@@ -11,21 +11,20 @@
     </header>
     <br>
     <h4 style="padding: 0px 0px 0px 200px "> Sign Up</h4>
-    <center>
     <body>
-        <table border="0">
+        <table border="0"  dir="ltl" style="float: left; padding: 0px 25px 0px 200px">
             
-            <br><br>
             <tr>
 
                  <!-- "padding: [top] [right] [bottom] [left]" -->
 
-              <td style="padding: 0px 0px 0px 15px "> username:</td>
-              <td style="padding: 0px 0px 0px 15px "><input type="text" name="username" required></td>
+              <td style="padding: 15px 0px 0px 15px "> username:</td>
+              <td style="padding: 15px 0px 0px 15px "><input type="text" name="username" required></td>
+              
             </tr> 
             <tr>
-                <td style="padding: 0px 0px 0px 15px "> major:</td>
-                <td style="padding: 0px 0px 0px 15px ">
+                <td style="padding: 15px 0px 0px 15px "> major:</td>
+                <td style="padding: 15px 0px 0px 15px ">
                 <select name="major" id="major" >
                     <option value="science">Science</option>
                     <option value="social">Social Technology</option>
@@ -39,24 +38,33 @@
                 </td>
               </tr>
             <tr>
-             <td style="padding: 0px 0px 0px 15px "> password:</td>
-             <td style="padding: 0px 0px 0px 15px "><input type="text" name="username" required></td>
-           </tr>
-            <tr>
-              <td style="padding: 0px 0px 0px 15px"> confirm password:</td>
-              <td style="padding: 0px 0px 0px 15px"><input type="password" name="password" required></td>
+             <td style="padding: 15px 0px 0px 15px "> password:</td>
+             <td style="padding: 15px 0px 0px 15px "><input type="text" name="username" required></td>
             </tr>
-          </table>
+             <tr><td style="padding: 15px 0px 0px 15px"> confirm password:</td>
+             <td style="padding: 15px 0px 0px 15px"><input type="password" name="password" required></td>
+             <tr><td></td><td><p style="padding: 25px 0px 0px 40px"><input type="submit" value="signup" ></p></td></tr>
+            </tr>
+    
+           
+        </table>
+          
+        <table style="float: left;" border="0">
+            <tr>     
+                <td style="padding: 0px 10px 10px 0px "><img id=1 src="./images/img1.png" width="100" onclick="selectPhoto(1)"></td>
+                <td style="padding: 0px 10px 10px 0px "><img id=2 src="./images/img2.png" width="100" onclick="selectPhoto(2)"></td>
+            </tr>
+            <tr>
+                <td><img id=3 src="./images/img3.png" width="100" onclick="selectPhoto(3)"></td>
+                <td><img id=4 src="./images/img4.png" width="100" onclick="selectPhoto(4)"></td>
+            </tr>
+    
+        </table>
           
     </body>
-    <br>
-    <br>
+    
 
-    <input type="submit" value="signup">
 
-    </center>
-    <br>
-    <br>
         <center>
             <footer> Footer </footer>
         </center>
