@@ -9,10 +9,8 @@
             <h3> header </h3>
             </center>
     </header>
-    <form action="insert.php" id="theForm" method="post" ></form>
-    <script type="text/javascript"></script>
+    <script src="text/javascript"></script>
     <script>
-
         var newPhoto = "";
         var btn = document.getElementById('submit');
         var btn2 = document.getElementById('clear');
@@ -50,8 +48,10 @@
     </script>
     <br>
     <h4 style="padding: 0px 0px 0px 200px "> Sign Up</h4>
+    <form action="insert.php" id="theForm" method="post" onsubmit="return checkPassword();">
     <p id ="pic2" style="padding: 0px 0px 0px 350px "><img src="./images/img1.png" width="100" onclick="selectPhoto(0)"></p>
-    <body>
+     <input type= "hidden" id="hid" name="avatar" value = "./images/img1.png" >
+     <body>
         <table border="0"  dir="ltl" style="float: left; padding: 0px 25px 0px 200px">
             
             <tr>
@@ -66,23 +66,23 @@
                 <td style="padding: 15px 0px 0px 15px "> major:</td>
                 <td style="padding: 15px 0px 0px 15px ">
                 <select name="major" id="major" >
-                    <option value="science">Science</option>
-                    <option value="social">Social Technology</option>
-                    <option value="agriculture">Agriculture</option>
-                    <option value="medicine">Medicine</option>
-                    <option value="nurse">Nurse</option>
-                    <option value="engineer">Engineer</option>
-                    <option value="dentisty">Dentisty</option>
-                    <option value="publichealth">Public Health</option>
+                    <option value="1">Science</option>
+                    <option value="2">Social Technology</option>
+                    <option value="3">Agriculture</option>
+                    <option value="4">Medicine</option>
+                    <option value="5">Nurse</option>
+                    <option value="6">Engineer</option>
+                    <option value="7">Dentisty</option>
+                    <option value="8">Public Health</option>
                   </select>
                 </td>
               </tr>
             <tr>
              <td style="padding: 15px 0px 0px 15px "> password:</td>
-             <td style="padding: 15px 0px 0px 15px "><input type="text" name="username" required></td>
+             <td style="padding: 15px 0px 0px 15px "><input type="password" name="password" placeholder="Password" id="password" required></td>
             </tr>
              <tr><td style="padding: 15px 0px 0px 15px"> confirm password:</td>
-             <td style="padding: 15px 0px 0px 15px"><input type="password" name="password" required></td>
+             <td style="padding: 15px 0px 0px 15px"><input type="password" name="confirm_password" placeholder="Confirm Password" id="confirm_password" required></td>
              <tr><td></td><td><p style="padding: 25px 0px 0px 40px"><input type="submit" value="signup" ></p></td></tr>
             </tr>
     
@@ -100,7 +100,21 @@
             </tr>
     
         </table>
-          
+    </form>
+    <script>
+        function checkPassword(){
+          var1 = document.getElementById("password");
+          var2 = document.getElementById("confirm_password");
+          if(var1.value != var2.value){
+              var2.setCustomValidity("Passwords Don't Match");
+              //alert("Passwords do not match, please try again!");
+              return false;   
+              }
+              else{
+                  return true;
+              }
+          }
+         </script>
     </body>
         <center>
             <footer> Footer </footer>
