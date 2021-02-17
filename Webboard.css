@@ -1,9 +1,22 @@
 table, th, td {
-    border: 2px solid black;
-    border-radius: 5px;
-    border-collapse: collapse;
-    font-family: Cursive, Helvetica, sans-serif;
+  border: 2px solid black;
+  border-radius: 5px;
+  border-collapse: collapse;
+  font-family: Cursive, Helvetica, sans-serif;
 }
 .h2 {
     font-family: Cursive, Helvetica, sans-serif;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
   }
