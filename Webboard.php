@@ -3,41 +3,58 @@
 <title>ThaiCreate.Com</title>
 <link rel="stylesheet" type="text/css" href="Webboard.css"> 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+
+<script>
+$(document).ready(function(){
+
+ load_data();
+
+ function load_data(query)
+ {
+  $.ajax({
+   url:"fetch.php",
+   method:"POST",
+   data:{query:query},
+   success:function(data)
+   {
+    $('#result').html(data);
+   }
+  });
+ }
+ $('#search_text').keyup(function(){
+  var search = $(this).val();
+  if(search != '')
+  {
+   load_data(search);
+  }
+  else
+  {
+   load_data();
+  }
+ });
+});
+</script>
 
 </head>
 <body>
 
-<a class="button" href="NewQuestion.php">New Topic</a>
-
-<?php
-  $conn=mysqli_connect("localhost", "root", "","helloboard_db");
-	$sql="SELECT * FROM webboard";
-	$rs=mysqli_query($conn,$sql); 
-?>
-
-<table class="main" align="center">
-  <tr>
-    <th width="99"> <div align="center">QuestionID</div></th>
-    <th width="458"> <div align="center">Question</div></th>
-    <th width="90"> <div align="center">Name</div></th>
-    <th width="130"> <div align="center">CreateDate</div></th>
-    <th width="45"> <div align="center">View</div></th>
-    <th width="47"> <div align="center">Reply</div></th>
-  </tr>
-<?php 
-while($row = mysqli_fetch_assoc($rs))
-{
-    echo '<tr>';
-    echo '<td><div align="center">'.$row["QuestionID"].'</div></td>';
-    echo '<td><a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>';
-    echo '<td>'.$row["Name"].'</td>';
-    echo '<td><div align="center">'.$row["CreateDate"].'</div></td>';
-    echo '<td align="center">'.$row["View"].'</td>';
-    echo '<td align="center">'.$row["Reply"].'</td>';
-    echo '</tr>';
-}
-mysqli_close($conn);
-?>
-
+<form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
+<div class="container">
+   <br />
+   <h2 align="center">SUT webboard</h2><br />
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon">Search</span>
+      <input type="text" name="search_text" id="search_text" class="form-control" />
+    </div>
+  </div>
+  <a class="button" href="NewQuestion.php">New Topic</a><br>
+  <br />
+   <div id="result"></div>
+  </div>
+</form>
 </body>
 </html>
