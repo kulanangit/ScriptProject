@@ -1,18 +1,20 @@
 <html>
 <head>
 <title>ThaiCreate.Com</title>
-
 <link rel="stylesheet" type="text/css" href="Webboard.css"> 
+
 
 </head>
 <body>
-  
+
 <a class="button" href="NewQuestion.php">New Topic</a>
+
 <?php
   $conn=mysqli_connect("localhost", "root", "","helloboard_db");
 	$sql="SELECT * FROM webboard";
 	$rs=mysqli_query($conn,$sql); 
 ?>
+
 <table class="main" align="center">
   <tr>
     <th width="99"> <div align="center">QuestionID</div></th>
