@@ -1,5 +1,4 @@
 .header {
-  padding: 60px;
   width: 100%;
   text-align: center;
   background: #1abc9c;
@@ -7,14 +6,13 @@
   font-size: 30px;
 }
 table {
-    border-collapse:separate;
+    border-collapse:collapse;
     padding-left: 200px;
     padding-right: 200px;
     width: 100%;
     font-family: Cursive, Helvetica, sans-serif;
     
   }
-  
   th, td {
     text-align: left;
     padding: 8px;
@@ -40,7 +38,6 @@ table {
     outline: none;
     font-family: Cursive, Helvetica, sans-serif;
   }
-
   .input-group{
     border-collapse:collapse;
     display: inline-block;

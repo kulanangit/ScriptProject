@@ -42,9 +42,10 @@ $(document).ready(function(){
 <body>
 
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
+<h2 class="header">SUT webboard</h2><br />
 <div class="container">
    <br />
-   <h2 class="header">SUT webboard</h2><br />
+   
   <div class="form-group">
     <div class="input-group">
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
