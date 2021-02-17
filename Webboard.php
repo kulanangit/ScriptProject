@@ -44,11 +44,11 @@ $(document).ready(function(){
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 <div class="container">
    <br />
-   <h2 align="center">SUT webboard</h2><br />
+   <h2 class="header">SUT webboard</h2><br />
   <div class="form-group">
     <div class="input-group">
-      <span class="input-group-addon">Search</span>
-      <input type="text" name="search_text" id="search_text" class="form-control" />
+          <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
+          <label class="form-label" for="form1"></label>
     </div>
   </div>
   <a class="button" href="NewQuestion.php">New Topic</a><br>
