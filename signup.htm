@@ -4,6 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     </head>
     <header>
+        
             <center>
             <h3> header </h3>
             </center>
@@ -49,9 +50,15 @@
     <br>
     <h4 style="padding: 0px 0px 0px 200px "> Sign Up</h4>
     <form action="insert.php" id="theForm" method="post" onsubmit="return checkPassword();">
-    <p id ="pic2" style="padding: 0px 0px 0px 350px "><img src="./images/img1.png" width="100" onclick="selectPhoto(0)"></p>
-     <input type= "hidden" id="hid" name="avatar" value = "./images/img1.png" >
-     <body>
+    <body>
+        <table border="0">
+            <tr>
+                <td><p id ="pic2" style="padding: 0px 0px 0px 450px "><img src="./images/img1.png" width="100" onclick="selectPhoto(0)"></p>
+        <input type= "hidden" id="hid" name="avatar" value = "./images/img1.png" ></td>
+        <td><p style="padding: 0px 0px 0px 280px "> select your avatar</p></td>
+            </tr>
+        </table>
+    <br>
         <table border="0"  dir="ltl" style="float: left; padding: 0px 25px 0px 200px">
             
             <tr>
@@ -59,7 +66,7 @@
                  <!-- "padding: [top] [right] [bottom] [left]" -->
 
               <td style="padding: 15px 0px 0px 15px "> username:</td>
-              <td style="padding: 15px 0px 0px 15px "><input type="text" id="username" name="username" required onBlur="checkAvailability()"><span id="user-availability-status" style="padding: 20px "><img src=''></span></td>
+              <td style="padding: 15px 0px 0px 15px "><input type="text" id="username" name="username" placeholder="Username" pattern="^[a-zA-Z0-9_-]" minlength="6" maxlength="20" required onBlur="checkAvailability()"><span id="user-availability-status" style="padding: 20px "><img src=''></span></td>
               
             </tr> 
             <tr>
@@ -79,11 +86,20 @@
               </tr>
             <tr>
              <td style="padding: 15px 0px 0px 15px "> password:</td>
-             <td style="padding: 15px 0px 0px 15px "><input type="password" name="password" placeholder="Password" id="password" required></td>
+             <td style="padding: 15px 0px 0px 15px "><input type="password" name="password" placeholder="Password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="8" maxlength="8"></td>
             </tr>
              <tr><td style="padding: 15px 0px 0px 15px"> confirm password:</td>
-             <td style="padding: 15px 0px 0px 15px"><input type="password" name="confirm_password" placeholder="Confirm Password" id="confirm_password" required></td>
-             <tr><td></td><td><p style="padding: 25px 0px 0px 40px"><input type="submit" value="signup" ></p></td></tr>
+             <td style="padding: 15px 0px 0px 15px"><input type="password" name="confirm_password" placeholder="Confirm Password" id="confirm_password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="8" maxlength="8"></td>
+             <tr>
+                <tr>
+                <td colspan = "2" style="padding: 15px 0px 0px 15px">
+                    <br>Username accepts 6 to 20 characters with any upper or lower case character, 
+                    <br>digit or special symbol "_" or "-" only.<br>
+                    <br>Password must contain at least one number and one uppercase and lowercase letter, 
+                    <br>and at least 8 or more characters.</td>
+            </tr>
+                <td colspan = "2"><p style="padding: 25px 0px 0px 250px">
+                    <input type="submit" value="signup" id="submit"></p></td></tr>
             </tr>
     
            
@@ -129,7 +145,7 @@
                 },
                 success:function(data){
                     $("#user-availability-status").html(data);
-                    $("#loaderIcon").hide(1000);
+                    //$('#submit').prop('disabled', true);
                 }
             });
             }
