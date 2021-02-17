@@ -42,7 +42,7 @@ $(document).ready(function(){
 <body>
 
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
-<h2 class="header">SUT webboard</h2><br />
+<h1 class="header"> <b>SUT Webboard </b></h1><br />
 <div class="container">
    <br />
    

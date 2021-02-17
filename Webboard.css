@@ -1,10 +1,17 @@
 .header {
-  width: 100%;
+  padding: 60px;
+  margin-top: 0mm;
   text-align: center;
   background: #1abc9c;
   color: white;
-  font-size: 30px;
+  font-size: 60px;
 }
+body {
+  font-family: Cursive, Helvetica, sans-serif;
+  margin: 0;
+  color: #1abc9c;
+}
+
 table {
     border-collapse:collapse;
     padding-left: 200px;
@@ -18,15 +25,14 @@ table {
     padding: 8px;
   }
   
+  
   tr:nth-child(even){background-color: #f2f2f2}
   
   th {
     background-color: #4CAF50;
     color: white;
   }
-.h2 {
-    font-family: Cursive, Helvetica, sans-serif;
-}
+
 .button {
     display: inline-block;
     padding: 10px 20px;
