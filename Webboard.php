@@ -1,10 +1,13 @@
 <html>
 <head>
 <title>ThaiCreate.Com</title>
+
 <link rel="stylesheet" type="text/css" href="Webboard.css"> 
+
+
 </head>
 <body>
-<a href="NewQuestion.php">New Topic</a>
+<a href="NewQuestion.php"><p>New Topic</p></a>
 <?php
   $conn=mysqli_connect("localhost", "root", "","helloboard_db");
 	$sql="SELECT * FROM webboard";
