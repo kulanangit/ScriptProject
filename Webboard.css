@@ -1,9 +1,9 @@
 table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  font-family: Cursive, Helvetica, sans-serif;
+    border: 2px solid black;
+    border-radius: 5px;
+    border-collapse: collapse;
+    font-family: Cursive, Helvetica, sans-serif;
 }
 .h2 {
-    
     font-family: Cursive, Helvetica, sans-serif;
   }
