@@ -9,7 +9,7 @@
             <h3> header </h3>
             </center>
     </header>
-    <script src="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>
         var newPhoto = "";
         var btn = document.getElementById('submit');
@@ -45,6 +45,7 @@
             localStorage.setItem("storageName",str2);
         };
         */
+
     </script>
     <br>
     <h4 style="padding: 0px 0px 0px 200px "> Sign Up</h4>
@@ -59,7 +60,7 @@
                  <!-- "padding: [top] [right] [bottom] [left]" -->
 
               <td style="padding: 15px 0px 0px 15px "> username:</td>
-              <td style="padding: 15px 0px 0px 15px "><input type="text" name="username" required></td>
+              <td style="padding: 15px 0px 0px 15px "><input type="text" id="username" name="username" required onBlur="checkAvailability()"><span id="user-availability-status" style="padding: 20px "><img src=''></span></td>
               
             </tr> 
             <tr>
@@ -115,6 +116,25 @@
               }
           }
          </script>
+         <script type="text/javascript">
+            function checkAvailability(){
+            $("#loaderIcon").show();
+            
+            $.ajax({
+                type:"POST",
+                url:"check_username.php",
+                cache:false,
+                data:{
+                    type:1,
+                    username:$("#username").val(),
+                },
+                success:function(data){
+                    $("#user-availability-status").html(data);
+                    $("#loaderIcon").hide(1000);
+                }
+            });
+            }
+            </script>
     </body>
         <center>
             <footer> Footer </footer>
