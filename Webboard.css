@@ -1,4 +1,11 @@
-
+.header {
+  padding: 60px;
+  width: 100%;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
 table {
     border-collapse:separate;
     padding-left: 200px;
@@ -33,3 +40,15 @@ table {
     outline: none;
     font-family: Cursive, Helvetica, sans-serif;
   }
+
+  .input-group{
+    border-collapse:collapse;
+    display: inline-block;
+    float: right;
+    width: 250px;
+    color: lawngreen;
+    border-radius: 6px;
+    outline: none;
+    font-family: Cursive, Helvetica, sans-serif;
+  }
+
