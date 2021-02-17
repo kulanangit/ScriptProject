@@ -6,8 +6,8 @@
 
 </head>
 <body>
+  
 <a class="button" href="NewQuestion.php">New Topic</a>
-
 <?php
   $conn=mysqli_connect("localhost", "root", "","helloboard_db");
 	$sql="SELECT * FROM webboard";

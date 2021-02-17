@@ -1,22 +1,35 @@
-table, th, td {
-  border: 2px solid black;
-  border-radius: 5px;
-  border-collapse: collapse;
-  font-family: Cursive, Helvetica, sans-serif;
-}
+
+table {
+    border-collapse:separate;
+    padding: 10px;
+    width: 100%;
+    font-family: Cursive, Helvetica, sans-serif;
+    
+  }
+  
+  th, td {
+    
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
 .h2 {
     font-family: Cursive, Helvetica, sans-serif;
 }
-
 .button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
+    display: inline-block;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+    color: #ffffff;
+    background-color: #F1C40F;
+    border-radius: 6px;
+    outline: none;
+    font-family: Cursive, Helvetica, sans-serif;
   }
