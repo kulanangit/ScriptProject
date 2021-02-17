@@ -8,7 +8,7 @@ $image2 = "./images/wrong.png";
     } 
 	if(isset($_POST['type']) == 1){
 		$username =$_POST['username'];
-		 $query ="SELECT * FROM user where username ='".$username."' ";
+		$query ="SELECT * FROM user where username ='".$username."'";
 		$result =mysqli_query($con, $query);
 		$rowcount=mysqli_num_rows($result);
 		if($rowcount >0){
