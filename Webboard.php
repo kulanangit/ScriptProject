@@ -4,15 +4,14 @@
 
 <link rel="stylesheet" type="text/css" href="Webboard.css"> 
 
-
 </head>
 <body>
-<button class="button"onclick="NewQuestion.php">New Topic</button>
+<a class="button" href="NewQuestion.php">New Topic</a>
+
 <?php
   $conn=mysqli_connect("localhost", "root", "","helloboard_db");
 	$sql="SELECT * FROM webboard";
-	$rs=mysqli_query($conn,$sql);
-  
+	$rs=mysqli_query($conn,$sql); 
 ?>
 <table class="main" align="center">
   <tr>
