@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<a href="NewQuestion.php"><p>New Topic</p></a>
+<a href="NewQuestion.php"><h2>New Topic</h2></a>
 <?php
   $conn=mysqli_connect("localhost", "root", "","helloboard_db");
 	$sql="SELECT * FROM webboard";
