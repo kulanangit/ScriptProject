@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>ThaiCreate.Com</title>
+<link rel="stylesheet" type="text/css" href="Webboard.css"> 
 </head>
 <body>
 <a href="NewQuestion.php">New Topic</a>
