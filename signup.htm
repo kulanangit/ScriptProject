@@ -5,7 +5,7 @@
     </head>
     <header>
         
-            <center>
+            <center>
             <h3> header </h3>
             </center>
     </header>
@@ -66,7 +66,7 @@
                  <!-- "padding: [top] [right] [bottom] [left]" -->
 
               <td style="padding: 15px 0px 0px 15px "> username:</td>
-              <td style="padding: 15px 0px 0px 15px "><input type="text" id="username" name="username" placeholder="Username" pattern="^[a-z0-9_-]" minlength="6" maxlength="20" required onBlur="checkAvailability()"><span id="user-availability-status" style="padding: 20px "><img src=''></span></td>
+              <td style="padding: 15px 0px 0px 15px "><input type="text" id="username" name="username" placeholder="Username" pattern="^[a-zA-Z0-9_-]" minlength="6" maxlength="20" required onBlur="checkAvailability()"><span id="user-availability-status" style="padding: 20px "><img src=''></span></td>
               
             </tr> 
             <tr>
@@ -93,7 +93,7 @@
              <tr>
                 <tr>
                 <td colspan = "2" style="padding: 15px 0px 0px 15px">
-                    <br>Username accepts 6 to 20 characters with any upper or lower case character, 
+                    <br>Username accepts 6 to 20 characters with any lowercase character, 
                     <br>digit or special symbol "_" or "-" only.<br>
                     <br>Password must contain at least one number and one uppercase and lowercase letter, 
                     <br>and at least 8 or more characters.</td>
