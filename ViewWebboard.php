@@ -19,7 +19,7 @@ if(isset($_GET["Action"]))
 
 <html>
 <head>
-  <title>ThaiCreate.Com</title>
+  <title>SUT-Webboard.Com</title>
   <meta http-equiv="Content-Type" content="text/html; charset=windows-874">
 </head>
 
@@ -34,6 +34,8 @@ if(isset($_GET["Action"]))
     $strSQL = "UPDATE webboard SET View = View + 1 WHERE QuestionID = '".$_GET["QuestionID"]."' ";
     $objQuery = mysqli_query($conn,$strSQL);	
 ?>
+
+<center>
 <table width="738" border="1" cellpadding="1" cellspacing="1">
   <tr>
     <td colspan="2"><center><h1><?=$objResult["Question"];?></h1></center></td>
@@ -46,8 +48,16 @@ if(isset($_GET["Action"]))
     <td width="253">View : <?=$objResult["View"];?> Reply : <?=$objResult["Reply"];?></td>
   </tr>
 </table>
+
+<table width="738">
+  <tr align= "right">
+    <a href="report.php">Report Post</a>
+  </tr>
+</table>
+
 <br>
 <br>
+
 <?php
 $intRows = 0;
 $strSQL2 = "SELECT * FROM reply  WHERE QuestionID = '".$_GET["QuestionID"]."' ";
@@ -55,14 +65,14 @@ $objQuery2 = mysqli_query($conn,$strSQL2) or die ("Error Query [".$strSQL."]");
 while($objResult2 = mysqli_fetch_array($objQuery2))
 {
 	$intRows++;
-?> No : <?=$intRows;?>
+?> 
 <table width="738" border="1" cellpadding="1" cellspacing="1">
   <tr>
-    <td height="53" colspan="2"><?=nl2br($objResult2["Details"]);?></td>
+    <td height="53" colspan="2">Comment <?=$intRows;?> : <?=nl2br($objResult2["Details"]);?></td>
   </tr>
   <tr>
     <td width="397">Name :
-        <?=$objResult2["Name"];?>      </td>
+        <?=$objResult2["Name"];?></td>
     <td width="253">Create Date :
     <?=$objResult2["CreateDate"];?></td>
   </tr>
@@ -70,11 +80,10 @@ while($objResult2 = mysqli_fetch_array($objQuery2))
 <?php
 }
 ?>
-<p>Reply:</p>
 <form action="ViewWebboard.php?QuestionID=<?=$_GET["QuestionID"];?>&Action=Save" method="post" name="frmMain" id="frmMain">
   <table width="738" border="1" cellpadding="1" cellspacing="1">
     <tr>
-      <td width="78">Details</td>
+      <td width="78">Reply</td>
       <td><textarea name="txtDetails" cols="50" rows="5" id="txtDetails"></textarea></td>
     </tr>
     <tr>
@@ -82,6 +91,7 @@ while($objResult2 = mysqli_fetch_array($objQuery2))
       <td width="647"><input name="txtName" type="text" id="txtName" value="" size="50"></td>
     </tr>
   </table>
+  <br>
   <input name="btnSave" type="submit" id="btnSave" value="Submit">
   <br><br><br><a href="Webboard.php">Back to Webboard</a> <br>
 </form>
