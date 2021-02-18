@@ -13,12 +13,10 @@ if ($conn->query($sql) === TRUE) {
   echo "<script 'text/JavaScript'>";
   echo "alert('Post ID:".$_GET['post_id']." has been deleted!!');";
   echo "</script>";
-  echo "<meta http-equiv='refresh' content='0; URL=admin.php'>";
 } else {
     echo "<script 'text/JavaScript'>";
-    echo "alert('Post ID: Error deleting record: " . $conn->error;
+    echo "alert('Post ID: Error deleting record: ".$conn->error.");";
     echo "</script>";
-    echo "<meta http-equiv='refresh' content='0; URL=admin.php'>";
 }
 
 $conn->close();

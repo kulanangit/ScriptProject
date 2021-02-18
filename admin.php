@@ -10,25 +10,27 @@
         <form action="delete_user.php" method="get">
 <?php 
 session_start();
-        
-        if($_SESSION['username'] == "")
-        {
-            echo "Please Login!";
-            exit();
-        }
 
-        else if($_SESSION['username'] != "admin")
-        {
-            echo "You don't have permission to access this page!";
-            exit();
-        }
-        else{
         $conn=mysqli_connect("localhost", "root", "","helloboard_db");
         $conn->query("SET NAMES UTF8");
         $strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
         $result = mysqli_query($conn, $strSQL);
+
+        if($_SESSION['username'] == "")
+        {
+            echo "<script 'text/JavaScript'>";
+            echo "alert('Please Login!');";
+            echo "</script>";
+            echo "<meta http-equiv='refresh' content='0; URL=login.htm'>";
         }
 
+        if($_SESSION['role'] != "1")
+        {
+            echo "<center>You don't have permission to access this page!</center>";
+        }
+        
+        if($_SESSION['role'] != "0")
+        {
         // get results from database
         $sql="SELECT  r.rp_id r.post_id, r.date, p.title, p.detail, p.category_id, r.user_id, u.username
                 FROM post p 
@@ -73,6 +75,7 @@ session_start();
         echo    "</table></center>";
     }
     $conn->close();
+}
 ?>
     <footer>
     <center>
