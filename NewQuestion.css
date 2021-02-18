@@ -1,12 +1,18 @@
-h3{
-    text-align: center;
-}
+.addnew{
+    padding: 60px;
+    margin-top: 0mm;
+    text-align: left;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+    font-family: Cursive, Helvetica, sans-serif;
+  }
 table{
     align-items: center;
-    border-collapse:collapse;
+    border-collapse: collapse;
     padding-left: 100px;
     padding-right: 100px;
-    width: 70%;
+    width: 100%;
     font-family: Cursive, Helvetica, sans-serif;
 }
 tr, td {
@@ -18,3 +24,15 @@ tr, td {
     background-color: #4CAF50;
     color: white;
   }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #F1C40F;
+    border-radius: 6px;
+    outline: none;
+    font-family: Cursive, Helvetica, sans-serif;
+  }
+  
