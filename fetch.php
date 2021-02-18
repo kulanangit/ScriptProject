@@ -1,6 +1,6 @@
 <html>
 <head>
-<!-- <link rel="stylesheet" type="text/css" href="webboard.css">  -->
+<link rel="stylesheet" type="text/css" href="fetch.css"> 
 
 <?php
 //fetch.php
@@ -25,7 +25,7 @@ if(mysqli_num_rows($result) > 0)
    <table class="table table bordered" id="list">
     <tr>
      <th align="center">QuestionID</th>
-     <th align="center">Question</th>
+     <th align="center">Questions</th>
      <th align="center">Name</th>
      <th align="center">CreateDate</th>
      <th align="center">View</th>
@@ -37,7 +37,7 @@ if(mysqli_num_rows($result) > 0)
   $output .= '
    <tr>
     <td align="center">'.$row["QuestionID"].'</td>
-    <td align="left"><a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
+    <td id="qeust"> <a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
     <td align="center">'.$row["Name"].'</td>
     <td align="center">'.$row["CreateDate"].'</td>
     <td align="center">'.$row["View"].'</td>

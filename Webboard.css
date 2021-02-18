@@ -20,7 +20,11 @@ body {
     padding-right: 20%;
     font-family: Cursive, Helvetica, sans-serif;
   }
-  th, td {
+  #quest{
+    text-align: left;
+    padding: 8px;
+  }
+  th {
     text-align: center;
     padding: 8px;
   }
