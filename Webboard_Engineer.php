@@ -16,7 +16,7 @@ $(document).ready(function(){
  function load_data(query)
  {
   $.ajax({
-   url:"fetch.php",
+   url:"fetchEngineer.php",
    method:"POST",
    data:{query:query},
    success:function(data)
@@ -55,7 +55,7 @@ $(document).ready(function(){
     
       </ul>
     </li>
-    <li><a href="#">Topic</a></li>
+  
   </ul>
 </nav>
 
@@ -64,21 +64,22 @@ $(document).ready(function(){
     <td>
       
     <ul>
-    
-    <li><a href="Webboard_topic.php?Topic=Love">Love</a></li>
-  <li> <a href="Webboard_topic.php?=Education">Educations</a> </li>
-  <li><a href="Webboard_topic.php?Topic=Drama">Drama</a></li>
-  <li> <a href="Webboard_topic.php?Topic=Health">Health</a> </li>
-  <li><a href="Webboard_topic.php?Topic=Game">Game</a></li>
-  <li> <a href="Webboard_topic.php?Topic=idol">idol</a> </li>
+    <li><a href="Webboard_Engineer.php">ALL</a></li>
+    <li><a href="Webboard_topic_Eng.php?Topic=Love">Love</a></li>
+  <li> <a href="Webboard_topic_Eng.php?Topic=Education">Educations</a> </li>
+  <li><a href="Webboard_topic_Eng.php?Topic=Drama">Drama</a></li>
+  <li> <a href="Webboard_topic_Eng.php?Topic=Health">Health</a> </li>
+  <li><a href="Webboard_topic_Eng.php?Topic=Game">Game</a></li>
+  <li> <a href="Webboard_topic_Eng.php?Topic=idol">idol</a> </li>
 </ul>
 </td>
 <td>
 
+
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 <div class="container">
    <br />
-   <h2 class="header">SUT webboard</h2><br />
+   <h2 class="header">School of Medicine</h2><br />
   <div class="form-group">
     <div class="input-group">
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
@@ -92,7 +93,6 @@ $(document).ready(function(){
 </form>
 </td>
 </tr>
-
 </table>
 </body>
 </html>

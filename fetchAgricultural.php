@@ -1,3 +1,6 @@
+
+
+
 <?php
 //fetch.php
 $connect = mysqli_connect("localhost", "root", "", "helloboard_db");
@@ -5,11 +8,11 @@ $output = '';
 if(isset($_POST["query"]))
 {
     $search = mysqli_real_escape_string($connect, $_POST["query"]);
-    $query = "SELECT * FROM webboard WHERE Question LIKE '%".$search."%' OR Name LIKE '%".$search."%'";
+    $query = "SELECT * FROM webboard WHERE Major = 'Agricultural' AND  Question LIKE '%".$search."%' ";
 }
 else
 {
-    $query = " SELECT * FROM webboard ORDER BY QuestionID ";
+    $query = " SELECT * FROM webboard WHERE Major = 'Agricultural' ORDER BY QuestionID ";
 }
 
 $result = $connect->query($query);
@@ -39,7 +42,8 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>
     <td>'.$row["Reply"].'</td>
-    <td><a href="ViewWebboard.php?QuestionID='.$row["Category"].'">'.$row["Category"].'</a></td>
+    <td >'.$row["Category"].'</td>
+
    </tr>
   ';
  }
