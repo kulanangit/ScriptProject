@@ -40,6 +40,10 @@ if ($conn->connect_error) {
                 }
 
     }else{
-        Header("Location: login.php"); //user & password incorrect back to login again
+      echo "<script 'text/JavaScript'>";
+      echo "alert('username or password not correct!');";
+      echo "</script>";
+      echo "<meta http-equiv='refresh' content='0;URL=login.htm'>";
+      //user & password incorrect back to login again
         }
 ?>
