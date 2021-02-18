@@ -1,17 +1,17 @@
-<html>
+<html lang="en">
 <head>
-<title>ThaiCreate.Com</title>
-<link rel="stylesheet" type="text/css" href="Webboard.css"> 
+<title>SUT Webboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<link rel="stylesheet" type="text/css" href="webboard.css"> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
 
 <script>
 $(document).ready(function(){
-
  load_data();
-
  function load_data(query)
  {
   $.ajax({
@@ -42,20 +42,23 @@ $(document).ready(function(){
 <body>
 
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
-<h1 class="header"> <b>SUT Webboard </b></h1><br />
+<div class="header">
+    <h1><b>SUT Webboard</b></h1>
+    <p>Add new post</p>
+</div>
+<br>
 <div class="container">
-   <br />
-   
-  <div class="form-group">
-    <div class="input-group">
+    <div class="form-group">
+      <div class="form-input">
+          <a class="button" href="NewQuestion.php"><b>New Topic</b></a>
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
           <label class="form-label" for="form1"></label>
+      <div>
     </div>
   </div>
-  <a class="button" href="NewQuestion.php">New Topic</a><br>
-  <br />
-   <div id="result"></div>
-  </div>
+    <br/>
+  <div id="result"></div>
+</div>
 </form>
 </body>
 </html>

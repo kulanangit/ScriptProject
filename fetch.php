@@ -1,3 +1,7 @@
+<html>
+<head>
+<!-- <link rel="stylesheet" type="text/css" href="webboard.css">  -->
+
 <?php
 //fetch.php
 $connect = mysqli_connect("localhost", "root", "", "helloboard_db");
@@ -18,24 +22,24 @@ if(mysqli_num_rows($result) > 0)
 {
  $output .= '
   <div class="table-responsive">
-   <table class="table table bordered">
+   <table class="table table bordered" id="list">
     <tr>
-     <th>QuestionID</th>
-     <th>Question</th>
-     <th>Name</th>
-     <th>CreateDate</th>
-     <th>View</th>
-     <th>Reply</th>
+     <th align="center">QuestionID</th>
+     <th align="center">Question</th>
+     <th align="center">Name</th>
+     <th align="center">CreateDate</th>
+     <th align="center">View</th>
+     <th align="center">Reply</th>
     </tr>
  ';
  while($row = mysqli_fetch_array($result))
  {
   $output .= '
    <tr>
-    <td>'.$row["QuestionID"].'</td>
-    <td><a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
-    <td>'.$row["Name"].'</td>
-    <td>'.$row["CreateDate"].'</td>
+    <td align="center">'.$row["QuestionID"].'</td>
+    <td align="left"><a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
+    <td align="center">'.$row["Name"].'</td>
+    <td align="center">'.$row["CreateDate"].'</td>
     <td align="center">'.$row["View"].'</td>
     <td align="center">'.$row["Reply"].'</td>
    </tr>
@@ -49,3 +53,5 @@ else
 }
 
 ?>
+
+</html>

@@ -1,30 +1,29 @@
-.header {
-  padding: 60px;
-  margin-top: 0mm;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-  font-size: 60px;
-}
 body {
   font-family: Cursive, Helvetica, sans-serif;
   margin: 0;
   color: #1abc9c;
 }
-
-table {
-    border-collapse:collapse;
-    padding-left: 200px;
-    padding-right: 200px;
-    width: 100%;
+.header{
+    padding: 20px;
+    margin-top: 0mm;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 40px;
     font-family: Cursive, Helvetica, sans-serif;
-    
+  }
+  .content {padding:20px;}
+
+  table {
+    border-collapse:collapse;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: Cursive, Helvetica, sans-serif;
   }
   th, td {
-    text-align: left;
+    text-align: center;
     padding: 8px;
   }
-  
   
   tr:nth-child(even){background-color: #f2f2f2}
   
@@ -35,23 +34,24 @@ table {
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 5px 10px;
     text-align: center;
     text-decoration: none;
     color: #ffffff;
+    margin: 8px 0;
     background-color: #F1C40F;
     border-radius: 6px;
     outline: none;
-    font-family: Cursive, Helvetica, sans-serif;
   }
-  .input-group{
-    border-collapse:collapse;
-    display: inline-block;
+  
+  input[type=text] {
     float: right;
     width: 250px;
-    color: lawngreen;
-    border-radius: 6px;
-    outline: none;
-    font-family: Cursive, Helvetica, sans-serif;
+    padding: 5px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    border-right: 5px solid rgb(255, 145, 0);
   }
 

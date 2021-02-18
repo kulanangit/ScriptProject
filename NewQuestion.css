@@ -1,38 +1,40 @@
-.addnew{
-    padding: 60px;
+body {
+  font-family: Cursive, Helvetica, sans-serif;
+  margin: 0;
+ 
+}
+.header{
+    padding: 10px;
     margin-top: 0mm;
-    text-align: left;
+    text-align: center;
     background: #1abc9c;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     font-family: Cursive, Helvetica, sans-serif;
   }
-table{
-    align-items: center;
-    border-collapse: collapse;
-    padding-left: 100px;
-    padding-right: 100px;
-    width: 100%;
+  .content {padding:20px;}
+  table {
+    border-collapse:collapse;
+    padding-left: 20%;
+    padding-right: 20%;
     font-family: Cursive, Helvetica, sans-serif;
-}
-tr, td {
-    text-align: left;
+  }
+  th, td {
+    text-align: center;
     padding: 8px;
   }
+  
   tr:nth-child(even){background-color: #f2f2f2}
+  
   th {
-    background-color: #4CAF50;
+    background-color: #000000;
     color: white;
   }
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #F1C40F;
-    border-radius: 6px;
-    outline: none;
-    font-family: Cursive, Helvetica, sans-serif;
+
+  input[type=text] ,textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
   }
-  
