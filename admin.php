@@ -5,9 +5,9 @@
         </center>
 
 </header>
-        <form action="deletetopic.php" method="get">
-        <form action="deletetopic.php" method="get">
-        <form action="deletetopic.php" method="get">
+        <form action="delete_topic.php" method="get">
+        <form action="ban_user.php" method="get">
+        <form action="delete_user.php" method="get">
 <?php 
 session_start();
         
@@ -23,7 +23,7 @@ session_start();
             exit();
         }
         else{
-        $conn=mysqli_connect("localhost", "root", "","RegisterDB");
+        $conn=mysqli_connect("localhost", "root", "","helloboard_db");
         $conn->query("SET NAMES UTF8");
         $strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
         $result = mysqli_query($conn, $strSQL);
@@ -61,7 +61,7 @@ session_start();
         echo    "<td>". $row['user_id'] ."</td>";
         echo    "<td>". $row['username'] ."</td>";
         echo    "<td><a onClick=\"javascript: return confirm('Are you sure to delete this topic 
-                ".$row['title']."');\" href='deletetopic.php?id=".$row['post_id']."'>delete topic</a></td>";
+                ".$row['title']."');\" href='delete_topic.php?id=".$row['post_id']."'>delete topic</a></td>";
         echo    "<td><a onClick=\"javascript: return confirm('Are you sure ban this user? 
                 ".$row['user_id']."');\" href='ban_user.php?id=".$row['user_id']."'>ban</a></td>";
         echo    "<td><a onClick=\"javascript: return confirm('Are you sure delete this user? 
