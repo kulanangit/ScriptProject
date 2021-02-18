@@ -22,7 +22,8 @@ body {
   }
   #quest{
     text-align: left;
-    padding: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   th {
     text-align: center;
