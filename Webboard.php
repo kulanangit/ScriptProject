@@ -46,16 +46,17 @@ $(document).ready(function(){
 </script>
 
 </head>
-<div class="navbar">
+<body>
+  <div class="navbar">
     <a href="Webboard.php">Public</a>
     <div class="subnav">
       <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
       <div class="subnav-content">
-        <a href="#company">Social Technology</a>
-        <a href="#team">Scienc</a>
-        <a href="#careers">Agricutural</a>
-        <a href="Webboard_Engineer.php">Engineering</a>
-        <a href="Webboard_Medicine.php">Medicine</a>
+      <a href="Webboard_Social.php">Social Technology</a>
+      <a href="Webboard_Science.php">Science</a>
+       <a href="Webboard_Agricultural.php">Agricutural</a>
+      <a href="Webboard_Engineer.php">Engineering</a>
+      <a href="Webboard_Medicine.php">Medicine</a>
       </div>
     </div> 
     <div class="subnav">
@@ -70,7 +71,7 @@ $(document).ready(function(){
     <div class="subnav">
       <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
       <div class="subnav-content">
-        <a href="#link1">Link 1</a>
+       <li> <a href="#link1">Link 1</a></li>
         <a href="#link2">Link 2</a>
         <a href="#link3">Link 3</a>
         <a href="#link4">Link 4</a>
@@ -78,6 +79,9 @@ $(document).ready(function(){
     </div>
     <a href="logout.php" div="ltl">Logout</a>
   </div>
+
+
+
 
 
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
