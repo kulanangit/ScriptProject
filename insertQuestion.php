@@ -3,7 +3,10 @@
 <?php
 $conn=mysqli_connect("localhost", "root", "","helloboard_db");
 
-	$sql = "INSERT INTO webboard(CreateDate,Question,Details,Name) VALUES('".date("Y-m-d H:i:s")."','".$_POST["txtQuestion"]."','".$_POST["txtDetails"]."','".$_POST["txtName"]."')";
+date_default_timezone_set("Asia/Bangkok"); //set time zone
+$date = date("Y-m-d H:i:s", time());
+
+	$sql = "INSERT INTO webboard(CreateDate,Question,Details,Name) VALUES('".$date."','".$_POST["txtQuestion"]."','".$_POST["txtDetails"]."','".$_POST["txtName"]."')";
 	$rs = mysqli_query($conn,$sql);
 	
 	if($rs){
