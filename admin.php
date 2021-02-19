@@ -15,13 +15,14 @@ session_start();
         $conn->query("SET NAMES UTF8");
         $strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
         $result = mysqli_query($conn, $strSQL);
+        
+        error_reporting(0);
+        ini_set('display_errors', 0); //hide error
+        
 
         if($_SESSION['username'] == "")
         {
-            echo "<script 'text/JavaScript'>";
-            echo "alert('Please Login!');";
-            echo "</script>";
-            echo "<meta http-equiv='refresh' content='0; URL=login.htm'>";
+            echo "<center>Please Login!<center>";
         }
 
         if($_SESSION['role'] != "1")
