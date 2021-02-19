@@ -1,4 +1,18 @@
 <html>
+<?php
+session_start();
+$conn=mysqli_connect("localhost", "root", "","helloboard_db");
+$conn->query("SET NAMES UTF8");
+        if($_SESSION['username'] == ""){
+            echo "<center>Please Login!<center>";
+        } 
+        else{
+            $sql="SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
+        }
+$rs=$conn->query($sql);
+while($row = $rs->fetch_assoc()) { ?>
+
+<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     </head>
@@ -37,7 +51,7 @@
      
         function func() {
         
-        document.getElementById('theForm').submit('hid');
+        document.getElementById('theForm2').submit('hid');
     };
         /*  window.onload = function() {
             str2 = "./avatar/" + newPhoto + ".jpg"; 
@@ -48,11 +62,11 @@
     </script>
     <br>
     <h4 style="padding: 0px 0px 0px 200px "> Sign Up</h4>
-    <form action="insert.php" id="theForm" method="post" onsubmit="return checkPassword();">
+    <form action="edit.php" id="theForm2" method="post" onsubmit="return checkPassword();">
     <body>
         <table border="0">
             <tr>
-                <td><p id ="pic2" style="padding: 0px 0px 0px 450px "><img src="./images/img1.png" width="100" onclick="selectPhoto(0)"></p>
+                <td><p id ="pic2" style="padding: 0px 0px 0px 450px "><img src="<?php echo $row['image']; ?>" width="100" onclick="selectPhoto(0)"></p>
         <input type= "hidden" id="hid" name="avatar" value = "./images/img1.png" ></td>
         <td><p style="padding: 0px 0px 0px 280px "> select your avatar</p></td>
             </tr>
@@ -65,29 +79,20 @@
                  <!-- "padding: [top] [right] [bottom] [left]" -->
 
               <td style="padding: 15px 0px 0px 15px "> username:</td>
-              <td style="padding: 15px 0px 0px 15px "><input type="text" id="username" name="username" placeholder="Username" pattern="^[a-z0-9_-]{5,15}$" required onBlur="checkAvailability()"><span id="user-availability-status" style="padding: 20px "><img src=''></span></td>
+              <td style="padding: 15px 0px 0px 15px "><input type="text" value ="<?php echo $row['username']; ?>" id="username" name="username" placeholder="Username" pattern="^[a-z0-9_-]{5,15}$" required onBlur="checkAvailability()"><span id="user-availability-status" style="padding: 20px "><img src=''></span></td>
               
             </tr> 
             <tr>
                 <td style="padding: 15px 0px 0px 15px "> major:</td>
                 <td style="padding: 15px 0px 0px 15px ">
-                <select name="major" id="major" >
-                    <option value="Science">Science</option>
-                    <option value="Social Technology">Social Technology</option>
-                    <option value="Agriculture">Agriculture</option>
-                    <option value="Medicine">Medicine</option>
-                    <option value="Nurse">Nurse</option>
-                    <option value="Engineer">Engineer</option>
-                    <option value="Dentisty">Dentisty</option>
-                    <option value="Public Health">Public Health</option>
-                  </select>
+                <input name="major" id="major" value ="<?php echo $row['major'] ?>" disabled>
                 </td>
               </tr>
             <tr>
-             <td style="padding: 15px 0px 0px 15px "> password:</td>
+             <td style="padding: 15px 0px 0px 15px "> new password:</td>
              <td style="padding: 15px 0px 0px 15px "><input type="password" name="password" placeholder="Password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></td>
             </tr>
-             <tr><td style="padding: 15px 0px 0px 15px"> confirm password:</td>
+             <tr><td style="padding: 15px 0px 0px 15px"> new confirm password:</td>
              <td style="padding: 15px 0px 0px 15px"><input type="password" name="confirm_password" placeholder="Confirm Password" id="confirm_password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></td>
              <tr>
                 <tr>
@@ -98,7 +103,8 @@
                     <br>and at least 8 up to 30 characters.</td>
             </tr>
                 <td colspan = "2"><p style="padding: 25px 0px 0px 250px">
-                    <input type="submit" value="signup" id="submit"></p></td></tr>
+                <input type="submit" value="Save">
+                <button onclick="location.href='Webboard.php'">Cancel</button>
             </tr>
     
            
@@ -114,7 +120,10 @@
                 <td><img id=4 src="./images/img4.png" width="100" onclick="selectPhoto(4)"></td>
             </tr>
     
+
         </table>
+        <?php } $conn->close(); ?>
+    </body>
     </form>
     <script>
         function checkPassword(){
@@ -149,8 +158,9 @@
             });
             }
             </script>
-    </body>
+   
         <center>
             <footer> Footer </footer>
         </center>
+</center>
 </html>
