@@ -1,8 +1,11 @@
 a {
+ 
     text-decoration: none;
   }
   
   nav {
+  
+    
     font-family: monospace;
   }
   
@@ -14,6 +17,7 @@ a {
   }
   
   li {
+    overflow: hidden;
     color: #fff;
     background: darkorange;
     display: block;

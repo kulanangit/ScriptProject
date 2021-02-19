@@ -1,14 +1,20 @@
 <html>
 <head>
 <title>ThaiCreate.Com</title>
-<link rel="stylesheet" type="text/css" href="Webboard.css"> 
-<link rel="stylesheet" type="text/css" href="topbar.css"> 
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> -->
+<link rel="stylesheet" type="text/css" href="Navbar_cat.css"> 
+<link rel="stylesheet" type="text/css" href="Webboard.css">
+
 
 <script>
+  
 $(document).ready(function(){
 
  load_data();

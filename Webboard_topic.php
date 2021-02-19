@@ -1,3 +1,6 @@
+
+
+ <?php session_start() ?>
 <html>
 <head>
 <title>ThaiCreate.Com</title>
@@ -8,7 +11,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script>
 $(document).ready(function(){
   
@@ -48,21 +50,22 @@ $(document).ready(function(){
 
 </head>
 <body>
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
+<nav role="navigation">
+  <ul>
+    <li><a href="Webboard.php">Public</a></li>
+    <li><a href="#">Major</a>
+      <ul class="dropdown">
+        <li><a href="Webboard_Social.php">Social Technology</a></li>
+        <li><a href="Webboard_Science.php">Science</a></li>
+        <li><a href="Webboard_Agricultural.php">Agricutural</a></li>
+        <li><a href="Webboard_Engineer.php">Engineering</a></li>
+        <li><a href="Webboard_Medicine.php">Medicine</a></li>
+    
+      </ul>
+    </li>
+ 
+  </ul>
 </nav>
-
 <br>
 <table class="center">
 <tr>
@@ -70,7 +73,7 @@ $(document).ready(function(){
       
     <ul>
     <li><a href="Webboard.php">ALL</a></li>
-  <li><a href="Webboard_topic.php?Topic=Love">Loveeeeeeeee</a></li>
+  <li><a href="Webboard_topic.php?Topic=Love">Love</a></li>
   <li> <a href="Webboard_topic.php?Topic=Education">Educations</a> </li>
   <li><a href="Webboard_topic.php?Topic=Drama">Drama</a></li>
   <li> <a href="Webboard_topic.php?Topic=Health">Health</a> </li>
@@ -97,25 +100,9 @@ $(document).ready(function(){
 </tr>
 </table>
 <?php
-session_start();
-
-
-error_reporting(0);
-ini_set('display_errors', 0); //hide error
-
-$connect=mysqli_connect("localhost", "root", "","helloboard_db");
-$connect->query("SET NAMES UTF8");
-$strSQL1 = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
-$result1 = mysqli_query($connect, $strSQL1);
-
-
-if($_SESSION['username'] == "")
-{
-    echo "<center>Please Login!<br><a href='login.htm'>Login</a><center>";
-
-} else {
 
 //fetch.php
+$connect = mysqli_connect("localhost", "root", "", "helloboard_db");
 $output = '';
 if(isset($_POST["query"]))
 
@@ -168,7 +155,7 @@ else
 {
  echo 'Data Not Found';
 }
-}
+
 
 ?><!-- <div id="result"></div> -->
   </div>
