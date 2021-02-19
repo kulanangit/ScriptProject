@@ -27,7 +27,11 @@ if(isset($_POST["query"]))
 }
 else
 {
-    $query = " SELECT * FROM webboard ORDER BY QuestionID ";
+    $query = "SELECT  w.QuestionID,w.CreateDate,w.Question,w.Details,w.View,w.Reply,w.Category,u.image
+                FROM webboard w 
+                INNER JOIN user u
+                ON w.Name = u.username 
+                ORDER BY QuestionID ";
 }
 
 $result = $connect->query($query);
@@ -53,7 +57,7 @@ if(mysqli_num_rows($result) > 0)
    <tr>
     <td>'.$row["QuestionID"].'</td>
     <td><a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
-    <td>'.$row["Name"].'</td>
+    <td><img src='.$row["image"].' width="50"></td>
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>
     <td>'.$row["Reply"].'</td>
