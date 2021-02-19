@@ -11,13 +11,17 @@
 <?php 
 session_start();
 
+
+        error_reporting(0);
+        ini_set('display_errors', 0); //hide error
+
+
         $conn=mysqli_connect("localhost", "root", "","helloboard_db");
         $conn->query("SET NAMES UTF8");
         $strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
         $result = mysqli_query($conn, $strSQL);
-        
-        error_reporting(0);
-        ini_set('display_errors', 0); //hide error
+
+
         
 
         if($_SESSION['username'] == "")
@@ -25,12 +29,12 @@ session_start();
             echo "<center>Please Login!<center>";
         }
 
-        if($_SESSION['role'] != "1")
+        else if($_SESSION['role'] != "1")
         {
             echo "<center>You don't have permission to access this page!</center>";
         }
         
-        if($_SESSION['role'] != "0")
+        else if($_SESSION['role'] != "0")
         {
         // get results from database
         $sql="SELECT  r.rp_id r.post_id, r.date, p.title, p.detail, p.category_id, r.user_id, u.username
