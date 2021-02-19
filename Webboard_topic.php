@@ -11,11 +11,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-
 <script>
 $(document).ready(function(){
-
- load_data();
+  
+    var url = window.location.href;
+    var res = /[^=]*$/.exec(url)[0];
+   // alert(res);
+    document.getElementById('headtopic').innerHTML = res;
+    
+    load_data();
 
  function load_data(query)
  {
@@ -41,6 +45,7 @@ $(document).ready(function(){
   }
  });
 });
+
 </script>
 
 </head>
@@ -81,7 +86,7 @@ $(document).ready(function(){
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 <div class="container">
    <br />
-   <h2 class="header">Topic</h2><br />
+  <h2 class="header" id = "headtopic">Topic</h2><br />
   <div class="form-group">
     <div class="input-group">
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
@@ -144,6 +149,7 @@ if(mysqli_num_rows($result) > 0)
   ';
  }
  echo $output;
+ 
 }
 else
 {
