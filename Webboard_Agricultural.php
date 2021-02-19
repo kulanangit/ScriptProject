@@ -1,12 +1,14 @@
 <html>
 <head>
 <title>ThaiCreate.Com</title>
-<link rel="stylesheet" type="text/css" href="Webboard.css"> 
-<link rel="stylesheet" type="text/css" href="topbar.css"> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> -->
+<link rel="stylesheet" type="text/css" href="Navbar_cat.css"> 
+<link rel="stylesheet" type="text/css" href="Webboard.css">
 
 <script>
 $(document).ready(function(){
@@ -38,47 +40,55 @@ $(document).ready(function(){
  });
 });
 </script>
-
 </head>
 <body>
 
-<nav role="navigation">
-  <ul>
-    <li><a href="Webboard.php">Public</a></li>
-    <li><a href="#">Major</a>
-      <ul class="dropdown">
-        <li><a href="Webboard_Social.php">Social Technology</a></li>
-        <li><a href="Webboard_Science.php">Science</a></li>
-        <li><a href="Webboard_Agricultural.php">Agricutural</a></li>
-        <li><a href="Webboard_Engineer.php">Engineering</a></li>
-        <li><a href="Webboard_Medicine.php">Medicine</a></li>
+  <div class="navbar">
     
-      </ul>
-    </li>
-   
-  </ul>
-</nav>
+  <div class="subnav">
+      <button class="subnavbtn">Public<i class="fa fa-caret-down"></i></button>
 
-<table class="center">
-<tr>
-    <td>
-      
-    <ul>
-    <li><a href="Webboard_Agricultural.php">ALL</a></li>
-    <li><a href="Webboard_topic_Agri.php?Topic=Love">Love</a></li>
-  <li> <a href="Webboard_topic_Agri.php?Topic=Education">Educations</a> </li>
-  <li><a href="Webboard_topic_Agri.php?Topic=Drama">Drama</a></li>
-  <li> <a href="Webboard_topic_Agri.php?Topic=Health">Health</a> </li>
-  <li><a href="Webboard_topic_Agri.php?Topic=Game">Game</a></li>
-  <li> <a href="Webboard_topic_Agri.php?Topic=idol">idol</a> </li>
-</ul>
-</td>
-<td>
+      <div class="subnav-content">
+      <a href="Webboard.php">ALL</a>
+  <a href="Webboard_topic.php?Topic=Love">Love</a>
+  <a href="Webboard_topic.php?Topic=Education">Educations</a> 
+ <a href="Webboard_topic.php?Topic=Drama">Drama</a>
+  <a href="Webboard_topic.php?Topic=Health">Health</a> 
+ <a href="Webboard_topic.php?Topic=Game">Game</a>
+  <a href="Webboard_topic.php?Topic=idol">idol</a> 
+    </div>
+    </div> 
+
+
+   
+
+
+    <div class="subnav">
+      <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+      <a href="Webboard_Social.php">Social Technology</a>
+      <a href="Webboard_Science.php">Science</a>
+       <a href="Webboard_Agricultural.php">Agricutural</a>
+      <a href="Webboard_Engineer.php">Engineering</a>
+      <a href="Webboard_Medicine.php">Medicine</a>
+    </div>
+    </div> 
+
+    <a href="logout.php"> Login</a>
+  
+  </div>
+
+
+  <div class="header">
+      <h1>School of Agricultual</h1>
+      <p>All</p>
+  </div>
+
 
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 <div class="container">
    <br />
-   <h2 class="header">School of Agricultural</h2><br />
+  
   <div class="form-group">
     <div class="input-group">
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
@@ -90,7 +100,6 @@ $(document).ready(function(){
    <div id="result"></div>
   </div>
 </form>
-</td>
-</tr>
+
 </body>
 </html>

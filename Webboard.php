@@ -47,9 +47,27 @@ $(document).ready(function(){
 
 </head>
 <body>
+
   <div class="navbar">
     
-    <a href="Webboard.php">Public</a>
+  <div class="subnav">
+      <button class="subnavbtn">Public<i class="fa fa-caret-down"></i></button>
+
+      <div class="subnav-content">
+      <a href="Webboard.php">ALL</a>
+  <a href="Webboard_topic.php?Topic=Love">Love</a>
+  <a href="Webboard_topic.php?Topic=Education">Educations</a> 
+ <a href="Webboard_topic.php?Topic=Drama">Drama</a>
+  <a href="Webboard_topic.php?Topic=Health">Health</a> 
+ <a href="Webboard_topic.php?Topic=Game">Game</a>
+  <a href="Webboard_topic.php?Topic=idol">idol</a> 
+    </div>
+    </div> 
+
+
+   
+
+
     <div class="subnav">
       <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
       <div class="subnav-content">
@@ -58,20 +76,25 @@ $(document).ready(function(){
        <a href="Webboard_Agricultural.php">Agricutural</a>
       <a href="Webboard_Engineer.php">Engineering</a>
       <a href="Webboard_Medicine.php">Medicine</a>
-      </div>
-      <label class="lg"><a href="logout.php" >Logout</a></label>
+    </div>
     </div> 
+
+    <a href="logout.php"> Login</a>
+  
   </div>
 
 
-
+  <div class="header">
+      <h1>SUT Webboard</h1>
+      <p>Add new post</p>
+  </div>
 
 
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
+
 <div class="container">
-   <br />
-   <h2 class="header">SUT Webboard</h2><br />
-   
+
+
   <div class="form-group">
     <div class="input-group">
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>

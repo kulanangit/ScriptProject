@@ -4,13 +4,14 @@
 <html>
 <head>
 <title>ThaiCreate.Com</title>
-<link rel="stylesheet" type="text/css" href="Webboard.css"> 
-<link rel="stylesheet" type="text/css" href="topbar.css"> 
-<!-- <link rel="stylesheet" type="text/css" href="Navbar_cat.css">  -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> -->
+<link rel="stylesheet" type="text/css" href="Navbar_cat.css"> 
+<link rel="stylesheet" type="text/css" href="Webboard.css">
 <script>
 $(document).ready(function(){
   
@@ -50,22 +51,27 @@ $(document).ready(function(){
 
 </head>
 <body>
-<nav role="navigation">
-  <ul>
-    <li><a href="Webboard.php">Public</a></li>
-    <li><a href="#">Major</a>
-      <ul class="dropdown">
-        <li><a href="Webboard_Social.php">Social Technology</a></li>
-        <li><a href="Webboard_Science.php">Science</a></li>
-        <li><a href="Webboard_Agricultural.php">Agricutural</a></li>
-        <li><a href="Webboard_Engineer.php">Engineering</a></li>
-        <li><a href="Webboard_Medicine.php">Medicine</a></li>
+
+<div class="navbar">
     
-      </ul>
-    </li>
- 
-  </ul>
-</nav>
+    <a href="Webboard.php">Public</a>
+    <div class="subnav">
+      <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+      <a href="Webboard_Social.php">Social Technology</a>
+      <a href="Webboard_Science.php">Science</a>
+       <a href="Webboard_Agricultural.php">Agricutural</a>
+      <a href="Webboard_Engineer.php">Engineering</a>
+      <a href="Webboard_Medicine.php">Medicine</a>
+      </div>
+     
+    
+    </div> 
+
+    <a href="logout.php"> Login</a>
+  </div>
+  </div>
+
 <br>
 <table class="center">
 <tr>
@@ -86,7 +92,12 @@ $(document).ready(function(){
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 <div class="container">
    <br />
-  <h2 class="header" id = "headtopic">Topic</h2><br />
+
+
+  <div class="header" >
+      <h2 id = "headtopic"  >Topic</h2>
+      <p>Add new post</p>
+  </div>
   <div class="form-group">
     <div class="input-group">
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
