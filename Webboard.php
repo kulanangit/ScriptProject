@@ -46,41 +46,40 @@ $(document).ready(function(){
 </script>
 
 </head>
-<body>
+<div class="navbar">
+    <a href="Webboard.php">Public</a>
+    <div class="subnav">
+      <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="#company">Social Technology</a>
+        <a href="#team">Scienc</a>
+        <a href="#careers">Agricutural</a>
+        <a href="Webboard_Engineer.php">Engineering</a>
+        <a href="Webboard_Medicine.php">Medicine</a>
+      </div>
+    </div> 
+    <div class="subnav">
+      <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="#bring">Bring</a>
+        <a href="#deliver">Deliver</a>
+        <a href="#package">Package</a>
+        <a href="#express">Express</a>
+      </div>
+    </div> 
+    <div class="subnav">
+      <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="#link1">Link 1</a>
+        <a href="#link2">Link 2</a>
+        <a href="#link3">Link 3</a>
+        <a href="#link4">Link 4</a>
+      </div>
+    </div>
+    <a href="logout.php" div="ltl">Logout</a>
+  </div>
 
-<nav role="navigation">
-  <ul>
-    <li><a href="Webboard.php">Public</a></li>
-    <li><a href="#">Major</a>
-      <ul class="dropdown">
-        <li><a href="Webboard_Social.php">Social Technology</a></li>
-        <li><a href="Webboard_Science.php">Science</a></li>
-        <li><a href="Webboard_Agricultural.php">Agricutural</a></li>
-        <li><a href="Webboard_Engineer.php">Engineering</a></li>
-        <li><a href="Webboard_Medicine.php">Medicine</a></li>
-    
-      </ul>
-    </li>
-    <li><a href="#">Topic</a></li>
-  </ul>
-</nav>
 
-<table class="center">
-<tr>
-    <td>
-      
-    <ul>
-    
-    <li><a href="Webboard_topic.php?Topic=Love">Love</a></li>
-  <li> <a href="Webboard_topic.php?=Education">Educations</a> </li>
-  <li><a href="Webboard_topic.php?Topic=Drama">Drama</a></li>
-  <li> <a href="Webboard_topic.php?Topic=Health">Health</a> </li>
-  <li><a href="Webboard_topic.php?Topic=Game">Game</a></li>
-  <li> <a href="Webboard_topic.php?Topic=idol">idol</a> </li>
-</ul>
-</td>
-<td>
-<a href="logout.php" div="ltl">Logout</a>
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 <div class="container">
    <br />
@@ -103,3 +102,6 @@ $(document).ready(function(){
 </table>
 </body>
 </html>
+
+
+
