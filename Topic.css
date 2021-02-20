@@ -1,0 +1,35 @@
+ul {
+    list-style-type: none;
+   
+    margin: 0;
+    padding: 0;
+    padding-left: 450px;
+    width: 100%;
+    background-color: #d3e4ee
+  }
+  li {
+    display: block;
+    float: left;
+
+  }
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+
+
+  /* Change the link color on hover */
+  li a:hover {
+    background-color: #a1cae2;
+    color: white;
+  }
+
+ .color {
+    background-color: #555;
+    color: white;
+  }
+ 
+ 
