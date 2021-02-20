@@ -1,50 +1,27 @@
-<?php
-session_start();
-
-
-error_reporting(0);
-ini_set('display_errors', 0); //hide error
-
-$connect=mysqli_connect("localhost", "root", "","helloboard_db");
-$connect->query("SET NAMES UTF8");
-$strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
-$result = mysqli_query($connect, $strSQL);
-?>
-
 <html>
 <head>
   <title>ThaiCreate.Com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> -->
   <link rel="stylesheet" type="text/css" href="Navbar_cat.css"> 
   <link rel="stylesheet" type="text/css" href="Webboard.css">
   <script>
+
   $(document).ready(function(){
   load_data();
   function load_data(query){
-    $.ajax({
-    url:"fetch.php",
-    method:"POST",
-    data:{query:query},
-    success:function(data)
-    {
+    $.ajax({url:"fetch.php", method:"POST", data:{query:query}, success:function(data){
       $('#result').html(data);
     }
     });
   }
-  $('#search_text').keyup(function(){
-    var search = $(this).val();
-    if(search != '')
-    {
-    load_data(search);
-    }
-    else
-    {
-    load_data();
-    }
-  });
+    $('#search_text').keyup(function(){
+        var search = $(this).val();
+        if(search != ''){
+            load_data(search);
+        }else{
+            load_data();
+        }
+    });
   });
   </script>
 </head>
@@ -77,7 +54,7 @@ $result = mysqli_query($connect, $strSQL);
         <a href="Webboard_Dentistry.php">Dentistry</a>
     </div>
     </div> 
-    <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
+    <a href="logout.php"> Login</a>
   </div>
 
 <table align="center">

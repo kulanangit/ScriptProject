@@ -57,7 +57,7 @@ body {
     outline: none;
   }
   
-  input[type=text] {
+  input [type=text] {
     float: right;
     width: 250px;
     padding: 5px 10px;

@@ -1,21 +1,19 @@
 .navbar {
   overflow: hidden;
   background-color: #34495E; 
-  width: auto;
 }
 .navbar a {
   float: center;
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 50px 50px;
+  padding: 10px 10px;
   text-decoration: none;
 }
 
 .subnav {
   float: center;
   overflow: hidden;
-
 }
 
 .subnav .subnavbtn {
@@ -23,7 +21,7 @@
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
-  padding: 50px 50px;
+  padding: 10px 10px;
   background-color: inherit;
   font-family: inherit;
   margin: 50px;
@@ -31,13 +29,12 @@
 
 .navbar a:hover, .subnav:hover .subnavbtn {
   background-color: #34495E;
-
 }
 
 .subnav-content {
   display: none;
   position:absolute;
-
+  left: 0;
   background-color: rgb(8, 41, 59);
   width:125px;
   z-index: 1;
@@ -51,7 +48,6 @@
 
 .subnav-content a:hover {
   background-color: #eee;
-  width: 100px;
   color: #34495E;
 }
 
