@@ -14,17 +14,13 @@
 
 <script>
 $(document).ready(function(){
-  
   var url = window.location.href;
   var res = /[^=]*$/.exec(url)[0];
  // alert(res);
   document.getElementById('headtopic').innerHTML = res;
-  
   load_data();
  load_data();
-
- function load_data(query)
- {
+ function load_data(query) {
   $.ajax({
    url:"Webboard_topic.php",
    method:"POST",
@@ -41,8 +37,7 @@ $(document).ready(function(){
   {
    load_data(search);
   }
-  else
-  {
+  else{
    load_data();
   }
  });
@@ -69,12 +64,12 @@ $(document).ready(function(){
         <a href="logout.php"> Logout</a>
       </div>
   </div>
-<table style="width: 100%">
+<table align="center">
 <tr>
   <div class="header">
-    <h1>School of Social Technology</h1>
-      <h2 id = "headtopic" >Topic</h2>
-      <p> <?php '$_GET["Topic"]' ?></p>
+      <h1>School of Social Technology</h1>
+      <p id = "headtopic" >Topic</p>
+      <?php '$_GET["Topic"]' ?>
   </div>
   </tr>
   <tr>
@@ -85,7 +80,7 @@ $(document).ready(function(){
         <li><a href="Webboard_topic_Soc.php?Topic=Drama">Drama</a></li>
         <li> <a href="Webboard_topic_Soc.php?Topic=Health">Health</a> </li>
         <li><a href="Webboard_topic_Soc.php?Topic=Game">Game</a></li>
-        <li> <a href="Webboard_topic_Soc.php?Topic=idol">Idol</a> </li>
+        <li> <a href="Webboard_topic_Soc.php?Topic=Idol">Idol</a> </li>
     </ul>
   </tr>
 </tr>
@@ -100,26 +95,23 @@ $(document).ready(function(){
       </div>
     </div>
   <div>
-  
   <?php session_start() ?>
-
 <?php
-
 //fetch.php
 $connect = mysqli_connect("localhost", "root", "", "helloboard_db");
 $output = '';
 if(isset($_POST["query"])){
     $search = mysqli_real_escape_string($connect, $_POST["query"]);
-    $query = "SELECT * FROM webboard WHERE Major = 'Agricultural'  AND  Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
+    $query = "SELECT * FROM webboard WHERE Major = 'Social'  AND  Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
 }
 else{
-    $query = "SELECT * FROM webboard WHERE  Major = 'Agricultural'  AND  Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
+    $query = "SELECT * FROM webboard WHERE  Major = 'Social'  AND  Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
 }
 $result = $connect->query($query);
 if(mysqli_num_rows($result) > 0){
  $output .= '
   <div class="table-responsive">
-   <table table style="width:100%">
+   <table style="width:100%">
     <tr>
      <th>QuestionID</th>
      <th>Question</th>
@@ -130,8 +122,7 @@ if(mysqli_num_rows($result) > 0){
      <th>Topic</th>
     </tr>
  ';
- while($row = mysqli_fetch_array($result))
- {
+ while($row = mysqli_fetch_array($result)){
   $output .= '
    <tr>
     <td>'.$row["QuestionID"].'</td>
@@ -146,8 +137,7 @@ if(mysqli_num_rows($result) > 0){
  }
  echo $output;
 }
-else
-{
+else{
  echo 'Data Not Found';
 }
 ?><!-- <div id="result"></div> -->

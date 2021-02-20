@@ -62,7 +62,8 @@ $(document).ready(function(){
   <table align="center">
 <tr>
   <div class="header">
-    <h1>School of Medicine</h1>
+    <h1>SUT WEBBOARD</h1>
+    <p>School of Medicine</p>
   </div>
 </tr>
 <tr>
@@ -73,7 +74,7 @@ $(document).ready(function(){
     <li><a href="Webboard_topic_Med.php?Topic=Drama">Drama</a></li>
     <li> <a href="Webboard_topic_Med.php?Topic=Health">Health</a> </li>
     <li><a href="Webboard_topic_Med.php?Topic=Game">Game</a></li>
-    <li> <a href="Webboard_topic_Med.php?Topic=idol">Idol</a> </li>
+    <li> <a href="Webboard_topic_Med.php?Topic=Idol">Idol</a> </li>
 </ul>
 </tr>
 <tr>

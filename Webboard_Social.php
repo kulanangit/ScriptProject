@@ -66,7 +66,8 @@ $(document).ready(function(){
   <table align="center">
 <tr>
   <div class="header">
-    <h1>School of Social Technology</h1>
+    <h1>SUT WEBBOARD</h1>
+    <p>School of Social Technology</p>
   </div>
   </tr>
 <tr >
@@ -77,7 +78,7 @@ $(document).ready(function(){
       <li><a href="Webboard_topic_Soc.php?Topic=Drama">Drama</a></li>
       <li><a href="Webboard_topic_Soc.php?Topic=Health">Health</a> </li>
       <li><a href="Webboard_topic_Soc.php?Topic=Game">Game</a></li>
-      <li><a href="Webboard_topic_Soc.php?Topic=idol">Idol</a> </li>
+      <li><a href="Webboard_topic_Soc.php?Topic=Idol">Idol</a> </li>
   </ul>
 </tr>
 <tr>
@@ -86,7 +87,7 @@ $(document).ready(function(){
    <div class="container">
       <div class="form-group">
         <div class="input-group">
-              <a class="button" href="NewQuestion.php">New Topic</a><br>
+              <a class="button" href="NewQuestion.php">New Topic</a>
               <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
               <label class="form-label" for="form1"></label>
     </div>

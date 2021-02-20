@@ -71,19 +71,20 @@ $(document).ready(function(){
 <table align="center">
   <tr >
     <div class="header">
-        <h2 id = "headtopic" >Topic</h2>
-        <p><?php '$_GET["Topic"]'?></p>
+        <h1>General</h1>
+        <p id = "headtopic" >Topic</p>
+        <?php '$_GET["Topic"]'?>
     </div>
   </tr>
   <tr > 
     <ul>
         <li><a href="Webboard.php">ALL</a></li>
         <li><a href="Webboard_topic.php?Topic=Love">Love</a></li>
-        <li> <a href="Webboard_topic.php?Topic=Education">Educations</a> </li>
+        <li><a href="Webboard_topic.php?Topic=Education">Educations</a> </li>
         <li><a href="Webboard_topic.php?Topic=Drama">Drama</a></li>
-        <li> <a href="Webboard_topic.php?Topic=Health">Health</a> </li>
+        <li><a href="Webboard_topic.php?Topic=Health">Health</a> </li>
         <li><a href="Webboard_topic.php?Topic=Game">Game</a></li>
-        <li> <a href="Webboard_topic.php?Topic=idol">Idol</a> </li>
+        <li><a href="Webboard_topic.php?Topic=Idol">Idol</a> </li>
     </ul>
   </tr>
   <tr >
@@ -147,7 +148,7 @@ $(document).ready(function(){
   }
   ?><!-- <div id="result"></div> -->
   </div>  
-  </div>
+</div>
 </form>
 </td>
 </tr>

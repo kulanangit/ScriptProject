@@ -65,7 +65,8 @@ $(document).ready(function(){
   <table align="center">
 <tr>
   <div class="header">
-    <h1>School of Dentistry</h1>
+    <h1>SUT WEBBOARD</h1>
+    <p>School of Dentistry</p>
   </div>
   </tr>
   <tr>
@@ -76,7 +77,7 @@ $(document).ready(function(){
         <li><a href="Webboard_topic_Agri.php?Topic=Drama">Drama</a></li>
         <li> <a href="Webboard_topic_Agri.php?Topic=Health">Health</a> </li>
         <li><a href="Webboard_topic_Agri.php?Topic=Game">Game</a></li>
-        <li> <a href="Webboard_topic_Agri.php?Topic=idol">Idol</a> </li>
+        <li> <a href="Webboard_topic_Agri.php?Topic=Idol">Idol</a> </li>
     </ul>
   </tr>
 <tr>

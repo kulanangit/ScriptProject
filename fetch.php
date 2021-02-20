@@ -36,7 +36,7 @@ if(mysqli_num_rows($result) > 0)
 {
  $output .= '
   <div class="table-responsive">
-   <table class="table table bordered">
+   <table style="width:100%">
     <tr>
      <th>QuestionID</th>
      <th>Question</th>

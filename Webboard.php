@@ -56,32 +56,32 @@ $(document).ready(function(){
           <a href="Webboard_topic.php?Topic=Drama">Drama</a>
           <a href="Webboard_topic.php?Topic=Health">Health</a> 
           <a href="Webboard_topic.php?Topic=Game">Game</a>
-          <a href="Webboard_topic.php?Topic=idol">Idol</a> 
+          <a href="Webboard_topic.php?Topic=Idol">Idol</a> 
     </div>
     </div> 
 <!-- ---------------------------------------- -->
     <div class="subnav">
       <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
-      <div class="subnav-content">
-        <a href="Webboard_Social.php">Social Technology</a>
-        <a href="Webboard_Science.php">Science</a>
-        <a href="Webboard_Agricultural.php">Agricutural</a>
-        <a href="Webboard_Engineer.php">Engineering</a>
-        <a href="Webboard_Medicine.php">Medicine</a>
-        <a href="Webboard_Medicine.php">Medicine</a>
-        <a href="Webboard_Nurse.php">Nurse</a>
-        <a href="Webboard_Dentistry.php">Dentistry</a>
+        <div class="subnav-content">
+          <a href="Webboard_Social.php">Social Technology</a>
+          <a href="Webboard_Science.php">Science</a>
+          <a href="Webboard_Agricultural.php">Agricutural</a>
+          <a href="Webboard_Engineer.php">Engineering</a>
+          <a href="Webboard_Medicine.php">Medicine</a>
+          <a href="Webboard_Nurse.php">Nurse</a>
+          <a href="Webboard_Dentistry.php">Dentistry</a>
+        </div>
+      </div> 
+      <a href="logout.php"> Logout</a>
     </div>
-    </div> 
-    <a href="logout.php"> Logout</a>
   </div>
-  </div>
-  <table align="center">
+<table align="center">
 <tr>
   <div class="header">
       <h1>SUT WEBBOARD</h1>
+      <p>Let's talk and discuss</p>
   </div>
-  </tr>
+</tr>
 <tr>
   <ul>
     <li><a href="Webboard_Social.php">ALL</a></li>
@@ -90,27 +90,26 @@ $(document).ready(function(){
     <li><a href="Webboard_topic_Soc.php?Topic=Drama">Drama</a></li>
     <li> <a href="Webboard_topic_Soc.php?Topic=Health">Health</a> </li>
     <li><a href="Webboard_topic_Soc.php?Topic=Game">Game</a></li>
-    <li> <a href="Webboard_topic_Soc.php?Topic=idol">Idol</a> </li>
-</ul>
+    <li><a href="Webboard_topic_Soc.php?Topic=idol">Idol</a> </li>
+  </ul>
 </tr>
 <tr>
-<td>
-<form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
-<div class="container">
-   <br />
-   <div class="container">
-    <div class="form-group">
-      <div class="input-group">
-            <a class="button" href="NewQuestion.php">New Topic</a>
-            <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
-            <label class="form-label" for="form1"></label>
+  <td>
+  <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
+  <div class="container">
+    <div class="container">
+      <div class="form-group">
+        <div class="input-group">
+              <a class="button" href="NewQuestion.php">New Topic</a>
+              <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
+              <label class="form-label" for="form1"></label>
+        </div>
       </div>
+      <div id="result"></div>
     </div>
-    <div id="result"></div>
-   </div>
-  </div>
-</form>
-</td>
+    </div>
+  </form>
+  </td>
 </tr>
 </body>
 </html>

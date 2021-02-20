@@ -52,93 +52,73 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="container">
-<div class="navbar">
-    
-    <a href="Webboard.php">Public</a>
-    <div class="subnav">
-      <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
-      <div class="subnav-content">
-      <a href="Webboard_Social.php">Social Technology</a>
-      <a href="Webboard_Science.php">Science</a>
-       <a href="Webboard_Agricultural.php">Agricutural</a>
-      <a href="Webboard_Engineer.php">Engineering</a>
-      <a href="Webboard_Medicine.php">Medicine</a>
-      <a href="Webboard_Dentistry.php">Dentistry</a>
-      <a href="Webboard_Nurse.php">Nurse</a>
-      </div>
-     
-    
-    </div> 
-
-    <a href="logout.php"> Logout</a>
+  <div class="navbar">
+      <a href="Webboard.php">Public</a>
+      <div class="subnav">
+        <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="Webboard_Social.php">Social Technology</a>
+          <a href="Webboard_Science.php">Science</a>
+          <a href="Webboard_Agricultural.php">Agricutural</a>
+          <a href="Webboard_Engineer.php">Engineering</a>
+          <a href="Webboard_Medicine.php">Medicine</a>
+          <a href="Webboard_Dentistry.php">Dentistry</a>
+          <a href="Webboard_Nurse.php">Nurse</a>
+        </div>
+      </div> 
+      <a href="logout.php"> Logout</a>
   </div>
-  </div>
-  <table style="width: 100%">
+</div>
+  <table align="center">
 <tr>
-  <div class="header">
-  <h1>School of Medicine</h1>
-   
-  <h2 id = "headtopic" >Topic</h2>
-      <p> <?php '$_GET["Topic"]' ?>
-</p>
+    <div class="header">
+      <h1>School of Medicine</h1>
+      <p id = "headtopic" >Topic</p>
+      <?php '$_GET["Topic"]' ?>
   </div>
-  </tr>
-  <tr>
-<tr>
-
-  <ul>
-    <li><a href="Webboard_Medicine.php">ALL</a></li>
-    <li><a href="Webboard_topic_med.php?Topic=Love">Love</a></li>
-  <li> <a href="Webboard_topic_Med.php?Topic=Education">Educations</a> </li>
-  <li><a href="Webboard_topic_Med.php?Topic=Drama">Drama</a></li>
-  <li> <a href="Webboard_topic_Med.php?Topic=Health">Health</a> </li>
-  <li><a href="Webboard_topic_Med.php?Topic=Game">Game</a></li>
-  <li> <a href="Webboard_topic_Med.php?Topic=idol">Idol</a> </li>
-</ul>
-
 </tr>
+<tr>
+    <ul>
+      <li><a href="Webboard_Medicine.php">ALL</a></li>
+      <li><a href="Webboard_topic_med.php?Topic=Love">Love</a></li>
+      <li><a href="Webboard_topic_Med.php?Topic=Education">Educations</a> </li>
+      <li><a href="Webboard_topic_Med.php?Topic=Drama">Drama</a></li>
+      <li><a href="Webboard_topic_Med.php?Topic=Health">Health</a> </li>
+      <li><a href="Webboard_topic_Med.php?Topic=Game">Game</a></li>
+      <li><a href="Webboard_topic_Med.php?Topic=Idol">Idol</a> </li>
+  </ul>
+</tr>
+<tr>
 <td>
-
-      
-    
-
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
-
-   <br />
-   <div class="container">
-  <div class="form-group">
-    <div class="input-group">
+  <div class="container">
+    <div class="form-group">
+      <div class="input-group">
+          <a class="button" href="NewQuestion.php">New Topic</a>
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
           <label class="form-label" for="form1"></label>
+      </div>
     </div>
-  </div>
-  <a class="button" href="NewQuestion.php">New Topic</a><br>
-  <br />
-  <?php session_start() ?>
-
+  <div>
+<?php session_start() ?>
 <?php
-
 //fetch.php
 $connect = mysqli_connect("localhost", "root", "", "helloboard_db");
 $output = '';
-if(isset($_POST["query"]))
-
-{
+if(isset($_POST["query"])){
     $search = mysqli_real_escape_string($connect, $_POST["query"]);
-    $query = "SELECT * FROM webboard WHERE Major = 'Agricultural'  AND  Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
+    $query = "SELECT * FROM webboard WHERE Major = 'Medicine'  AND  Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
 }
-else
-{
-    $query = "SELECT * FROM webboard WHERE  Major = 'Agricultural'  AND  Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
+else{
+    $query = "SELECT * FROM webboard WHERE  Major = 'Medicine'  AND  Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
 }
 
 $result = $connect->query($query);
 
-if(mysqli_num_rows($result) > 0)
-{
+if(mysqli_num_rows($result) > 0){
  $output .= '
   <div class="table-responsive">
-   <table table style="width:100%">
+   <table style="width:100%">
     <tr>
      <th>QuestionID</th>
      <th>Question</th>
@@ -149,8 +129,7 @@ if(mysqli_num_rows($result) > 0)
      <th>Topic</th>
     </tr>
  ';
- while($row = mysqli_fetch_array($result))
- {
+ while($row = mysqli_fetch_array($result)){
   $output .= '
    <tr>
     <td>'.$row["QuestionID"].'</td>
@@ -160,27 +139,20 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["View"].'</td>
     <td>'.$row["Reply"].'</td>
     <td >'.$row["Category"].'</td>
-
    </tr>
   ';
  }
  echo $output;
 }
-else
-{
+else{
  echo 'Data Not Found';
 }
-
-
 ?><!-- <div id="result"></div> -->
+  </div>  
   </div>
 </form>
 </td>
 </tr>
-
-
-
-
 </table>
 </body>
 </html>

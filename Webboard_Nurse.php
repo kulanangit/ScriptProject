@@ -45,18 +45,17 @@ $(document).ready(function(){
 <body>
 <div class="container">
 <div class="navbar">
-    
     <a href="Webboard.php">Public</a>
     <div class="subnav">
       <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
       <div class="subnav-content">
-      <a href="Webboard_Social.php">Social Technology</a>
-      <a href="Webboard_Science.php">Science</a>
-       <a href="Webboard_Agricultural.php">Agricutural</a>
-      <a href="Webboard_Engineer.php">Engineering</a>
-      <a href="Webboard_Medicine.php">Medicine</a>
-      <a href="Webboard_Dentistry.php">Dentistry</a>
-      <a href="Webboard_Nurse.php">Nurse</a>
+        <a href="Webboard_Social.php">Social Technology</a>
+        <a href="Webboard_Science.php">Science</a>
+        <a href="Webboard_Agricultural.php">Agricutural</a>
+        <a href="Webboard_Engineer.php">Engineering</a>
+        <a href="Webboard_Medicine.php">Medicine</a>
+        <a href="Webboard_Dentistry.php">Dentistry</a>
+        <a href="Webboard_Nurse.php">Nurse</a>
       </div>
     </div> 
     <a href="logout.php"> Logout</a>
@@ -65,7 +64,8 @@ $(document).ready(function(){
   <table align="center">
 <tr>
   <div class="header">
-  <h1>School of Nurse</h1>
+    <h1>SUT WEBBOARD</h1>
+    <p>School of Nurse</p>
   </div>
   </tr>
 <tr>
@@ -76,7 +76,7 @@ $(document).ready(function(){
     <li><a href="Webboard_topic_Nurse.php?Topic=Drama">Drama</a></li>
     <li><a href="Webboard_topic_Nurse.php?Topic=Health">Health</a> </li>
     <li><a href="Webboard_topic_Nurse.php?Topic=Game">Game</a></li>
-    <li><a href="Webboard_topic_Nurse.php?Topic=idol">Idol</a> </li>
+    <li><a href="Webboard_topic_Nurse.php?Topic=Idol">Idol</a> </li>
 </ul>
 </tr>
 <tr>
