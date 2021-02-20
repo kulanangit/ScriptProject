@@ -12,7 +12,7 @@ $result = mysqli_query($connect, $strSQL);
 ?>
 <html>
 <head>
-<title>SUT WEBBOARD</title>
+<title>ThaiCreate.Com</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,7 +31,7 @@ $(document).ready(function(){
  function load_data(query)
  {
   $.ajax({
-   url:"fetchSceince.php",
+   url:"fetchIdol.php",
    method:"POST",
    data:{query:query},
    success:function(data)
@@ -60,9 +60,9 @@ $(document).ready(function(){
 <div class="navbar">
     <a href="Webboard.php">Public</a>
     <div class="subnav">
-      <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
-      <div class="subnav-content">
-      <a href="Webboard_Social_Technology.php">Social Technology</a>
+        <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+        <a href="Webboard_Social_Technology.php">Social Technology</a>
         <a href="Webboard_Science.php">Science</a>
         <a href="Webboard_Agricultural.php">Agricutural</a>
         <a href="Webboard_Engineer.php">Engineering</a>
@@ -71,28 +71,29 @@ $(document).ready(function(){
         <a href="Webboard_Nurse.php">Nurse</a>
         <a href="Webboard_Public_Health.php">Public Health</a>
       </div>
-    </div>
+    </div> 
     <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
-    </div>
+  </div>
   </div>
   <table align="center">
 <tr>
-    <div class="header">
-      <h1>SUT WEBBOARD</h1>
-      <p>School of Science</p>
-    </div>
-</tr>
+  <div class="header">
+    <h1>SUT WEBBOARD</h1>
+    <p>Idol</p>
+  </div>
+  </tr>
+  <tr>
+      <ul>
+      <li><a href="Webboard.php">ALL</a></li>
+        <li><a href="Webboard_Love.php">Love</a></li>
+        <li> <a href="Webboard_Education.php">Educations</a> </li>
+        <li><a href="Webboard_Drama.php">Drama</a></li>
+        <li> <a href="Webboard_Health.php">Health</a> </li>
+        <li><a href="Webboard_Game.php">Game</a></li>
+        <li> <a href="Webboard_Idol.php">Idol</a> </li>
+    </ul>
+  </tr>
 <tr>
-    <ul>
-      <li><a href="Webboard_Science.php">ALL</a></li>
-      <li><a href="Webboard_topic_Sci.php?Topic=Love">Love</a></li>
-      <li> <a href="Webboard_topic_Sci.php?Topic=Education">Educations</a> </li>
-      <li><a href="Webboard_topic_Sci.php?Topic=Drama">Drama</a></li>
-      <li> <a href="Webboard_topic_Sci.php?Topic=Health">Health</a> </li>
-      <li><a href="Webboard_topic_Sci.php?Topic=Game">Game</a></li>
-      <li> <a href="Webboard_topic_Sci.php?Topic=Idol">Idol</a> </li>
-  </ul>
-</tr>
 <td>
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 <div class="container">
@@ -103,7 +104,6 @@ $(document).ready(function(){
           <label class="form-label" for="form1"></label>
     </div>
   </div>
-
    <div id="result"></div>
    </div>
   </div>

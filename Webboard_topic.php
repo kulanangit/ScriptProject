@@ -29,7 +29,7 @@ $(document).ready(function(){
  // alert(res);
   document.getElementById('headtopic').innerHTML = res;
   
-  load_data();
+  //load_data();
  load_data();
 
  function load_data(query) {
@@ -65,13 +65,14 @@ $(document).ready(function(){
       <div class="subnav">
           <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
           <div class="subnav-content">
-          <a href="Webboard_Social.php">Social Technology</a>
-          <a href="Webboard_Science.php">Science</a>
-          <a href="Webboard_Agricultural.php">Agricutural</a>
-          <a href="Webboard_Engineer.php">Engineering</a>
-          <a href="Webboard_Medicine.php">Medicine</a>
-          <a href="Webboard_Dentistry.php">Dentistry</a>
-          <a href="Webboard_Nurse.php">Nurse</a>
+          <a href="Webboard_Social_Technology.php">Social Technology</a>
+        <a href="Webboard_Science.php">Science</a>
+        <a href="Webboard_Agricultural.php">Agricutural</a>
+        <a href="Webboard_Engineer.php">Engineering</a>
+        <a href="Webboard_Medicine.php">Medicine</a>
+        <a href="Webboard_Dentistry.php">Dentistry</a>
+        <a href="Webboard_Nurse.php">Nurse</a>
+        <a href="Webboard_Public_Health.php">Public Health</a>
         </div>
       </div> 
       <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
@@ -103,7 +104,7 @@ $(document).ready(function(){
       <div class="form-group">
         <div class="input-group">
               <a class="button" href="NewQuestion.php">New Topic</a>
-              <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
+              <!-- <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/> -->
               <label class="form-label" for="form1"></label>
         </div>
       </div>
@@ -115,10 +116,10 @@ $(document).ready(function(){
   $output = '';
   if(isset($_POST["query"])){
       $search = mysqli_real_escape_string($connect, $_POST["query"]);
-      $query = "SELECT * FROM webboard WHERE    Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
+      $query = "SELECT * FROM webboard WHERE  Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
   }
   else{
-      $query = "SELECT * FROM webboard WHERE   Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
+      $query = "SELECT * FROM webboard WHERE  Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
   }
   $result = $connect->query($query);
   if(mysqli_num_rows($result) > 0){
@@ -155,7 +156,8 @@ $(document).ready(function(){
   else{
   echo 'Data Not Found';
   }
-  ?><!-- <div id="result"></div> -->
+  ?>
+  <!-- <div id="result"></div> -->
   </div>  
 </div>
 </form>

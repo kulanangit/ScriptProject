@@ -58,7 +58,8 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>
     <td>'.$row["Reply"].'</td>
-    <td >'.$row["Category"].'</td>
+    <td><a href="Webboard_'.$row["Category"].'.php">'.$row["Category"].'</a></td>
+ 
 
    </tr>
   ';

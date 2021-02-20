@@ -1,10 +1,24 @@
-<?php
+<?php 
 session_start();
+
+        error_reporting(0);
+        ini_set('display_errors', 0); //hide error
+
+        $conn=mysqli_connect("localhost", "root", "","helloboard_db");
+        $conn->query("SET NAMES UTF8");
+        $strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
+        $result = mysqli_query($conn, $strSQL);   
+
+        if($_SESSION['username'] == "")
+        {
+            echo "<center>Please Login!<center>";
+        }
+
 $date = date("Y-m-d H:i:s", time());
 
 $conn=mysqli_connect("localhost", "root", "","helloboard_db");
 $conn->query("SET NAMES UTF8");
-$insertsql="INSERT INTO report (rp_id,QuestionID,date) VALUES ('','".$_POST["q_id"]."','".$date."')";
+$insertsql="INSERT INTO report (rp_id,QuestionID,userName,date) VALUES ('','".$_POST["q_id"]."','".$_SESSION['username']."','".$date."')";
 $rs=$conn->query($insertsql);
         echo "<script 'text/JavaScript'>";
         echo "alert('Report successful!');";

@@ -31,7 +31,7 @@ $(document).ready(function(){
  // alert(res);
   document.getElementById('headtopic').innerHTML = res;
   
-  load_data();
+  //load_data();
  load_data();
 
  function load_data(query)
@@ -63,19 +63,24 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="container">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9ca91a0ec69eaf3c245c646cd84b0829e13e0a6f
 <div class="navbar">
     
     <a href="Webboard.php">Public</a>
     <div class="subnav">
       <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
       <div class="subnav-content">
-      <a href="Webboard_Social.php">Social Technology</a>
-      <a href="Webboard_Science.php">Science</a>
-       <a href="Webboard_Agricultural.php">Agricutural</a>
-      <a href="Webboard_Engineer.php">Engineering</a>
-      <a href="Webboard_Medicine.php">Medicine</a>
-      <a href="Webboard_Dentistry.php">Dentistry</a>
-      <a href="Webboard_Nurse.php">Nurse</a>
+      <a href="Webboard_Social_Technology.php">Social Technology</a>
+        <a href="Webboard_Science.php">Science</a>
+        <a href="Webboard_Agricultural.php">Agricutural</a>
+        <a href="Webboard_Engineer.php">Engineering</a>
+        <a href="Webboard_Medicine.php">Medicine</a>
+        <a href="Webboard_Dentistry.php">Dentistry</a>
+        <a href="Webboard_Nurse.php">Nurse</a>
+        <a href="Webboard_Public_Health.php">Public Health</a>
       </div>
      
     
@@ -85,6 +90,10 @@ $(document).ready(function(){
   </div>
   </div>
   <table style="width: 100%">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9ca91a0ec69eaf3c245c646cd84b0829e13e0a6f
 <tr>
   <div class="header">
       <h1>School of Science </h1>
@@ -110,7 +119,7 @@ $(document).ready(function(){
     <div class="form-group">
       <div class="input-group">
             <a class="button" href="NewQuestion.php">New Topic</a>
-            <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
+            <!-- <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/> -->
             <label class="form-label" for="form1"></label>
       </div>
   </div>

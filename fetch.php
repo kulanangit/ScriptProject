@@ -43,6 +43,7 @@ if(mysqli_num_rows($result) > 0)
      <th>View</th>
      <th>Reply</th>
      <th>Topic</th>
+     <th>Major</th>
     </tr>
  ';
  while($row = mysqli_fetch_array($result))
@@ -55,7 +56,9 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>
     <td>'.$row["Reply"].'</td>
-    <td >'.$row["Category"].'</td>
+    
+     <td><a href="Webboard_'.$row["Category"].'.php">'.$row["Category"].'</a></td>
+     <td><a href="Webboard_'.$row["Major"].'.php">'.$row["Major"].'</a></td>
    </tr>
   ';
  }

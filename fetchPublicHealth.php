@@ -7,15 +7,15 @@ ini_set('display_errors', 0); //hide error
 
 $connect=mysqli_connect("localhost", "root", "","helloboard_db");
 $connect->query("SET NAMES UTF8");
-// $strSQL1 = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
-// $result1 = mysqli_query($connect, $strSQL1);
+$strSQL1 = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
+$result1 = mysqli_query($connect, $strSQL1);
 
 
-// if($_SESSION['username'] == "")
-// {
-//     echo "<center>Please Login!<br><a href='login.htm'>Login</a><center>";
+if($_SESSION['username'] == "")
+{
+    echo "<center>Please Login!<br><a href='login.htm'>Login</a><center>";
 
-// } else {
+} else {
 
 //fetch.php
 
@@ -23,13 +23,13 @@ $output = '';
 if(isset($_POST["query"]))
 {
     $search = mysqli_real_escape_string($connect, $_POST["query"]);
-    $query = "SELECT * FROM webboard 
-                WHERE Major = 'Dentistry' AND  Question LIKE '%".$search."%' ";
+    $query = "SELECT * FROM webboard
+                WHERE Major = 'Public Health' AND  Question LIKE '%".$search."%' ";
 }
 else
 {
-    $query = "SELECT * FROM webboard 
-                WHERE Major = 'Dentistry' ORDER BY QuestionID ";
+    $query = " SELECT * FROM webboard 
+                WHERE Major = 'Public Health' ORDER BY QuestionID ";
 }
 
 $result = $connect->query($query);
@@ -38,7 +38,7 @@ if(mysqli_num_rows($result) > 0)
 {
  $output .= '
   <div class="table-responsive">
-   <table "style="width:100%">
+   <table style="width:100%">
     <tr>
      <th>QuestionID</th>
      <th>Question</th>
@@ -55,12 +55,11 @@ if(mysqli_num_rows($result) > 0)
    <tr>
     <td>'.$row["QuestionID"].'</td>
     <td><a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
-    <td>'.$row["Name"].'></td>
+    <td>'.$row["Name"].'</td>
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>
     <td>'.$row["Reply"].'</td>
     <td><a href="Webboard_'.$row["Category"].'.php">'.$row["Category"].'</a></td>
-   
     
    </tr>
   ';
@@ -71,5 +70,5 @@ else
 {
  echo 'Data Not Found';
 }
-// }
+}
 ?>

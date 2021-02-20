@@ -12,7 +12,7 @@ $result = mysqli_query($connect, $strSQL);
 ?>
 <html>
 <head>
-<title>SUT WEBBOARD</title>
+<title>ThaiCreate.Com</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,7 +31,7 @@ $(document).ready(function(){
  function load_data(query)
  {
   $.ajax({
-   url:"fetchSocial.php",
+   url:"fetchDrama.php",
    method:"POST",
    data:{query:query},
    success:function(data)
@@ -56,56 +56,56 @@ $(document).ready(function(){
 
 </head>
 <body>
-<body>
 <div class="container">
 <div class="navbar">
     <a href="Webboard.php">Public</a>
     <div class="subnav">
         <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
         <div class="subnav-content">
-          <a href="Webboard_Social.php">Social Technology</a>
-          <a href="Webboard_Science.php">Science</a>
-          <a href="Webboard_Agricultural.php">Agricutural</a>
-          <a href="Webboard_Engineer.php">Engineering</a>
-          <a href="Webboard_Medicine.php">Medicine</a>
-          <a href="Webboard_Dentistry.php">Dentistry</a>
-          <a href="Webboard_Nurse.php">Nurse</a>
-        </div>
-      </div> 
-      <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
-    </div>
+        <a href="Webboard_Social_Technology.php">Social Technology</a>
+        <a href="Webboard_Science.php">Science</a>
+        <a href="Webboard_Agricultural.php">Agricutural</a>
+        <a href="Webboard_Engineer.php">Engineering</a>
+        <a href="Webboard_Medicine.php">Medicine</a>
+        <a href="Webboard_Dentistry.php">Dentistry</a>
+        <a href="Webboard_Nurse.php">Nurse</a>
+        <a href="Webboard_Public_Health.php">Public Health</a>
+      </div>
+    </div> 
+    <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
+  </div>
   </div>
   <table align="center">
 <tr>
   <div class="header">
     <h1>SUT WEBBOARD</h1>
-    <p>School of Social Technology</p>
+    <p>Drama</p>
   </div>
   </tr>
-<tr >
-    <ul>
-      <li><a href="Webboard_Social.php">ALL</a></li>
-      <li><a href="Webboard_topic_Soc.php?Topic=Love">Love</a></li>
-      <li><a href="Webboard_topic_Soc.php?Topic=Education">Educations</a> </li>
-      <li><a href="Webboard_topic_Soc.php?Topic=Drama">Drama</a></li>
-      <li><a href="Webboard_topic_Soc.php?Topic=Health">Health</a> </li>
-      <li><a href="Webboard_topic_Soc.php?Topic=Game">Game</a></li>
-      <li><a href="Webboard_topic_Soc.php?Topic=Idol">Idol</a> </li>
-  </ul>
-</tr>
+  <tr>
+      <ul>
+        <li><a href="Webboard.php">ALL</a></li>
+        <li><a href="Webboard_Love.php">Love</a></li>
+        <li> <a href="Webboard_Education.php">Educations</a> </li>
+        <li><a href="Webboard_Drama.php">Drama</a></li>
+        <li> <a href="Webboard_Health.php">Health</a> </li>
+        <li><a href="Webboard_Game.php">Game</a></li>
+        <li> <a href="Webboard_Idol.php">Idol</a> </li>
+    </ul>
+  </tr>
 <tr>
 <td>
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
-   <div class="container">
-      <div class="form-group">
-        <div class="input-group">
-              <a class="button" href="NewQuestion.php">New Topic</a>
-              <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
-              <label class="form-label" for="form1"></label>
+<div class="container">
+  <div class="form-group">
+    <div class="input-group">
+          <a class="button" href="NewQuestion.php">New Topic</a>
+          <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
+          <label class="form-label" for="form1"></label>
     </div>
   </div>
    <div id="result"></div>
-  </div>
+   </div>
   </div>
 </form>
 </td>
