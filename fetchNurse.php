@@ -24,12 +24,12 @@ if(isset($_POST["query"]))
 {
     $search = mysqli_real_escape_string($connect, $_POST["query"]);
     $query = "SELECT * FROM webboard
-                WHERE w.Major = 'Nurse' AND  Question LIKE '%".$search."%' ";
+                WHERE Major = 'Nurse' AND  Question LIKE '%".$search."%' ";
 }
 else
 {
     $query = " SELECT * FROM webboard 
-                WHERE w.Major = 'Nurse' ORDER BY QuestionID ";
+                WHERE Major = 'Nurse' ORDER BY QuestionID ";
 }
 
 $result = $connect->query($query);
