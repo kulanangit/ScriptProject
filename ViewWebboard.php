@@ -51,7 +51,7 @@ if(isset($_GET["Action"]))
     <td width="253">View : <?=$objResult["View"];?> Reply : <?=$objResult["Reply"];?></td>
   </tr>
 </table>
-<form action="report.php" method="post" id="report">
+<form action="report.php" method="post">
 <table width="738">
   <tr align= "right">
     <input name="q_id" type="hidden" id="q_id" value="<?php echo $_GET["QuestionID"] ?>" size="50">
@@ -60,7 +60,7 @@ if(isset($_GET["Action"]))
     <input name="btnSave" type="submit" id="btnReport" value="Report">
   </tr>
 </table>
-
+</form>
 <br>
 <br>
 
