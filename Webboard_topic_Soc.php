@@ -63,6 +63,8 @@ $(document).ready(function(){
        <a href="Webboard_Agricultural.php">Agricutural</a>
       <a href="Webboard_Engineer.php">Engineering</a>
       <a href="Webboard_Medicine.php">Medicine</a>
+      <a href="Webboard_Dentistry.php">Dentistry</a>
+      <a href="Webboard_Nurse.php">Nurse</a>
       </div>
      
     
@@ -94,6 +96,7 @@ $(document).ready(function(){
   <li> <a href="Webboard_topic_Soc.php?Topic=Health">Health</a> </li>
   <li><a href="Webboard_topic_Soc.php?Topic=Game">Game</a></li>
   <li> <a href="Webboard_topic_Soc.php?Topic=idol">idol</a> </li>
+  
 </ul>
 
 </tr>

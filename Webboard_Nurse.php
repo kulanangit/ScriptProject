@@ -10,7 +10,6 @@
 <link rel="stylesheet" type="text/css" href="Navbar_cat.css"> 
 <link rel="stylesheet" type="text/css" href="Webboard.css">
 <link rel="stylesheet" type="text/css" href="Topic.css">
-
 <script>
 $(document).ready(function(){
 
@@ -19,7 +18,7 @@ $(document).ready(function(){
  function load_data(query)
  {
   $.ajax({
-   url:"fetchSocial.php",
+   url:"fetchNurse.php",
    method:"POST",
    data:{query:query},
    success:function(data)
@@ -43,8 +42,6 @@ $(document).ready(function(){
 </script>
 
 </head>
-<body>
-
 <body>
 <div class="container">
 <div class="navbar">
@@ -71,7 +68,7 @@ $(document).ready(function(){
   <table style="width: 100%">
 <tr>
   <div class="header">
-  <h1>School of Social Technology</h1>
+  <h1>School of Nurse</h1>
    
 
   </div>
@@ -80,24 +77,23 @@ $(document).ready(function(){
 <tr>
 
   <ul>
-    <li><a href="Webboard_Social.php">ALL</a></li>
-    <li><a href="Webboard_topic_Soc.php?Topic=Love">Love</a></li>
-  <li> <a href="Webboard_topic_Soc.php?Topic=Education">Educations</a> </li>
-  <li><a href="Webboard_topic_Soc.php?Topic=Drama">Drama</a></li>
-  <li> <a href="Webboard_topic_Soc.php?Topic=Health">Health</a> </li>
-  <li><a href="Webboard_topic_Soc.php?Topic=Game">Game</a></li>
-  <li> <a href="Webboard_topic_Soc.php?Topic=idol">idol</a> </li>
+    <li><a href="Webboard_Medicine.php">ALL</a></li>
+    <li><a href="Webboard_topic_Med.php?Topic=Love">Love</a></li>
+  <li> <a href="Webboard_topic_Med.php?Topic=Education">Educations</a> </li>
+  <li><a href="Webboard_topic_Med.php?Topic=Drama">Drama</a></li>
+  <li> <a href="Webboard_topic_Med.php?Topic=Health">Health</a> </li>
+  <li><a href="Webboard_topic_Med.php?Topic=Game">Game</a></li>
+  <li> <a href="Webboard_topic_Med.php?Topic=idol">idol</a> </li>
 </ul>
 
 </tr>
 <td>
 
 
-
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 <div class="container">
    <br />
-  
+
   <div class="form-group">
     <div class="input-group">
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
@@ -109,6 +105,8 @@ $(document).ready(function(){
    <div id="result"></div>
   </div>
 </form>
+
+
 
 </body>
 </html>

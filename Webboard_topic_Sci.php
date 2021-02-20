@@ -63,6 +63,8 @@ $(document).ready(function(){
        <a href="Webboard_Agricultural.php">Agricutural</a>
       <a href="Webboard_Engineer.php">Engineering</a>
       <a href="Webboard_Medicine.php">Medicine</a>
+      <a href="Webboard_Dentistry.php">Dentistry</a>
+      <a href="Webboard_Nurse.php">Nurse</a>
       </div>
      
     
