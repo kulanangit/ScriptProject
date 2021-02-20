@@ -3,14 +3,27 @@
 <title>ThaiCreate.Com</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<script type="text/javascript" src="Topic_bar.js"></script>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> -->
 <link rel="stylesheet" type="text/css" href="Navbar_cat.css"> 
 <link rel="stylesheet" type="text/css" href="Webboard.css">
+<link rel="stylesheet" type="text/css" href="Topic.css">
+
 
 <script>
+function bigImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+
+function normalImg(x) {
+  x.style.height = "32px";
+  x.style.width = "32px";
+
+
+
 $(document).ready(function(){
 
  load_data();
@@ -44,7 +57,6 @@ $(document).ready(function(){
 <body>
 
   <div class="navbar">
-    
   <div class="subnav">
       <button class="subnavbtn">Public<i class="fa fa-caret-down"></i></button>
 
@@ -75,19 +87,30 @@ $(document).ready(function(){
     </div> 
 
     <a href="logout.php"> Login</a>
-  
   </div>
 
-
+<table>
+<tr>
   <div class="header">
       <h1>School of Agricultual</h1>
       <p>All</p>
   </div>
+  </tr>
+  <tr>
+  <td>
 
-
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</td>
+<td>
+  
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 <div class="container">
-   <br />
+   <br/>
   
   <div class="form-group">
     <div class="input-group">
@@ -100,6 +123,8 @@ $(document).ready(function(){
    <div id="result"></div>
   </div>
 </form>
-
+</td>
+</tr>
+</table>
 </body>
 </html>
