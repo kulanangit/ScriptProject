@@ -12,7 +12,7 @@ $result = mysqli_query($conn, $sql1);
 $pw = md5($_POST['password']);
 if(mysqli_num_rows($result) == 0){ //dont have this username then insert
 
-$sql = "INSERT INTO user (user_id, username, password, role, image, major_id) 
+$sql = "INSERT INTO user (user_id, username, password, role, image, major) 
 VALUES (null,'".$_POST['username']."','".$pw."',0,'".$_POST['avatar']."','".$_POST['major']."')";
 
 if ($conn->query($sql) === TRUE) {
