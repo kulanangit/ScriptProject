@@ -102,6 +102,7 @@ $(document).ready(function(){
     </div>
   </div>
   <a class="button" href="NewQuestion.php">New Topic</a><br>
+  <a class="button" href="editForm.php">Edit</a><br>
   <br />
    <div id="result"></div>
   </div>

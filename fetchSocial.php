@@ -23,11 +23,18 @@ $output = '';
 if(isset($_POST["query"]))
 {
     $search = mysqli_real_escape_string($connect, $_POST["query"]);
-    $query = "SELECT * FROM webboard WHERE Major = 'Social' AND  Question LIKE '%".$search."%' ";
+    $query = "SELECT  w.QuestionID,w.CreateDate,w.Question,w.Details,w.View,w.Reply,w.Category,u.image,w.Major
+                FROM webboard w 
+                INNER JOIN user u
+                ON w.Name = u.username 
+                WHERE w.Major = 'Social' AND  Question LIKE '%".$search."%' ";
 }
 else
 {
-    $query = " SELECT * FROM webboard WHERE Major = 'Social' ORDER BY QuestionID ";
+    $query = " SELECT  w.QuestionID,w.CreateDate,w.Question,w.Details,w.View,w.Reply,w.Category,u.image,w.Major
+                FROM webboard w 
+                INNER JOIN user u
+                ON w.Name = u.username WHERE w.Major = 'Social' ORDER BY QuestionID ";
 }
 
 $result = $connect->query($query);
@@ -53,7 +60,7 @@ if(mysqli_num_rows($result) > 0)
    <tr>
     <td>'.$row["QuestionID"].'</td>
     <td><a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
-    <td>'.$row["Name"].'</td>
+    <td><img src='.$row["image"].' width="50"></td>
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>
     <td>'.$row["Reply"].'</td>
