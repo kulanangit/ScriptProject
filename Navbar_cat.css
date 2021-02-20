@@ -1,19 +1,23 @@
 .navbar {
   overflow: hidden;
-  background-color: #34495E; 
+  background-color: #fce38a;
+  width: auto;
+ 
 }
+
 .navbar a {
-  float: center;
+  float: left;
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 10px 10px;
+  padding: 14px 16px;
   text-decoration: none;
 }
 
 .subnav {
-  float: center;
+  float: left;
   overflow: hidden;
+
 }
 
 .subnav .subnavbtn {
@@ -21,36 +25,37 @@
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
-  padding: 10px 10px;
+  padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
-  margin: 50px;
+  margin: 0;
 }
 
 .navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: #34495E;
+  background-color: rgb(241, 154, 154);
+
 }
 
 .subnav-content {
   display: none;
   position:absolute;
-  left: 0;
+
   background-color: rgb(8, 41, 59);
-  width:125px;
+  width: 15%;
   z-index: 1;
 }
 
 .subnav-content a {
   float: center;
-  color: #34495E;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
 .subnav-content a:hover {
   background-color: #eee;
-  color: #34495E;
+  color: rgb(255, 255, 255);
 }
 
 .subnav:hover .subnav-content {
-  display:block;
+  display: block;
 }
