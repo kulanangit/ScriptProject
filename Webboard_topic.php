@@ -1,5 +1,13 @@
+<?php session_start();
+error_reporting(0);
+ini_set('display_errors', 0); //hide error
 
-<?php session_start();?>
+$connect=mysqli_connect("localhost", "root", "","helloboard_db");
+$connect->query("SET NAMES UTF8");
+$strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
+$result = mysqli_query($connect, $strSQL);
+?>
+
 <html>
 <head>
 <title>ThaiCreate.Com</title>
@@ -66,7 +74,7 @@ $(document).ready(function(){
           <a href="Webboard_Nurse.php">Nurse</a>
         </div>
       </div> 
-      <a href="logout.php" <?php if($_SESSION['username'] != null)  {echo "style='display: none;'";} ?>> Logout</a>
+      <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
     </div>
   </div>
 <table align="center">

@@ -1,14 +1,12 @@
-<?php
-session_start();
-
-
+<?php session_start();
 error_reporting(0);
 ini_set('display_errors', 0); //hide error
 
 $connect=mysqli_connect("localhost", "root", "","helloboard_db");
 $connect->query("SET NAMES UTF8");
-$strSQL1 = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
-$result1 = mysqli_query($connect, $strSQL1);
+$strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
+$result = mysqli_query($connect, $strSQL);
+
 
 
 if($_SESSION['username'] == "")
