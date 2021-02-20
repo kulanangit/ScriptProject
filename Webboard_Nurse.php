@@ -77,13 +77,13 @@ $(document).ready(function(){
 <tr>
 
   <ul>
-    <li><a href="Webboard_Medicine.php">ALL</a></li>
-    <li><a href="Webboard_topic_Med.php?Topic=Love">Love</a></li>
-  <li> <a href="Webboard_topic_Med.php?Topic=Education">Educations</a> </li>
-  <li><a href="Webboard_topic_Med.php?Topic=Drama">Drama</a></li>
-  <li> <a href="Webboard_topic_Med.php?Topic=Health">Health</a> </li>
-  <li><a href="Webboard_topic_Med.php?Topic=Game">Game</a></li>
-  <li> <a href="Webboard_topic_Med.php?Topic=idol">idol</a> </li>
+    <li><a href="Webboard_Nurse.php">ALL</a></li>
+    <li><a href="Webboard_topic_Nurse.php?Topic=Love">Love</a></li>
+  <li> <a href="Webboard_topic_Nurse.php?Topic=Education">Educations</a> </li>
+  <li><a href="Webboard_topic_Nurse.php?Topic=Drama">Drama</a></li>
+  <li> <a href="Webboard_topic_Nurse.php?Topic=Health">Health</a> </li>
+  <li><a href="Webboard_topic_Nurse.php?Topic=Game">Game</a></li>
+  <li> <a href="Webboard_topic_Nurse.php?Topic=idol">idol</a> </li>
 </ul>
 
 </tr>
