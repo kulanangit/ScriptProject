@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <?php
+error_reporting(0);
+ini_set('display_errors', 0); //hide error
+
 $conn=mysqli_connect("localhost", "root", "","helloboard_db");
 
 if(isset($_GET["Action"]))
@@ -24,6 +27,7 @@ if(isset($_GET["Action"]))
 </head>
 
 <body>
+
 <?php
     //*** Select Question ***//
     $strSQL = "SELECT * FROM webboard  WHERE QuestionID = '".$_GET["QuestionID"]."' ";
@@ -34,7 +38,6 @@ if(isset($_GET["Action"]))
     $strSQL = "UPDATE webboard SET View = View + 1 WHERE QuestionID = '".$_GET["QuestionID"]."' ";
     $objQuery = mysqli_query($conn,$strSQL);	
 ?>
-
 <center>
 <table width="738" border="1" cellpadding="1" cellspacing="1">
   <tr>
@@ -48,13 +51,16 @@ if(isset($_GET["Action"]))
     <td width="253">View : <?=$objResult["View"];?> Reply : <?=$objResult["Reply"];?></td>
   </tr>
 </table>
-
+<form action="report.php" method="post">
 <table width="738">
   <tr align= "right">
-    <a href="report.php">Report Post</a>
+    <input name="q_id" type="hidden" id="q_id" value="<?php echo $_GET["QuestionID"] ?>" size="50">
+    <input name="url" type="hidden" id="url" value="<?php echo $_SERVER['REQUEST_URI'] ?>" size="50">
+    <!--<a href="report.php">Report Post</a> -->
+    <input name="btnSave" type="submit" id="btnReport" value="Report">
   </tr>
 </table>
-
+</form>
 <br>
 <br>
 
@@ -81,7 +87,7 @@ while($objResult2 = mysqli_fetch_array($objQuery2))
 }
 ?>
 <form action="ViewWebboard.php?QuestionID=<?=$_GET["QuestionID"];?>&Action=Save" method="post" name="frmMain" id="frmMain">
-  <table width="738" border="1" cellpadding="1" cellspacing="1">
+<table width="738" border="1" cellpadding="1" cellspacing="1">
     <tr>
       <td width="78">Reply</td>
       <td><textarea name="txtDetails" cols="50" rows="5" id="txtDetails"></textarea></td>
