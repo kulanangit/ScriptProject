@@ -1,3 +1,23 @@
+<?php 
+session_start();
+
+
+        error_reporting(0);
+        ini_set('display_errors', 0); //hide error
+
+
+        $conn=mysqli_connect("localhost", "root", "","helloboard_db");
+        $conn->query("SET NAMES UTF8");
+        $strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
+        $result = mysqli_query($conn, $strSQL);
+
+
+        if($_SESSION['username'] == "")
+        {
+          echo "<center>Please Login!<br><a href='login.htm'>Login</a><center>";
+        }
+        
+?>
 <html>
 <head>
   <title>Add new question</title>
@@ -16,7 +36,7 @@
               <p1>Question</p1>
           </td>
           <td>
-              <p2><input name="txtQuestion" type="text" id="txtQuestion" value="" size="55" placeholder="Add your question here....."></p2>
+              <p2><input name="txtQuestion" type="text" id="txtQuestion" value="" size="55" placeholder="Add your question here....." <?php if($_SESSION['username'] == "")  {echo "disabled=\"disabled\"";} ?>></p2>
           </td>
       </tr>
       
@@ -26,7 +46,7 @@
           </td>
           <td>
           <div class="col-75">
-              <p2><textarea name="txtDetails" cols="50" rows="15" id="txtDetails" placeholder="Type your detail......"></textarea></p2>
+              <p2><textarea name="txtDetails" cols="50" rows="15" id="txtDetails" placeholder="Type your detail......" <?php if($_SESSION['username'] == "")  {echo "disabled=\"disabled\"";} ?>></textarea></p2>
           </div>
           </td>
       </tr>
@@ -35,13 +55,13 @@
             <p1>Name</p1>
           </td>
           <td>  
-            <p2><input name="txtName" type="text" id="txtName" value="" size="55" placeholder="Insert your avatar name...."></p2>
+            <p2><input name="txtName" type="text" id="txtName" value="<?php echo $_SESSION['username'] ?>" size="55" placeholder="Insert your avatar name...." disabled></p2>
           </td>
       </tr>        
     </table>
     <br>
     <div class="input-button" align="center">
-            <input name="btnSave" type="submit" id="btnSave" value="Submit">
+            <input name="btnSave" type="submit" id="btnSave" value="Submit" <?php if($_SESSION['username'] == "")  {echo "disabled=\"disabled\"";} ?>>
     <div>
   </form>
 </body>
