@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>Add new question</title>
-  <link rel="stylesheet" type="text/css" href="newquestion.css" > 
+  <link rel="stylesheet" type="text/css" href="newquestion.css"> 
 </head>
 <body>
   <form action="insertQuestion.php" method="post" name="frmMain" id="frmMain">

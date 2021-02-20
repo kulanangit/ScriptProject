@@ -9,7 +9,7 @@ $result = mysqli_query($connect, $strSQL);
 ?>
 <html>
 <head>
-<title>ThaiCreate.Com</title>
+<title>SUT WEBBOARD</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 

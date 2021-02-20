@@ -2,9 +2,7 @@
 <?php
 error_reporting(0);
 ini_set('display_errors', 0); //hide error
-
 $conn=mysqli_connect("localhost", "root", "","helloboard_db");
-
 if(isset($_GET["Action"]))
 {
   if($_GET["Action"] == "Save")
@@ -22,8 +20,10 @@ if(isset($_GET["Action"]))
 
 <html>
 <head>
-  <title>SUT-Webboard.Com</title>
+
+  <title>SUT WEBBOARD</title>
   <meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+  <link rel="stylesheet" type="text/css" href="viewwebboard.css">
 </head>
 
 <body>
@@ -39,20 +39,20 @@ if(isset($_GET["Action"]))
     $objQuery = mysqli_query($conn,$strSQL);	
 ?>
 <center>
-<table width="738" border="1" cellpadding="1" cellspacing="1">
+<table width="1000px" align="center" border="1" cellpadding="1" cellspacing="1">
   <tr>
     <td colspan="2"><center><h1><?=$objResult["Question"];?></h1></center></td>
   </tr>
   <tr>
-    <td height="53" colspan="2"><?=nl2br($objResult["Details"]);?></td>
+    <td colspan="2"><?=nl2br($objResult["Details"]);?></td>
   </tr>
   <tr>
-    <td width="397">Name : <?=$objResult["Name"];?> Create Date : <?=$objResult["CreateDate"];?></td>
-    <td width="253">View : <?=$objResult["View"];?> Reply : <?=$objResult["Reply"];?></td>
+    <td >Name : <?=$objResult["Name"];?> Create Date : <?=$objResult["CreateDate"];?></td>
+    <td >View : <?=$objResult["View"];?> Reply : <?=$objResult["Reply"];?></td>
   </tr>
 </table>
 <form action="report.php" method="post">
-<table width="738">
+<table >
   <tr align= "right">
     <input name="q_id" type="hidden" id="q_id" value="<?php echo $_GET["QuestionID"] ?>" size="50">
     <input name="url" type="hidden" id="url" value="<?php echo $_SERVER['REQUEST_URI'] ?>" size="50">
@@ -72,14 +72,14 @@ while($objResult2 = mysqli_fetch_array($objQuery2))
 {
 	$intRows++;
 ?> 
-<table width="738" border="1" cellpadding="1" cellspacing="1">
+<table width="1000px" align="center" border="1" cellpadding="1" cellspacing="1">
   <tr>
-    <td height="53" colspan="2">Comment <?=$intRows;?> : <?=nl2br($objResult2["Details"]);?></td>
+    <td  colspan="2">Comment <?=$intRows;?> : <?=nl2br($objResult2["Details"]);?></td>
   </tr>
   <tr>
-    <td width="397">Name :
+    <td >Name :
         <?=$objResult2["Name"];?></td>
-    <td width="253">Create Date :
+    <td >Create Date :
     <?=$objResult2["CreateDate"];?></td>
   </tr>
 </table><br>
@@ -87,14 +87,14 @@ while($objResult2 = mysqli_fetch_array($objQuery2))
 }
 ?>
 <form action="ViewWebboard.php?QuestionID=<?=$_GET["QuestionID"];?>&Action=Save" method="post" name="frmMain" id="frmMain">
-<table width="738" border="1" cellpadding="1" cellspacing="1">
+<table width="1000px" align="center" border="1" cellpadding="1" cellspacing="1">
     <tr>
-      <td width="78">Reply</td>
-      <td><textarea name="txtDetails" cols="50" rows="5" id="txtDetails"></textarea></td>
+      <td align="left">Reply</td>
+      <td><textarea name="txtDetails" id="txtDetails"></textarea></td>
     </tr>
     <tr>
-      <td width="78">Name</td>
-      <td width="647"><input name="txtName" type="text" id="txtName" value="" size="50"></td>
+      <td align="left">Name</td>
+      <td ><input name="txtName" type="text" id="txtName" value=""></td>
     </tr>
   </table>
   <br>

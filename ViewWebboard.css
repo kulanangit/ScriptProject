@@ -1,0 +1,62 @@
+    body {
+    font-family: Cursive, Helvetica, sans-serif;
+    margin: 0;
+    }
+    .content {padding:20px;}
+    table {
+      border-collapse:collapse;
+      padding-left: 20%;
+      padding-right: 20%;
+      font-family: Cursive, Helvetica, sans-serif;
+    }
+    th, td {
+      text-align: center;
+      padding: 12px;
+    }
+    tr:nth-child(even){background-color: #f2f2f2}
+    th {
+      background-color: #000000;
+      color: white;
+    }
+    input[type=text] ,textarea{
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    .box {
+      position:relative;
+    }
+    .box select {
+      background-color: white;
+      color: #000;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      -webkit-appearance: button;
+      appearance: button;
+      font-family: Cursive;
+      width: 100%;
+    }
+    .box::before {
+      content: "\f13a";
+      font-family: FontAwesome;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20%;
+      height: 100%;
+      text-align: center;
+      font-size: 28px;
+      line-height: 45px;
+      color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.1);
+      pointer-events: none;
+    }
+    .box:hover::before {
+      color: rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .box select option {
+      padding: 12px;
+    }
