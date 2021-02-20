@@ -9,6 +9,7 @@
 <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> -->
 <link rel="stylesheet" type="text/css" href="Navbar_cat.css"> 
 <link rel="stylesheet" type="text/css" href="Webboard.css">
+<link rel="stylesheet" type="text/css" href="Topic.css">
 <script>
 $(document).ready(function(){
 
@@ -42,7 +43,7 @@ $(document).ready(function(){
 
 </head>
 <body>
-
+<div class="container">
 <div class="navbar">
     
     <a href="Webboard.php">Public</a>
@@ -54,29 +55,38 @@ $(document).ready(function(){
        <a href="Webboard_Agricultural.php">Agricutural</a>
       <a href="Webboard_Engineer.php">Engineering</a>
       <a href="Webboard_Medicine.php">Medicine</a>
-</div>
+      </div>
+     
+    
     </div> 
 
-    <a href="logout.php"> Login</a>
+    <a href="logout.php"> Logout</a>
   </div>
   </div>
-
+  <table style="width: 100%">
+<tr>
   <div class="header">
-      <h1>Scool of Medicine</h1>
-      <p>Add new post</p>
+  <h1>School of Medicine</h1>
+   
+
   </div>
+  </tr>
+  <tr>
+<td>
 
-
-      
-    <ul>
-    <li><a href="Webboard_Medicine.php">ALL</a></li>
-    <li><a href="Webboard_topic_Med.php?Topic=Love">Love</a></li>
-  <li> <a href="Webboard_topic_Med.php?Topic=Education">Educations</a> </li>
-  <li><a href="Webboard_topic_Med.php?Topic=Drama">Drama</a></li>
-  <li> <a href="Webboard_topic_Med.php?Topic=Health">Health</a> </li>
-  <li><a href="Webboard_topic_Med.php?Topic=Game">Game</a></li>
-  <li> <a href="Webboard_topic_Med.php?Topic=idol">idol</a> </li>
+  <ul>
+    <li><a href="Webboard_Agricultural.php">ALL</a></li>
+    <li><a href="Webboard_topic_Agri.php?Topic=Love">Love</a></li>
+  <li> <a href="Webboard_topic_Agri.php?Topic=Education">Educations</a> </li>
+  <li><a href="Webboard_topic_Agri.php?Topic=Drama">Drama</a></li>
+  <li> <a href="Webboard_topic_Agri.php?Topic=Health">Health</a> </li>
+  <li><a href="Webboard_topic_Agri.php?Topic=Game">Game</a></li>
+  <li> <a href="Webboard_topic_Agri.php?Topic=idol">idol</a> </li>
 </ul>
+
+</td>
+<td>
+
 
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 <div class="container">

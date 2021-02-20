@@ -68,7 +68,7 @@ $(document).ready(function(){
     
     </div> 
 
-    <a href="logout.php"> Login</a>
+    <a href="logout.php"> Logout</a>
   </div>
   </div>
 
@@ -95,7 +95,7 @@ $(document).ready(function(){
 
 
   <div class="header" >
-      <h2 id = "headtopic"  >Topic</h2>
+      <h2 id = "headtopic" >Topic</h2>
       <p>Add new post</p>
   </div>
   <div class="form-group">

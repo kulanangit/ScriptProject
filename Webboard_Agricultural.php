@@ -3,7 +3,7 @@
 <title>ThaiCreate.Com</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="text/javascript" src="Topic_bar.js"></script>  
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> -->
@@ -11,19 +11,7 @@
 <link rel="stylesheet" type="text/css" href="Webboard.css">
 <link rel="stylesheet" type="text/css" href="Topic.css">
 
-
 <script>
-function bigImg(x) {
-  x.style.height = "64px";
-  x.style.width = "64px";
-}
-
-function normalImg(x) {
-  x.style.height = "32px";
-  x.style.width = "32px";
-
-
-
 $(document).ready(function(){
 
  load_data();
@@ -53,28 +41,14 @@ $(document).ready(function(){
  });
 });
 </script>
+
 </head>
 <body>
 
-  <div class="navbar">
-  <div class="subnav">
-      <button class="subnavbtn">Public<i class="fa fa-caret-down"></i></button>
-
-      <div class="subnav-content">
-      <a href="Webboard.php">ALL</a>
-  <a href="Webboard_topic.php?Topic=Love">Love</a>
-  <a href="Webboard_topic.php?Topic=Education">Educations</a> 
- <a href="Webboard_topic.php?Topic=Drama">Drama</a>
-  <a href="Webboard_topic.php?Topic=Health">Health</a> 
- <a href="Webboard_topic.php?Topic=Game">Game</a>
-  <a href="Webboard_topic.php?Topic=idol">idol</a> 
-    </div>
-    </div> 
-
-
-   
-
-
+<div class="container">
+<div class="navbar">
+    
+    <a href="Webboard.php">Public</a>
     <div class="subnav">
       <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
       <div class="subnav-content">
@@ -83,35 +57,42 @@ $(document).ready(function(){
        <a href="Webboard_Agricultural.php">Agricutural</a>
       <a href="Webboard_Engineer.php">Engineering</a>
       <a href="Webboard_Medicine.php">Medicine</a>
-    </div>
+      </div>
+     
+    
     </div> 
 
-    <a href="logout.php"> Login</a>
+    <a href="logout.php"> Logout</a>
+  </div>
   </div>
 
-<table>
+  <table style="width: 100%">
 <tr>
   <div class="header">
-      <h1>School of Agricultual</h1>
-      <p>All</p>
+  <h1>School of Agricultual</h1>
+  
   </div>
   </tr>
   <tr>
-  <td>
+<td>
 
-<ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+  <ul>
+    <li><a href="Webboard_Agricultural.php">ALL</a></li>
+    <li><a href="Webboard_topic_Agri.php?Topic=Love">Love</a></li>
+  <li> <a href="Webboard_topic_Agri.php?Topic=Education">Educations</a> </li>
+  <li><a href="Webboard_topic_Agri.php?Topic=Drama">Drama</a></li>
+  <li> <a href="Webboard_topic_Agri.php?Topic=Health">Health</a> </li>
+  <li><a href="Webboard_topic_Agri.php?Topic=Game">Game</a></li>
+  <li> <a href="Webboard_topic_Agri.php?Topic=idol">idol</a> </li>
 </ul>
+
 </td>
 <td>
-  
+
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
-<div class="container">
+
    <br/>
-  
+   
   <div class="form-group">
     <div class="input-group">
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>

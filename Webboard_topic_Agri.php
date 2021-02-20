@@ -10,10 +10,17 @@
 <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> -->
 <link rel="stylesheet" type="text/css" href="Navbar_cat.css"> 
 <link rel="stylesheet" type="text/css" href="Webboard.css">
+<link rel="stylesheet" type="text/css" href="Topic.css">
 
 <script>
 $(document).ready(function(){
-
+  
+  var url = window.location.href;
+  var res = /[^=]*$/.exec(url)[0];
+ // alert(res);
+  document.getElementById('headtopic').innerHTML = res;
+  
+  load_data();
  load_data();
 
  function load_data(query)
@@ -61,17 +68,23 @@ $(document).ready(function(){
     
     </div> 
 
-    <a href="logout.php"> Login</a>
+    <a href="logout.php"> Logout</a>
   </div>
   </div>
+  <table style="width: 100%">
+<tr>
   <div class="header">
-      <h1>School of Agrilcultural</h1>
-      <p>Add new post</p>
+  <h1>School of Agricultual</h1>
+   
+  <h2 id = "headtopic" >Topic</h2>
+      <p> <?php '$_GET["Topic"]' ?>
+</p>
   </div>
-]
+  </tr>
+  <tr>
+<td>
 
-      
-    <ul>
+  <ul>
     <li><a href="Webboard_Agricultural.php">ALL</a></li>
     <li><a href="Webboard_topic_Agri.php?Topic=Love">Love</a></li>
   <li> <a href="Webboard_topic_Agri.php?Topic=Education">Educations</a> </li>
@@ -81,6 +94,11 @@ $(document).ready(function(){
   <li> <a href="Webboard_topic_Agri.php?Topic=idol">idol</a> </li>
 </ul>
 
+</td>
+<td>
+
+      
+    
 
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 
