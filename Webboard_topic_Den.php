@@ -53,7 +53,6 @@ $(document).ready(function(){
 <body>
 <div class="container">
 <div class="navbar">
-    
     <a href="Webboard.php">Public</a>
     <div class="subnav">
       <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>

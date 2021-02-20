@@ -46,68 +46,55 @@ $(document).ready(function(){
 <body>
 <div class="container">
 <div class="navbar">
-    
     <a href="Webboard.php">Public</a>
     <div class="subnav">
       <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
       <div class="subnav-content">
-      <a href="Webboard_Social.php">Social Technology</a>
-      <a href="Webboard_Science.php">Science</a>
-       <a href="Webboard_Agricultural.php">Agricutural</a>
-      <a href="Webboard_Engineer.php">Engineering</a>
-      <a href="Webboard_Medicine.php">Medicine</a>
-      <a href="Webboard_Dentistry.php">Dentistry</a>
-      <a href="Webboard_Nurse.php">Nurse</a>
+        <a href="Webboard_Social.php">Social Technology</a>
+        <a href="Webboard_Science.php">Science</a>
+        <a href="Webboard_Agricultural.php">Agricutural</a>
+        <a href="Webboard_Engineer.php">Engineering</a>
+        <a href="Webboard_Medicine.php">Medicine</a>
+        <a href="Webboard_Dentistry.php">Dentistry</a>
+        <a href="Webboard_Nurse.php">Nurse</a>
       </div>
-     
-    
-    </div> 
-
+    </div>
     <a href="logout.php"> Logout</a>
+    </div>
   </div>
-  </div>
-  <table style="width: 100%">
+  <table align="center">
 <tr>
-  <div class="header">
-  <h1>School of Science</h1>
-   
- 
-  </div>
-  </tr>
-  <tr>
+    <div class="header">
+      <h1>School of Science</h1>
+    </div>
+</tr>
 <tr>
-
-  <ul>
-    <li><a href="Webboard_Science.php">ALL</a></li>
-    <li><a href="Webboard_topic_Sci.php?Topic=Love">Love</a></li>
-  <li> <a href="Webboard_topic_Sci.php?Topic=Education">Educations</a> </li>
-  <li><a href="Webboard_topic_Sci.php?Topic=Drama">Drama</a></li>
-  <li> <a href="Webboard_topic_Sci.php?Topic=Health">Health</a> </li>
-  <li><a href="Webboard_topic_Sci.php?Topic=Game">Game</a></li>
-  <li> <a href="Webboard_topic_Sci.php?Topic=idol">Idol</a> </li>
-</ul>
-
+    <ul>
+      <li><a href="Webboard_Science.php">ALL</a></li>
+      <li><a href="Webboard_topic_Sci.php?Topic=Love">Love</a></li>
+      <li> <a href="Webboard_topic_Sci.php?Topic=Education">Educations</a> </li>
+      <li><a href="Webboard_topic_Sci.php?Topic=Drama">Drama</a></li>
+      <li> <a href="Webboard_topic_Sci.php?Topic=Health">Health</a> </li>
+      <li><a href="Webboard_topic_Sci.php?Topic=Game">Game</a></li>
+      <li> <a href="Webboard_topic_Sci.php?Topic=idol">Idol</a> </li>
+  </ul>
 </tr>
 <td>
-
-
-
-
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 <div class="container">
-   <br />
-
   <div class="form-group">
     <div class="input-group">
+          <a class="button" href="NewQuestion.php">New Topic</a>
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
           <label class="form-label" for="form1"></label>
     </div>
   </div>
-  <a class="button" href="NewQuestion.php">New Topic</a><br>
-  <br />
+
    <div id="result"></div>
+   </div>
   </div>
 </form>
-
+</td>
+</tr>
 </body>
 </html>

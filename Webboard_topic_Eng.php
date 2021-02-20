@@ -170,8 +170,6 @@ else
 {
  echo 'Data Not Found';
 }
-
-
 ?><!-- <div id="result"></div> -->
   </div>
 </form>

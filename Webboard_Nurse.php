@@ -58,53 +58,43 @@ $(document).ready(function(){
       <a href="Webboard_Dentistry.php">Dentistry</a>
       <a href="Webboard_Nurse.php">Nurse</a>
       </div>
-     
-    
     </div> 
-
     <a href="logout.php"> Logout</a>
   </div>
   </div>
-  <table style="width: 100%">
+  <table align="center">
 <tr>
   <div class="header">
   <h1>School of Nurse</h1>
-   
-
   </div>
   </tr>
-  <tr>
 <tr>
-
   <ul>
     <li><a href="Webboard_Nurse.php">ALL</a></li>
     <li><a href="Webboard_topic_Nurse.php?Topic=Love">Love</a></li>
-  <li> <a href="Webboard_topic_Nurse.php?Topic=Education">Educations</a> </li>
-  <li><a href="Webboard_topic_Nurse.php?Topic=Drama">Drama</a></li>
-  <li> <a href="Webboard_topic_Nurse.php?Topic=Health">Health</a> </li>
-  <li><a href="Webboard_topic_Nurse.php?Topic=Game">Game</a></li>
-  <li> <a href="Webboard_topic_Nurse.php?Topic=idol">Idol</a> </li>
+    <li><a href="Webboard_topic_Nurse.php?Topic=Education">Educations</a> </li>
+    <li><a href="Webboard_topic_Nurse.php?Topic=Drama">Drama</a></li>
+    <li><a href="Webboard_topic_Nurse.php?Topic=Health">Health</a> </li>
+    <li><a href="Webboard_topic_Nurse.php?Topic=Game">Game</a></li>
+    <li><a href="Webboard_topic_Nurse.php?Topic=idol">Idol</a> </li>
 </ul>
-
 </tr>
+<tr>
 <td>
-
-
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 <div class="container">
   <div class="form-group">
     <div class="input-group">
+          <a class="button" href="NewQuestion.php">New Topic</a>
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
           <label class="form-label" for="form1"></label>
     </div>
   </div>
-  <a class="button" href="NewQuestion.php">New Topic</a><br>
-  <br />
    <div id="result"></div>
+   </div>
   </div>
 </form>
-
-
-
+</td>
+</tr>
 </body>
 </html>
