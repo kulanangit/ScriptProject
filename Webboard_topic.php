@@ -1,4 +1,5 @@
 
+<?php session_start();?>
 <html>
 <head>
 <title>ThaiCreate.Com</title>
@@ -65,7 +66,7 @@ $(document).ready(function(){
           <a href="Webboard_Nurse.php">Nurse</a>
         </div>
       </div> 
-      <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
+      <a href="logout.php" <?php if($_SESSION['username'] != null)  {echo "style='display: none;'";} ?>> Logout</a>
     </div>
   </div>
 <table align="center">
