@@ -82,19 +82,19 @@ $(document).ready(function(){
   </div>
   </tr>
   <tr>
-<td>
+<tr>
 
   <ul>
-    <li><a href="Webboard_Agricultural.php">ALL</a></li>
-    <li><a href="Webboard_topic_Agri.php?Topic=Love">Love</a></li>
-  <li> <a href="Webboard_topic_Agri.php?Topic=Education">Educations</a> </li>
-  <li><a href="Webboard_topic_Agri.php?Topic=Drama">Drama</a></li>
-  <li> <a href="Webboard_topic_Agri.php?Topic=Health">Health</a> </li>
-  <li><a href="Webboard_topic_Agri.php?Topic=Game">Game</a></li>
-  <li> <a href="Webboard_topic_Agri.php?Topic=idol">idol</a> </li>
+    <li><a href="Webboard_Science.php">ALL</a></li>
+    <li><a href="Webboard_topic_Sci.php?Topic=Love">Love</a></li>
+  <li> <a href="Webboard_topic_Sci.php?Topic=Education">Educations</a> </li>
+  <li><a href="Webboard_topic_Sci.php?Topic=Drama">Drama</a></li>
+  <li> <a href="Webboard_topic_Sci.php?Topic=Health">Health</a> </li>
+  <li><a href="Webboard_topic_Sci.php?Topic=Game">Game</a></li>
+  <li> <a href="Webboard_topic_Sci.php?Topic=idol">idol</a> </li>
 </ul>
 
-</td>
+</tr>
 <td>
 
       

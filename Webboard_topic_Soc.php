@@ -73,7 +73,9 @@ $(document).ready(function(){
   </div>
   <table style="width: 100%">
 <tr>
+
   <div class="header">
+
   <h1>School of Social Technology</h1>
    
   <h2 id = "headtopic" >Topic</h2>
@@ -82,19 +84,19 @@ $(document).ready(function(){
   </div>
   </tr>
   <tr>
-<td>
 
+  <tr>
   <ul>
-    <li><a href="Webboard_Agricultural.php">ALL</a></li>
-    <li><a href="Webboard_topic_Agri.php?Topic=Love">Love</a></li>
-  <li> <a href="Webboard_topic_Agri.php?Topic=Education">Educations</a> </li>
-  <li><a href="Webboard_topic_Agri.php?Topic=Drama">Drama</a></li>
-  <li> <a href="Webboard_topic_Agri.php?Topic=Health">Health</a> </li>
-  <li><a href="Webboard_topic_Agri.php?Topic=Game">Game</a></li>
-  <li> <a href="Webboard_topic_Agri.php?Topic=idol">idol</a> </li>
+    <li><a href="Webboard_Social.php">ALL</a></li>
+    <li><a href="Webboard_topic_Soc.php?Topic=Love">Love</a></li>
+  <li> <a href="Webboard_topic_Soc.php?Topic=Education">Educations</a> </li>
+  <li><a href="Webboard_topic_Soc.php?Topic=Drama">Drama</a></li>
+  <li> <a href="Webboard_topic_Soc.php?Topic=Health">Health</a> </li>
+  <li><a href="Webboard_topic_Soc.php?Topic=Game">Game</a></li>
+  <li> <a href="Webboard_topic_Soc.php?Topic=idol">idol</a> </li>
 </ul>
 
-</td>
+</tr>
 <td>
 
       
