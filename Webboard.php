@@ -2,6 +2,9 @@
 <head>
   <title>ThaiCreate.Com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> -->
   <link rel="stylesheet" type="text/css" href="Navbar_cat.css"> 
   <link rel="stylesheet" type="text/css" href="Webboard.css">
   <script>
@@ -70,7 +73,7 @@
 <div class="container">
   <div class="form-group">
     <div class="input-group">
-    <a class="button" href="NewQuestion.php">New Topic</a>
+          <a class="button" href="NewQuestion.php">New Topic</a>
           <a class="button" href="editForm.php">Edit</a>
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
           <label class="form-label" for="form1"></label>
@@ -81,6 +84,8 @@
   </div>
 </form>
 </td>
+</tr>
+<tr>
 </tr>
 </table>
 </body>
