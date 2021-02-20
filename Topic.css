@@ -1,6 +1,5 @@
 ul {
     list-style-type: none;
-   
     margin: 0;
     padding: 0;
     padding-left: 450px;
@@ -10,7 +9,6 @@ ul {
   li {
     display: block;
     float: left;
-
   }
   li a {
     display: block;

@@ -84,7 +84,7 @@ $(document).ready(function(){
   <li><a href="Webboard_topic_Sci.php?Topic=Drama">Drama</a></li>
   <li> <a href="Webboard_topic_Sci.php?Topic=Health">Health</a> </li>
   <li><a href="Webboard_topic_Sci.php?Topic=Game">Game</a></li>
-  <li> <a href="Webboard_topic_Sci.php?Topic=idol">idol</a> </li>
+  <li> <a href="Webboard_topic_Sci.php?Topic=idol">Idol</a> </li>
 </ul>
 
 </tr>
@@ -96,7 +96,7 @@ $(document).ready(function(){
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 <div class="container">
    <br />
-   
+
   <div class="form-group">
     <div class="input-group">
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>

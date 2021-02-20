@@ -1,23 +1,3 @@
-<?php 
-session_start();
-
-
-        error_reporting(0);
-        ini_set('display_errors', 0); //hide error
-
-
-        $conn=mysqli_connect("localhost", "root", "","helloboard_db");
-        $conn->query("SET NAMES UTF8");
-        $strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
-        $result = mysqli_query($conn, $strSQL);
-
-
-        if($_SESSION['username'] == "")
-        {
-          echo "<center>Please Login!<br><a href='login.htm'>Login</a><center>";
-        }
-        
-?>
 <html>
 <head>
   <title>Add new question</title>
@@ -29,8 +9,23 @@ session_start();
       <h1>SUT Webboard</h1>
       <p>Add new post</p>
   </div>
+  <?php 
+session_start();
+        error_reporting(0);
+        ini_set('display_errors', 0); //hide error
+        $conn=mysqli_connect("localhost", "root", "","helloboard_db");
+        $conn->query("SET NAMES UTF8");
+        $strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
+        $result = mysqli_query($conn, $strSQL);
+        if($_SESSION['username'] == "")
+        {
+          echo "<center><h2><b>Please Login!</b></h2>
+          <a href='login.htm'><h1><b>Login</b></h1></a><center>";
+        }
+?>
+
   <div class="content">
-    <table width="700px" align="center">
+    <table width="1000px" align="center">
       <tr>
           <td>
               <p1>Question</p1>

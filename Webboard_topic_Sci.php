@@ -93,7 +93,7 @@ $(document).ready(function(){
   <li><a href="Webboard_topic_Sci.php?Topic=Drama">Drama</a></li>
   <li> <a href="Webboard_topic_Sci.php?Topic=Health">Health</a> </li>
   <li><a href="Webboard_topic_Sci.php?Topic=Game">Game</a></li>
-  <li> <a href="Webboard_topic_Sci.php?Topic=idol">idol</a> </li>
+  <li> <a href="Webboard_topic_Sci.php?Topic=idol">Idol</a> </li>
 </ul>
 
 </tr>
@@ -105,7 +105,7 @@ $(document).ready(function(){
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 
    <br />
-   
+   <div class="container">
   <div class="form-group">
     <div class="input-group">
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
@@ -138,7 +138,7 @@ if(mysqli_num_rows($result) > 0)
 {
  $output .= '
   <div class="table-responsive">
-   <table class="table table bordered">
+   <table table style="width:100%">
     <tr>
      <th>QuestionID</th>
      <th>Question</th>

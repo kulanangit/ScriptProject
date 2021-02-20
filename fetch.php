@@ -13,7 +13,8 @@ $result = mysqli_query($connect, $strSQL);
 
 if($_SESSION['username'] == "")
 {
-    echo "<center>Please Login!<br><a href='login.htm'>Login</a><center>";
+    echo "<center><h2><b>Please Login!</b></h2>
+        <a href='login.htm'><h1><b>Login</b></h1></a><center>";
 } else {
 
 
