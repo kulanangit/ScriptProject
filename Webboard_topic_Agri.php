@@ -82,7 +82,7 @@ $(document).ready(function(){
   </div>
   </tr>
   <tr>
-<td>
+<tr>
 
   <ul>
     <li><a href="Webboard_Agricultural.php">ALL</a></li>
@@ -94,7 +94,7 @@ $(document).ready(function(){
   <li> <a href="Webboard_topic_Agri.php?Topic=idol">idol</a> </li>
 </ul>
 
-</td>
+</tr>
 <td>
 
       
@@ -157,7 +157,7 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>
     <td>'.$row["Reply"].'</td>
-    <td >'.$row["Category"].'</td>
+    <td ><a href="Webboard_topic.php?Topic='.$row["Category"].'">'.$row["Category"].'</a></td>
 
    </tr>
   ';

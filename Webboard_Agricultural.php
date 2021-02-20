@@ -74,7 +74,7 @@ $(document).ready(function(){
   </div>
   </tr>
   <tr>
-<td>
+<tr>
 
   <ul>
     <li><a href="Webboard_Agricultural.php">ALL</a></li>
@@ -86,7 +86,7 @@ $(document).ready(function(){
   <li> <a href="Webboard_topic_Agri.php?Topic=idol">idol</a> </li>
 </ul>
 
-</td>
+</tr>
 <td>
 
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">

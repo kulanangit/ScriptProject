@@ -114,6 +114,7 @@ $(document).ready(function(){
   </div>
   <a class="button" href="NewQuestion.php">New Topic</a><br>
   <br />
+  
   <?php session_start() ?>
 
 <?php
@@ -159,7 +160,7 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>
     <td>'.$row["Reply"].'</td>
-    <td >'.$row["Category"].'</td>
+    <td ><a href="Webboard_topic.php?Topic='.$row["Category"].'">'.$row["Category"].'</a></td>
 
    </tr>
   ';

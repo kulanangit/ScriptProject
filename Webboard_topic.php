@@ -1,6 +1,4 @@
 
-
- <?php session_start() ?>
 <html>
 <head>
 <title>ThaiCreate.Com</title>
@@ -12,15 +10,18 @@
 <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> -->
 <link rel="stylesheet" type="text/css" href="Navbar_cat.css"> 
 <link rel="stylesheet" type="text/css" href="Webboard.css">
+<link rel="stylesheet" type="text/css" href="Topic.css">
+
 <script>
 $(document).ready(function(){
   
-    var url = window.location.href;
-    var res = /[^=]*$/.exec(url)[0];
-   // alert(res);
-    document.getElementById('headtopic').innerHTML = res;
-    
-    load_data();
+  var url = window.location.href;
+  var res = /[^=]*$/.exec(url)[0];
+ // alert(res);
+  document.getElementById('headtopic').innerHTML = res;
+  
+  load_data();
+ load_data();
 
  function load_data(query)
  {
@@ -46,12 +47,11 @@ $(document).ready(function(){
   }
  });
 });
-
 </script>
 
 </head>
 <body>
-
+<div class="container">
 <div class="navbar">
     
     <a href="Webboard.php">Public</a>
@@ -71,15 +71,22 @@ $(document).ready(function(){
     <a href="logout.php"> Logout</a>
   </div>
   </div>
-
-<br>
-<table class="center">
+  <table style="width: 100%">
 <tr>
-    <td>
-      
-    <ul>
+  <div class="header">
+  
+   
+  <h2 id = "headtopic" >Topic</h2>
+      <p> <?php '$_GET["Topic"]' ?>
+</p>
+  </div>
+  </tr>
+  <tr>
+<tr>
+
+  <ul>
     <li><a href="Webboard.php">ALL</a></li>
-  <li><a href="Webboard_topic.php?Topic=Love">Love</a></li>
+    <li><a href="Webboard_topic.php?Topic=Love">Love</a></li>
   <li> <a href="Webboard_topic.php?Topic=Education">Educations</a> </li>
   <li><a href="Webboard_topic.php?Topic=Drama">Drama</a></li>
   <li> <a href="Webboard_topic.php?Topic=Health">Health</a> </li>
@@ -87,17 +94,16 @@ $(document).ready(function(){
   <li> <a href="Webboard_topic.php?Topic=idol">idol</a> </li>
 </ul>
 
-</td>
+</tr>
 <td>
+
+      
+    
+
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
-<div class="container">
+
    <br />
-
-
-  <div class="header" >
-      <h2 id = "headtopic" >Topic</h2>
-      <p>Add new post</p>
-  </div>
+   
   <div class="form-group">
     <div class="input-group">
           <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
@@ -106,10 +112,8 @@ $(document).ready(function(){
   </div>
   <a class="button" href="NewQuestion.php">New Topic</a><br>
   <br />
- 
-  </td>
-</tr>
-</table>
+  <?php session_start() ?>
+
 <?php
 
 //fetch.php
@@ -119,20 +123,12 @@ if(isset($_POST["query"]))
 
 {
     $search = mysqli_real_escape_string($connect, $_POST["query"]);
-    $query = "SELECT  w.QuestionID,w.CreateDate,w.Question,w.Details,w.View,w.Reply,w.Category,u.image
-              FROM webboard w 
-              INNER JOIN user u
-              ON w.Name = u.username  
-              WHERE Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
-    $string = $_GET['Topic'];
+    $query = "SELECT * FROM webboard WHERE    Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
 }
 else
 {
-    $query = "SELECT  w.QuestionID,w.CreateDate,w.Question,w.Details,w.View,w.Reply,w.Category,u.image
-              FROM webboard w 
-              INNER JOIN user u
-              ON w.Name = u.username  WHERE Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
-  }
+    $query = "SELECT * FROM webboard WHERE   Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
+}
 
 $result = $connect->query($query);
 
@@ -149,6 +145,7 @@ if(mysqli_num_rows($result) > 0)
      <th>View</th>
      <th>Reply</th>
      <th>Topic</th>
+     <th>   Major    </th>
     </tr>
  ';
  while($row = mysqli_fetch_array($result))
@@ -157,17 +154,18 @@ if(mysqli_num_rows($result) > 0)
    <tr>
     <td>'.$row["QuestionID"].'</td>
     <td><a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
-    <td><img src='.$row["image"].' width="50"></td>
+    <td>'.$row["Name"].'</td>
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>
     <td>'.$row["Reply"].'</td>
     <td >'.$row["Category"].'</td>
+    <td>'.$row["Major"].'</td>
+   
 
    </tr>
   ';
  }
  echo $output;
- 
 }
 else
 {
