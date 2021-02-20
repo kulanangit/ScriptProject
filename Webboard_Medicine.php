@@ -12,9 +12,7 @@
 <link rel="stylesheet" type="text/css" href="Topic.css">
 <script>
 $(document).ready(function(){
-
  load_data();
-
  function load_data(query)
  {
   $.ajax({
@@ -69,13 +67,10 @@ $(document).ready(function(){
 <tr>
   <div class="header">
   <h1>School of Medicine</h1>
-   
-
   </div>
   </tr>
   <tr>
 <tr>
-
   <ul>
     <li><a href="Webboard_Medicine.php">ALL</a></li>
     <li><a href="Webboard_topic_Med.php?Topic=Love">Love</a></li>
