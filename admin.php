@@ -5,9 +5,9 @@
         </center>
 
 </header>
-        <form action="delete_topic.php" method="get">
-        <form action="ban_user.php" method="get">
-        <form action="delete_user.php" method="get">
+<body>
+<form action="delete_topic.php" method="GET">
+        <!--<form action="delete_user.php" method="get">-->
 <?php 
 session_start();
 
@@ -37,23 +37,22 @@ session_start();
         else if($_SESSION['role'] != "0")
         {
         // get results from database
-        $sql="SELECT  r.rp_id r.post_id, r.date, p.title, p.detail, p.category_id, r.user_id, u.username
-                FROM post p 
+        $sql="SELECT  r.rp_id, r.QuestionID, r.date, p.Question, p.Details, p.Major, p.Category, r.userName, p.Name
+                FROM webboard p 
                 INNER JOIN report r
-                INNER JOIN user u
-                ON p.post_id = r.post_id 
-                AND r.user_id = u.user_id"; 
+                ON p.QuestionID = r.QuestionID
+                ORDER BY r.date";
                 $rs=$conn->query($sql);
 
     echo "<center><table border='1'>	
         <tr>
             <th width='150px'>date</th>
-            <th width='300px'>title</th>
+            <th width='300px'>question</th>
             <th width='400px'>detail</th>
+            <th width='150px'>major</th>
             <th width='150px'>category</th>
-            <th width='150px'>user id</th>
             <th width='150px'>username</th>
-            <th width='50px'></th>
+    
             <th width='50px'></th>
             <th width='50px'></th>
 	    </tr>";
@@ -62,26 +61,24 @@ session_start();
     // echo out the contents of each row into a table
     echo    "<tr>";
         echo    "<td>". $row['date'] ."</td>";
-        echo    "<td>". $row['title'] ."</td>";
-        echo    "<td>". $row['detail'] ."</td>";
-        echo    "<td>". $row['category_id'] ."</td>";
-        echo    "<td>". $row['user_id'] ."</td>";
-        echo    "<td>". $row['username'] ."</td>";
-        echo    "<td><a onClick=\"javascript: return confirm('Are you sure to delete this topic 
-                ".$row['title']."');\" href='delete_topic.php?id=".$row['post_id']."'>delete topic</a></td>";
-        echo    "<td><a onClick=\"javascript: return confirm('Are you sure ban this user? 
-                ".$row['user_id']."');\" href='ban_user.php?id=".$row['user_id']."'>ban</a></td>";
+        echo    "<td>". $row['Question'] ."</td>";
+        echo    "<td>". $row['Details'] ."</td>";
+        echo    "<td>". $row['Major'] ."</td>";
+        echo    "<td>". $row['Category'] ."</td>";
+        echo    "<td>". $row['userName'] ."</td>";
+        echo    "<td><a onClick=\"javascript: return confirm('Are you sure to delete #id ".$row['QuestionID']."');\" href='delete_topic.php?QuestionID=".$row['QuestionID']."'>Delete</a></td>";
         echo    "<td><a onClick=\"javascript: return confirm('Are you sure delete this user? 
-                ".$row['user_id']."');\" href='delete_user.php?id=".$row['user_id']."'>delete</a></td>";
+                ".$row['QuestionID']."');\" href='delete_user.php?id=".$row['QuestionID']."'>delete</a></td>";
         echo	"</tr>";
-        // $_SESSION['post_id']=$row['post_id'];
-        // $_SESSION['user_id']=$row['user_id'];
         }
         echo    "</table></center>";
     }
     $conn->close();
 }
 ?>
+<!--</form>-->
+</form>
+</body>
     <footer>
     <center>
         <h3> footer </h3>
