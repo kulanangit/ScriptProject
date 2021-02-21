@@ -115,10 +115,10 @@ $(document).ready(function(){
   $output = '';
   if(isset($_POST["query"])){
       $search = mysqli_real_escape_string($connect, $_POST["query"]);
-      $query = "SELECT * FROM webboard WHERE    Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
+      $query = "SELECT * FROM webboard WHERE  Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
   }
   else{
-      $query = "SELECT * FROM webboard WHERE   Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
+      $query = "SELECT * FROM webboard WHERE  Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
   }
   $result = $connect->query($query);
   if(mysqli_num_rows($result) > 0){
@@ -155,7 +155,8 @@ $(document).ready(function(){
   else{
   echo 'Data Not Found';
   }
-  ?><!-- <div id="result"></div> -->
+  ?>
+  <!-- <div id="result"></div> -->
   </div>  
 </div>
 </form>
