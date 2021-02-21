@@ -1,16 +1,17 @@
 body {
     font-family: Cursive, Helvetica, sans-serif;
     margin: 0;
-    color: #1abc9c;
+    color: #212F3C;
     background-color: #1abc9c;
     font-size: 15px;
+    
   }
   .header{
       padding-top: 10px;
       padding: 20px;
       margin-top: 0;
       text-align: center;
-      background: #1abc9c;
+      background: #212F3C;
       color: white;
       font-size: 20px;
       font-family: Cursive, Helvetica, sans-serif;
@@ -25,6 +26,7 @@ body {
       font-size: 15px;
   }
     table {
+        border-radius: 10px;
       padding-top: 10px;
       border-collapse:collapse;
       padding-left: 20%;
@@ -104,14 +106,22 @@ body {
       right: 0;
     }
     input{
+        font-size: 15px;
+        border: 1px;
         border-radius: 5px;
+        position: inherit;
+        font-family: Cursive;
+
     }
     select{
-        width: auto;
-        padding: 3px 3px;
-        border: 1px solid #ccc;
+        width: 220px;
+        padding: 2px 2px;
+        border: 1px rgb(0, 0, 0);
         border-radius: 4px;
-        background-color: #f2f2f2;
+        background-color: #ffffff;
+        font-family: Cursive;
+        position:inherit;
     }
- 
+
+
   

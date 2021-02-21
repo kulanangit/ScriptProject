@@ -6,16 +6,15 @@ body {
     font-size: 15px;
   }
   .header{
-      padding-top: 10px;
-      padding: 20px;
+      padding-top: 100px;
       margin-top: 0;
       text-align: center;
       background: #1abc9c;
       color: white;
-      font-size: 20px;
+      font-size: 30px;
       font-family: Cursive, Helvetica, sans-serif;
     }
-    .content {padding:20px;}
+    .content {padding:0px;}
   a{
     padding-left: 15%;
 
@@ -33,15 +32,15 @@ body {
     }
     th {
       text-align: center;
-      padding: 8px;
+      padding: 3px;
     }
     #btn{
       text-align: center;
-      padding: 8px;
+      padding:3px;
     }
     td{
       text-align: left;
-      padding: 8px;
+      padding: 3px;
     }
     
     
@@ -98,6 +97,13 @@ body {
       opacity: 1;
       right: 0;
     }
-    
+    input{
+      font-size: 15px;
+      border: 1px;
+      border-radius: 5px;
+      position: inherit;
+      font-family: Cursive;
+
+  }
  
   

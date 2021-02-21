@@ -33,24 +33,26 @@
             <h1>SUT WEBBOARD</h1>
             <p><b>Let's talk and discuss</b></p>
         </div>
+        <br/>
 <table align="center" border="0">
     <tr>
-        <td width="400px">    
+        <td width="600px" align="center">    
         <table align="center" border="0">
             <tr>
-                <td><p id ="pic2" ><img src="./images/img1.png" width="100" onclick="selectPhoto(0)"></p>
+                <td><p id ="pic2" ><img src="./images/img1.png" width="100" onclick="selectPhoto(1)"></p>
                 <input type= "hidden" id="hid" name="avatar" value = "./images/img1.png" ></td>
                 <td><p > <b>Select your avatar</b></p></td>
             </tr>
         </table>
+        <br/>
         <table border="0"  >
             <tr>
                  <!-- "padding: [top] [right] [bottom] [left]" -->
-              <td > Username:</td>
-              <td ><input type="text" id="username" name="username" placeholder="Username" pattern="^[a-z0-9_-]{5,15}$" required onBlur="checkAvailability()"><span id="user-availability-status" ><img src=''></span></td>
+              <td > Username </td>
+              <td ><input type="text" id="username" name="username" placeholder="Username" pattern="^[a-z0-9_-]{5,15}$" required onblur="checkAvailability()"><span id="user-availability-status" ><img src=''></span></td>
             </tr> 
-            <tr>
-                <td > Major:</td>
+            <tr >
+                <td > Major </td>
                 <td >
                 <select name="major" id="major" required>
                     <option disabled selected value="">Choose Major...</option >
@@ -134,7 +136,4 @@
         </td>
 </table>
     </body>
-        <center>
-            <footer> Footer </footer>
-        </center>
 </html>
