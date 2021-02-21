@@ -1,12 +1,16 @@
 <?php session_start();?>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    </head>
-                <center>
-                <h4> Log-in </h4>
-                </center>
+        
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="login.css">
+      </head>
+    
 <center>
+  <div class="header">
+    <h1>SUT WEBBOARD</h1>
+    <p><b>Let's talk and discuss</b></p>
+</div>
 <body>
       <form name="frmlogin"  method="post" action="check_user.php">
         <table border="0">
@@ -14,20 +18,18 @@
             <br><br>
             <tr>
                  <!-- "padding: [top] [right] [bottom] [left]" -->
-              <td style="padding: 0px 0px 0px 15px "> username:</td>
-              <td style="padding: 0px 0px 0px 15px "><input type="text" name="username" required></td>
+              <td > Username:</td>
+              <td ><input type="text" name="username" required></td>
             </tr>
             <tr>
-              <td style="padding: 0px 0px 0px 15px"> password:</td>
-              <td style="padding: 0px 0px 0px 15px"><input type="password" name="password" required></td>
+              <td > Password:</td>
+              <td ><input type="password" name="password" required></td>
             </tr>
-            <tr>
-                <td></td>
-                <td dir="rtl" style="padding: 15px 0px" ><a href="signup.htm">Sign Up</a></td>
+            <tr >
+                <td colspan="2" align="center" id="btn"><button class="button" type="submit"><span><b>Login</b></span></button></td>
               </tr>
-          
        </table>
-       <button type="submit">Login</button>
+       <a  href="signup.htm">Sign Up</a>
       </form>
 </body>
 </center>

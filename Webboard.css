@@ -15,6 +15,16 @@ body {
   }
   .content {padding:20px;}
 
+  .input-group input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border-right: 5px solid rgb(255, 145, 0);
+  }
+
   table {
     border-collapse:collapse;
     padding-left: 20%;
@@ -40,7 +50,7 @@ body {
   
   
   tr,td:nth-child(even){
-    background-color: #ffffff;
+    background-color: #ececec;
     
   }
   
@@ -68,5 +78,5 @@ body {
     box-sizing: border-box;
     text-decoration: none;
     border: none;
-    border-right: 5px solid rgb(255, 145, 0);
+    
   }
