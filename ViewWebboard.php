@@ -58,7 +58,7 @@ if(isset($_GET["Action"]))
     <input name="q_id" type="hidden" id="q_id" value="<?php echo $_GET["QuestionID"] ?>" size="50">
     <input name="url" type="hidden" id="url" value="<?php echo $_SERVER['REQUEST_URI'] ?>" size="50">
     <!--<a href="report.php">Report Post</a> -->
-    <input name="btnSave" type="submit" id="btnReport" value="Report">
+    <input name="btnSave" class="button" type="submit" id="btnReport" value="Report">
   </tr>
 </table>
 </form>
@@ -99,7 +99,7 @@ while($objResult2 = mysqli_fetch_array($objQuery2))
     </tr>
   </table>
   <br>
-  <input name="btnSave" type="submit" id="btnSave" value="Submit">
+  <input name="btnSave" class="button" type="submit" id="btnSave" value="Submit">
   <br><br><br><a href="Webboard.php">Back to Webboard</a> <br>
 </form>
 </body>
