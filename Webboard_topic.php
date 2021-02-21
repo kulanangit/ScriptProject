@@ -29,7 +29,7 @@ $(document).ready(function(){
  // alert(res);
   document.getElementById('headtopic').innerHTML = res;
   
-  load_data();
+  //load_data();
  load_data();
 
  function load_data(query) {

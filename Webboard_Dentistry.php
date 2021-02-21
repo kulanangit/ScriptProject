@@ -83,7 +83,7 @@ $(document).ready(function(){
   </tr>
   <tr>
       <ul>
-        <li><a href="Webboard_Agricultural.php">ALL</a></li>
+        <li><a href="Webboard_Dentistry.php">ALL</a></li>
         <li><a href="Webboard_topic_Agri.php?Topic=Love">Love</a></li>
         <li> <a href="Webboard_topic_Agri.php?Topic=Education">Educations</a> </li>
         <li><a href="Webboard_topic_Agri.php?Topic=Drama">Drama</a></li>

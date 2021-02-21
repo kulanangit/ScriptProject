@@ -63,24 +63,6 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="container">
-<<<<<<< HEAD
-  <div class="navbar"> 
-      <a href="Webboard.php">Public</a>
-      <div class="subnav">
-          <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
-          <div class="subnav-content">
-          <a href="Webboard_Social.php">Social Technology</a>
-          <a href="Webboard_Science.php">Science</a>
-          <a href="Webboard_Agricultural.php">Agricutural</a>
-          <a href="Webboard_Engineer.php">Engineering</a>
-          <a href="Webboard_Medicine.php">Medicine</a>
-          <a href="Webboard_Dentistry.php">Dentistry</a>
-          <a href="Webboard_Nurse.php">Nurse</a>
-        </div>
-      </div> 
-      <a href="logout.php"> Logout</a>
-    </div>
-=======
 <div class="navbar">
     
     <a href="Webboard.php">Public</a>
@@ -101,7 +83,6 @@ $(document).ready(function(){
 
     <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
   </div>
->>>>>>> b68f736096c019bf4f8d7f8a74e0399947e3a1a3
   </div>
 <table align="center">
 <tr>
