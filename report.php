@@ -14,6 +14,7 @@ session_start();
             echo "<center>Please Login!<center>";
         }
 
+date_default_timezone_set("Asia/Bangkok"); 
 $date = date("Y-m-d H:i:s", time());
 
 $conn=mysqli_connect("localhost", "root", "","helloboard_db");

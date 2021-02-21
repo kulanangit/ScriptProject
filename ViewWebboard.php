@@ -4,12 +4,14 @@ session_start();
 error_reporting(0);
 ini_set('display_errors', 0); //hide error
 $conn=mysqli_connect("localhost", "root", "","helloboard_db");
+date_default_timezone_set("Asia/Bangkok"); 
+$date = date("Y-m-d H:i:s", time());
 if(isset($_GET["Action"]))
 {
   if($_GET["Action"] == "Save")
   {
       //*** Insert Reply ***//
-      $strSQL = "INSERT INTO reply (QuestionID,CreateDate,Details,Name) VALUES('".$_GET["QuestionID"]."','".date("Y-m-d H:i:s")."','".$_POST["txtDetails"]."','".$_POST["txtName"]."')";
+      $strSQL = "INSERT INTO reply (QuestionID,CreateDate,Details,Name) VALUES('".$_GET["QuestionID"]."','".$date."','".$_POST["txtDetails"]."','".$_POST["txtName"]."')";
       $rs = mysqli_query($conn,$strSQL);
       
       //*** Update Reply ***//
@@ -53,12 +55,12 @@ if(isset($_GET["Action"]))
   </tr>
 </table>
 <form action="report.php" method="post">
-<table width="1000px" align="right" border="1" cellpadding="1" cellspacing="1">
-  <tr>
+<table >
+  <tr align= "right">
     <input name="q_id" type="hidden" id="q_id" value="<?php echo $_GET["QuestionID"] ?>" size="50">
     <input name="url" type="hidden" id="url" value="<?php echo $_SERVER['REQUEST_URI'] ?>" size="50">
     <!--<a href="report.php">Report Post</a> -->
-    <input name="btnSave" class="button" type="submit" id="btnReport" value="Report">
+    <input name="btnSave" type="submit" id="btnReport" value="Report">
   </tr>
 </table>
 </form>
@@ -67,7 +69,7 @@ if(isset($_GET["Action"]))
 
 <?php
 $intRows = 0;
-$strSQL2 = "SELECT * FROM reply  WHERE QuestionID = '".$_GET["QuestionID"]."' ";
+$strSQL2 = "SELECT * FROM reply  WHERE QuestionID = '".$_GET["QuestionID"]."' ORDER BY CreateDate";
 $objQuery2 = mysqli_query($conn,$strSQL2) or die ("Error Query [".$strSQL."]");
 while($objResult2 = mysqli_fetch_array($objQuery2))
 {
@@ -99,7 +101,7 @@ while($objResult2 = mysqli_fetch_array($objQuery2))
     </tr>
   </table>
   <br>
-  <input name="btnSave" class="button" type="submit" id="btnSave" value="Submit">
+  <input name="btnSave" type="submit" id="btnSave" value="Submit">
   <br><br><br><a href="Webboard.php">Back to Webboard</a> <br>
 </form>
 </body>
