@@ -4,16 +4,16 @@ ini_set('display_errors', 0); //hide error
 
 $connect=mysqli_connect("localhost", "root", "","helloboard_db");
 $connect->query("SET NAMES UTF8");
-// $strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
-// $result = mysqli_query($connect, $strSQL);
+$strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
+$result = mysqli_query($connect, $strSQL);
 
 
 
-// if($_SESSION['username'] == "")
-// {
-//     echo "<center>Please Login!<br><a href='login.htm'>Login</a><center>";
+if($_SESSION['username'] == "")
+{
+    echo "<center>Please Login!<br><a href='login.htm'>Login</a><center>";
 
-// } else {
+} else {
 
 //fetch.php
 $connect = mysqli_connect("localhost", "root", "", "helloboard_db");
@@ -43,6 +43,7 @@ if(mysqli_num_rows($result) > 0)
      <th>View</th>
      <th>Reply</th>
      <th>Topic</th>
+     <th>Major</th>
     </tr>
  ';
  while($row = mysqli_fetch_array($result))
@@ -55,7 +56,9 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>
     <td>'.$row["Reply"].'</td>
-    <td >'.$row["Category"].'</td>
+    
+     <td><a href="Webboard_'.$row["Category"].'.php">'.$row["Category"].'</a></td>
+     <td><a href="Webboard_'.$row["Major"].'.php">'.$row["Major"].'</a></td>
    </tr>
   ';
  }
@@ -64,6 +67,6 @@ if(mysqli_num_rows($result) > 0)
 else
 {
  echo 'Data Not Found';
-// }
+}
 }
 ?>

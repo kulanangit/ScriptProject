@@ -22,16 +22,13 @@ $result = mysqli_query($connect, $strSQL);
 <link rel="stylesheet" type="text/css" href="Navbar_cat.css"> 
 <link rel="stylesheet" type="text/css" href="Webboard.css">
 <link rel="stylesheet" type="text/css" href="Topic.css">
-
 <script>
 $(document).ready(function(){
-
  load_data();
-
  function load_data(query)
  {
   $.ajax({
-   url:"fetchDrama.php",
+   url:"fetchPublicHealth.php",
    method:"POST",
    data:{query:query},
    success:function(data)
@@ -74,25 +71,25 @@ $(document).ready(function(){
     </div> 
     <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
   </div>
-  </div>
+</div>
   <table align="center">
 <tr>
   <div class="header">
     <h1>SUT WEBBOARD</h1>
-    <p>Drama</p>
+    <p>School of Public Health</p>
   </div>
-  </tr>
-  <tr>
-      <ul>
-        <li><a href="Webboard.php">ALL</a></li>
-        <li><a href="Webboard_Love.php">Love</a></li>
-        <li> <a href="Webboard_Education.php">Educations</a> </li>
-        <li><a href="Webboard_Drama.php">Drama</a></li>
-        <li> <a href="Webboard_Health.php">Health</a> </li>
-        <li><a href="Webboard_Game.php">Game</a></li>
-        <li> <a href="Webboard_Idol.php">Idol</a> </li>
-    </ul>
-  </tr>
+</tr>
+<tr>
+  <ul>
+  <li><a href="Webboard_Public_Health.php">ALL</a></li>
+      <li><a href="Webboard_topic_PublicHealth.php?Topic=Love">Love</a></li>
+      <li><a href="Webboard_topic_PublicHealth.php?Topic=Education">Educations</a> </li>
+      <li><a href="Webboard_topic_PublicHealth.php?Topic=Drama">Drama</a></li>
+      <li><a href="Webboard_topic_PublicHealth.php?Topic=Health">Health</a> </li>
+      <li><a href="Webboard_topic_PublicHealth.php?Topic=Game">Game</a></li>
+      <li><a href="Webboard_topic_PublicHealth.php?Topic=Idol">Idol</a> </li>
+</ul>
+</tr>
 <tr>
 <td>
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
@@ -104,8 +101,8 @@ $(document).ready(function(){
           <label class="form-label" for="form1"></label>
     </div>
   </div>
-   <div id="result"></div>
-   </div>
+    <div id="result"></div>
+  </div>
   </div>
 </form>
 </td>

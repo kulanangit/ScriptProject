@@ -76,13 +76,13 @@ session_start();
             <select name="major">
               <option disabled selected>Choose Major...</option>
               <option value="Science">Science</option>
-              <option value="Social Technology">Social Technology</option>
+              <option value="Social_Technology">Social Technology</option>
               <option value="Agriculture">Agriculture</option>
               <option value="Medicine">Medicine</option>
               <option value="Nurse">Nurse</option>
               <option value="Engineer">Engineer</option>
-              <option value="Dentisty">Dentisty</option>
-              <option value="Public Health">Public Health</option>
+              <option value="Dentistry">Dentisty</option>
+              <option value="Public_Health">Public Health</option>
             </select>
             </div>
           </td>

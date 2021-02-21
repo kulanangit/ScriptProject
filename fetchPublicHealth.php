@@ -20,12 +20,16 @@ if($_SESSION['username'] == "")
 //fetch.php
 
 $output = '';
-if(isset($_POST["query"])){
+if(isset($_POST["query"]))
+{
     $search = mysqli_real_escape_string($connect, $_POST["query"]);
-    $query = "SELECT * FROM webboard WHERE  Category  = 'Idol' AND  Question LIKE '%".$search."%' ";
+    $query = "SELECT * FROM webboard
+                WHERE Major = 'Public Health' AND  Question LIKE '%".$search."%' ";
 }
-else{
-    $query = "SELECT * FROM webboard WHERE  Category  = 'Idol' ORDER BY QuestionID ";
+else
+{
+    $query = " SELECT * FROM webboard 
+                WHERE Major = 'Public Health' ORDER BY QuestionID ";
 }
 
 $result = $connect->query($query);
@@ -42,7 +46,7 @@ if(mysqli_num_rows($result) > 0)
      <th>CreateDate</th>
      <th>View</th>
      <th>Reply</th>
-     <th>Major</th>
+     <th>Topic</th>
     </tr>
  ';
  while($row = mysqli_fetch_array($result))
@@ -55,7 +59,8 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>
     <td>'.$row["Reply"].'</td>
-    <td><a href="Webboard_'.$row["Major"].'.php">'.$row["Major"].'</a></td>
+    <td><a href="Webboard_'.$row["Category"].'.php">'.$row["Category"].'</a></td>
+    
    </tr>
   ';
  }

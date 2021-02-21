@@ -62,13 +62,14 @@ $(document).ready(function(){
     <div class="subnav">
         <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
         <div class="subnav-content">
-        <a href="Webboard_Social.php">Social Technology</a>
+        <a href="Webboard_Social_Technology.php">Social Technology</a>
         <a href="Webboard_Science.php">Science</a>
         <a href="Webboard_Agricultural.php">Agricutural</a>
         <a href="Webboard_Engineer.php">Engineering</a>
         <a href="Webboard_Medicine.php">Medicine</a>
         <a href="Webboard_Dentistry.php">Dentistry</a>
         <a href="Webboard_Nurse.php">Nurse</a>
+        <a href="Webboard_Public_Health.php">Public Health</a>
       </div>
     </div> 
     <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
@@ -84,12 +85,12 @@ $(document).ready(function(){
   <tr>
       <ul>
         <li><a href="Webboard_Dentistry.php">ALL</a></li>
-        <li><a href="Webboard_topic_Agri.php?Topic=Love">Love</a></li>
-        <li> <a href="Webboard_topic_Agri.php?Topic=Education">Educations</a> </li>
-        <li><a href="Webboard_topic_Agri.php?Topic=Drama">Drama</a></li>
-        <li> <a href="Webboard_topic_Agri.php?Topic=Health">Health</a> </li>
-        <li><a href="Webboard_topic_Agri.php?Topic=Game">Game</a></li>
-        <li> <a href="Webboard_topic_Agri.php?Topic=Idol">Idol</a> </li>
+        <li><a href="Webboard_topic_Den.php?Topic=Love">Love</a></li>
+        <li> <a href="Webboard_topic_Den.php?Topic=Education">Educations</a> </li>
+        <li><a href="Webboard_topic_Den.php?Topic=Drama">Drama</a></li>
+        <li> <a href="Webboard_topic_Den.php?Topic=Health">Health</a> </li>
+        <li><a href="Webboard_topic_Den.php?Topic=Game">Game</a></li>
+        <li> <a href="Webboard_topic_Den.php?Topic=Idol">Idol</a> </li>
     </ul>
   </tr>
 <tr>

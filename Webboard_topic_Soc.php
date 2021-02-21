@@ -63,13 +63,14 @@ $(document).ready(function(){
         <div class="subnav">
             <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-            <a href="Webboard_Social.php">Social Technology</a>
-            <a href="Webboard_Science.php">Science</a>
-            <a href="Webboard_Agricultural.php">Agricutural</a>
-            <a href="Webboard_Engineer.php">Engineering</a>
-            <a href="Webboard_Medicine.php">Medicine</a>
-            <a href="Webboard_Dentistry.php">Dentistry</a>
-            <a href="Webboard_Nurse.php">Nurse</a>
+            <a href="Webboard_Social_Technology.php">Social Technology</a>
+        <a href="Webboard_Science.php">Science</a>
+        <a href="Webboard_Agricultural.php">Agricutural</a>
+        <a href="Webboard_Engineer.php">Engineering</a>
+        <a href="Webboard_Medicine.php">Medicine</a>
+        <a href="Webboard_Dentistry.php">Dentistry</a>
+        <a href="Webboard_Nurse.php">Nurse</a>
+        <a href="Webboard_Public_Health.php">Public Health</a>
           </div>
         </div> 
         <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
@@ -85,7 +86,7 @@ $(document).ready(function(){
   </tr>
   <tr>
     <ul>
-        <li><a href="Webboard_Social.php">ALL</a></li>
+        <li><a href="Webboard_Social_technology.php">ALL</a></li>
         <li><a href="Webboard_topic_Soc.php?Topic=Love">Love</a></li>
         <li> <a href="Webboard_topic_Soc.php?Topic=Education">Educations</a> </li>
         <li><a href="Webboard_topic_Soc.php?Topic=Drama">Drama</a></li>
@@ -101,7 +102,7 @@ $(document).ready(function(){
     <div class="form-group">
       <div class="input-group">
             <a class="button" href="NewQuestion.php">New Topic</a>
-            <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
+            <!-- <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/> -->
             <label class="form-label" for="form1"></label>
       </div>
     </div>
@@ -113,10 +114,10 @@ $connect = mysqli_connect("localhost", "root", "", "helloboard_db");
 $output = '';
 if(isset($_POST["query"])){
     $search = mysqli_real_escape_string($connect, $_POST["query"]);
-    $query = "SELECT * FROM webboard WHERE Major = 'Social'  AND  Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
+    $query = "SELECT * FROM webboard WHERE Major = 'Social_Technology'  AND  Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
 }
 else{
-    $query = "SELECT * FROM webboard WHERE  Major = 'Social'  AND  Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
+    $query = "SELECT * FROM webboard WHERE  Major = 'Social_Technology'  AND  Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
 }
 $result = $connect->query($query);
 if(mysqli_num_rows($result) > 0){

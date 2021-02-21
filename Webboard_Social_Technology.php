@@ -63,13 +63,14 @@ $(document).ready(function(){
     <div class="subnav">
         <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
         <div class="subnav-content">
-          <a href="Webboard_Social.php">Social Technology</a>
-          <a href="Webboard_Science.php">Science</a>
-          <a href="Webboard_Agricultural.php">Agricutural</a>
-          <a href="Webboard_Engineer.php">Engineering</a>
-          <a href="Webboard_Medicine.php">Medicine</a>
-          <a href="Webboard_Dentistry.php">Dentistry</a>
-          <a href="Webboard_Nurse.php">Nurse</a>
+        <a href="Webboard_Social_Technology.php">Social Technology</a>
+        <a href="Webboard_Science.php">Science</a>
+        <a href="Webboard_Agricultural.php">Agricutural</a>
+        <a href="Webboard_Engineer.php">Engineering</a>
+        <a href="Webboard_Medicine.php">Medicine</a>
+        <a href="Webboard_Dentistry.php">Dentistry</a>
+        <a href="Webboard_Nurse.php">Nurse</a>
+        <a href="Webboard_Public_Health.php">Public Health</a>
         </div>
       </div> 
       <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
@@ -84,7 +85,7 @@ $(document).ready(function(){
   </tr>
 <tr >
     <ul>
-      <li><a href="Webboard_Social.php">ALL</a></li>
+      <li><a href="Webboard_Social_Technology.php">ALL</a></li>
       <li><a href="Webboard_topic_Soc.php?Topic=Love">Love</a></li>
       <li><a href="Webboard_topic_Soc.php?Topic=Education">Educations</a> </li>
       <li><a href="Webboard_topic_Soc.php?Topic=Drama">Drama</a></li>
