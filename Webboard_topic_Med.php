@@ -82,8 +82,8 @@ $(document).ready(function(){
   </div>
   </div>
 </div>
-<div style="overflow-x:auto;>
-  <table align="center" class="ta">
+<div class="table-responsive">
+  <table align="center" >
 <tr>
     <div class="header">
       <h1>School of Medicine</h1>
@@ -168,6 +168,5 @@ else{
 </td>
 </tr>
 </table>
-</div>
 </body>
 </html>
