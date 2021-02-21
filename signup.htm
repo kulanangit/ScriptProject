@@ -12,9 +12,7 @@
     <script>
         var newPhoto = "";
         var btn = document.getElementById('submit');
-        var btn2 = document.getElementById('clear');
         btn.addEventListener('click', func);
-        btn2.addEventListener('click', clear);
         
      function selectPhoto (img){
           if(img == 1){
@@ -31,7 +29,6 @@
         document.getElementById("pic2").innerHTML = str;
         str2 = "./images/" + newPhoto + ".png";
         document.getElementById('hid').value = str2;
-        //document.getElementById('nameimg').value = newPhoto + ".jpg";
         
      };
      
@@ -39,11 +36,6 @@
         
         document.getElementById('theForm').submit('hid');
     };
-        /*  window.onload = function() {
-            str2 = "./avatar/" + newPhoto + ".jpg"; 
-            localStorage.setItem("storageName",str2);
-        };
-        */
 
     </script>
     <br>
@@ -71,7 +63,8 @@
             <tr>
                 <td style="padding: 15px 0px 0px 15px "> major:</td>
                 <td style="padding: 15px 0px 0px 15px ">
-                <select name="major" id="major" >
+                <select name="major" id="major" required>
+                    <option disabled selected value="">Choose Major...</option >
                     <option value="Science">Science</option>
                     <option value="Social Technology">Social Technology</option>
                     <option value="Agriculture">Agriculture</option>
@@ -132,8 +125,6 @@
          </script>
          <script type="text/javascript">
             function checkAvailability(){
-            $("#loaderIcon").show();
-            
             $.ajax({
                 type:"POST",
                 url:"check_username.php",

@@ -10,7 +10,7 @@ $sql = "DELETE FROM user WHERE username ='".$_GET['username']."'";
 
 if ($conn->query($sql) === TRUE) {
   echo "<script 'text/JavaScript'>";
-  echo "alert('user ID: '".$_GET['username']."' has been deleted!!');";
+  echo "alert('username: '".$_GET['username']."' has been deleted!!');";
   echo "</script>";
   echo "<meta http-equiv='refresh' content='0; URL=list_user.php'>";
 } else {

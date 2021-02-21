@@ -55,7 +55,7 @@ session_start();
         echo    "<td>". $row['user_ID'] ."</td>";
         echo    "<td>". $row['username'] ."</td>";
         echo    "<td>". $row['major'] ."</td>";
-        echo    "<td><a onClick=\"javascript: return confirm('Are you sure to delete username #id ".$row['username']."');\" href='delete_user.php?username=".$row['username']."'>Delete</a></td>";
+        echo    "<td><a onClick=\"javascript: return confirm('Are you sure to delete this username #username ".$row['username']."');\" href='delete_user.php?username=".$row['username']."'>Delete</a></td>";
         echo	"</tr>";
         }
         echo    "</table></center>";
@@ -65,6 +65,7 @@ session_start();
 ?>
 </form>
 </body>
+<a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
     <footer>
     <center>
         <h3> footer </h3>
