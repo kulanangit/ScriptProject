@@ -33,9 +33,10 @@ body {
 
   input[type=text] ,textarea{
     width: 100%;
-    padding: 12px;
+    padding: 8px 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 15px;
     resize: vertical;
   }
   
