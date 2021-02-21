@@ -4,16 +4,16 @@ ini_set('display_errors', 0); //hide error
 
 $connect=mysqli_connect("localhost", "root", "","helloboard_db");
 $connect->query("SET NAMES UTF8");
-$strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
-$result = mysqli_query($connect, $strSQL);
+// $strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
+// $result = mysqli_query($connect, $strSQL);
 
 
 
-if($_SESSION['username'] == "")
-{
-    echo "<center>Please Login!<br><a href='login.htm'>Login</a><center>";
+// if($_SESSION['username'] == "")
+// {
+//     echo "<center>Please Login!<br><a href='login.htm'>Login</a><center>";
 
-} else {
+// } else {
 
 //fetch.php
 $connect = mysqli_connect("localhost", "root", "", "helloboard_db");
@@ -64,6 +64,6 @@ if(mysqli_num_rows($result) > 0)
 else
 {
  echo 'Data Not Found';
-}
+// }
 }
 ?>

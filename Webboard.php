@@ -60,12 +60,13 @@ $(document).ready(function(){
       <button class="subnavbtn">Public<i class="fa fa-caret-down"></i></button>
       <div class="subnav-content">
           <a href="Webboard.php">ALL</a>
-          <a href="Webboard_topic.php?Topic=Love">Love</a>
-          <a href="Webboard_topic.php?Topic=Education">Educations</a> 
-          <a href="Webboard_topic.php?Topic=Drama">Drama</a>
-          <a href="Webboard_topic.php?Topic=Health">Health</a> 
-          <a href="Webboard_topic.php?Topic=Game">Game</a>
-          <a href="Webboard_topic.php?Topic=Idol">Idol</a> 
+   
+        <li><a href="Webboard_Love.php">Love</a></li>
+        <li> <a href="Webboard_Education.php">Educations</a> </li>
+        <li><a href="Webboard_Drama.php">Drama</a></li>
+        <li> <a href="Webboard_Health.php">Health</a> </li>
+        <li><a href="Webboard_Game.php">Game</a></li>
+        <li> <a href="Webboard_Idol.php">Idol</a> </li>
     </div>
     </div> 
 <!-- ---------------------------------------- -->
