@@ -12,9 +12,12 @@
     }
     th, td {
       
-      padding: 12px;
+      padding: 8px;
     }
     tr:nth-child(even){background-color: #f2f2f2}
+    #report{
+      text-align : right;
+    }
     th {
       background-color: #000000;
       color: rgb(255, 255, 255);
@@ -25,6 +28,15 @@
       border-radius: 4px;
       resize: vertical;
     }
+    input [type=submit] #btnReport{
+      float: right;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+
     .box {
       position:relative;
     }
@@ -62,28 +74,36 @@
       padding: 12px;
     }
     #btnReport{
-      right: 200px;
+      right:auto;
       background-color: #f85336;
       border: none;
       color: white;
-      padding: 15px 32px;
-      text-align: center;
-      
+      padding: 10px 32px;
+      text-align: right;
       display: inline-block;
-      font-size: 16px;
+      font-size: 14px;
       margin: 4px 2px;
       cursor: pointer;
+      border-radius: 12px;
     }
 
     .button {
       background-color: #4CAF50;
       border: none;
       color: white;
-      padding: 15px 32px;
+      padding: 10px 32px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
+      border-radius: 12px;
     }
+    #header{
+      background-color: #65b8c4f1;
+    }
+    #detail{
+      background-color: #b7dee4f1;
+    }
+    

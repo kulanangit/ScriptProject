@@ -1,3 +1,17 @@
+
+<?php 
+session_start();
+
+error_reporting(0);
+ini_set('display_errors', 0); //hide error
+
+
+$conn=mysqli_connect("localhost", "root", "","helloboard_db");
+$conn->query("SET NAMES UTF8");
+$strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
+$result = mysqli_query($conn, $strSQL);
+
+?>
 <html>
 <header>
         <center>
@@ -6,23 +20,9 @@
 
 </header>
 <body>
-<button onclick="location.href='list_user.php'">list users</button>
+<button onclick="location.href='list_user.php'" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>>list users</button>
 <form action="delete_topic.php" method="GET">
 <?php 
-session_start();
-
-
-        error_reporting(0);
-        ini_set('display_errors', 0); //hide error
-
-
-        $conn=mysqli_connect("localhost", "root", "","helloboard_db");
-        $conn->query("SET NAMES UTF8");
-        $strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
-        $result = mysqli_query($conn, $strSQL);
-
-
-        
 
         if($_SESSION['username'] == "")
         {
@@ -73,7 +73,8 @@ session_start();
 }
 ?>
 </form>
-</body>
+</body> 
+<a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
     <footer>
     <center>
         <h3> footer </h3>
