@@ -41,29 +41,32 @@ if(isset($_GET["Action"]))
     $strSQL = "UPDATE webboard SET View = View + 1 WHERE QuestionID = '".$_GET["QuestionID"]."' ";
     $objQuery = mysqli_query($conn,$strSQL);	
 ?>
-<center>
-<table width="1000px" align="center" border="1" cellpadding="1" cellspacing="1">
+<p></p>
+<table id="header" width="1000px" align="center" border="1" cellpadding="1" cellspacing="1">
   <tr>
-    <td colspan="2"><center><h1><?=$objResult["Question"];?></h1></center></td>
+    <td id="header" colspan="2"><center><h1><?=$objResult["Question"];?></h1></center></td>
   </tr>
   <tr>
-    <td colspan="2"><?=nl2br($objResult["Details"]);?></td>
+    <td id="detail" colspan="2"><?=nl2br($objResult["Details"]);?></td>
   </tr>
   <tr>
     <td >Name : <?=$objResult["Name"];?> Create Date : <?=$objResult["CreateDate"];?></td>
     <td >View : <?=$objResult["View"];?> Reply : <?=$objResult["Reply"];?></td>
   </tr>
 </table>
-<form action="report.php" method="post">
-<table >
-  <tr align= "right">
+<form id= "rp" action="report.php" method="post">
+<table>
+  <tr >
     <input name="q_id" type="hidden" id="q_id" value="<?php echo $_GET["QuestionID"] ?>" size="50">
     <input name="url" type="hidden" id="url" value="<?php echo $_SERVER['REQUEST_URI'] ?>" size="50">
     <!--<a href="report.php">Report Post</a> -->
-    <input name="btnSave" type="submit" id="btnReport" value="Report">
   </tr>
 </table>
 </form>
+<div class="btnRP">
+    <input class= "button" name="btnSave" type="submit" id="btnReport" value="Report" form="rp">
+    <br>
+</div>
 <br>
 <br>
 
@@ -75,14 +78,13 @@ while($objResult2 = mysqli_fetch_array($objQuery2))
 {
 	$intRows++;
 ?> 
-<table width="1000px" align="center" border="1" cellpadding="1" cellspacing="1">
-  <tr>
-    <td  colspan="2">Comment <?=$intRows;?> : <?=nl2br($objResult2["Details"]);?></td>
+<table class="replyData" width="1000px" align="center" border="1" cellpadding="1" cellspacing="1">
+  <tr > 
+    <td id="comment" colspan="2">Comment <?=$intRows;?> : <?=nl2br($objResult2["Details"]);?></td>
   </tr>
   <tr>
-    <td >Name :
-        <?=$objResult2["Name"];?></td>
-    <td >Create Date :
+    <td >Name  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:&nbsp <?=$objResult2["Name"];?></td>
+    <td align="right">Create Date :
     <?=$objResult2["CreateDate"];?></td>
   </tr>
 </table><br>
@@ -90,19 +92,19 @@ while($objResult2 = mysqli_fetch_array($objQuery2))
 }
 ?>
 <form action="ViewWebboard.php?QuestionID=<?=$_GET["QuestionID"];?>&Action=Save" method="post" name="frmMain" id="frmMain">
-<table width="1000px" align="center" border="1" cellpadding="1" cellspacing="1">
-    <tr>
-      <td align="left">Reply</td>
-      <td><textarea name="txtDetails" id="txtDetails"></textarea></td>
+<table class="reply" align="center" border="1" cellpadding="1" cellspacing="1">
+    <tr id="replyTxt">
+      <td width="50px">Reply</td>
+      <td ><textarea name="txtDetails" id="txtDetails"></textarea></td>
     </tr>
-    <tr>
-      <td align="left">Name</td>
+    <tr id="nameTxt">
+      <td >Name</td>
       <td ><input name="txtName" type="text" id="txtName" value=""></td>
     </tr>
   </table>
   <br>
-  <input name="btnSave" type="submit" id="btnSave" value="Submit">
-  <br><br><br><a href="Webboard.php">Back to Webboard</a> <br>
+  <center><input name="btnSave" class="button" type="submit" id="btnSave" value="Submit">
+  <br><br><a href="Webboard.php">Back to Webboard</a> <br></center>
 </form>
 </body>
 <?php mysqli_close($conn);?>
