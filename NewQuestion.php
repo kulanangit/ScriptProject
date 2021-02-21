@@ -92,7 +92,7 @@ session_start();
     <br>
      <br>
     <div class="input-button" align="center">
-            <input name="btnSave" type="submit" id="btnSave" value="Submit" <?php if($_SESSION['username'] == "")  {echo "disabled=\"disabled\"";} ?>>
+            <input name="btnSave" class="button" type="submit" id="btnSave" value="Submit" <?php if($_SESSION['username'] == "")  {echo "disabled=\"disabled\"";} ?>>
     <div>
   </form>
 </body>

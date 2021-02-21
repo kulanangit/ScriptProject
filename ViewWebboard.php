@@ -53,8 +53,8 @@ if(isset($_GET["Action"]))
   </tr>
 </table>
 <form action="report.php" method="post">
-<table >
-  <tr align= "right">
+<table width="1000px" align="right" border="1" cellpadding="1" cellspacing="1">
+  <tr>
     <input name="q_id" type="hidden" id="q_id" value="<?php echo $_GET["QuestionID"] ?>" size="50">
     <input name="url" type="hidden" id="url" value="<?php echo $_SERVER['REQUEST_URI'] ?>" size="50">
     <!--<a href="report.php">Report Post</a> -->
