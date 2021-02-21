@@ -82,7 +82,8 @@ $(document).ready(function(){
   </div>
   </div>
 </div>
-  <table align="center">
+<div style="overflow-x:auto;>
+  <table align="center" class="ta">
 <tr>
     <div class="header">
       <h1>School of Medicine</h1>
@@ -90,7 +91,7 @@ $(document).ready(function(){
       <?php '$_GET["Topic"]' ?>
   </div>
 </tr>
-<tr>
+<tr > 
     <ul>
       <li><a href="Webboard_Medicine.php">ALL</a></li>
       <li><a href="Webboard_topic_med.php?Topic=Love">Love</a></li>
@@ -167,5 +168,6 @@ else{
 </td>
 </tr>
 </table>
+</div>
 </body>
 </html>

@@ -60,13 +60,12 @@ $(document).ready(function(){
       <button class="subnavbtn">Public<i class="fa fa-caret-down"></i></button>
       <div class="subnav-content">
           <a href="Webboard.php">ALL</a>
-   
-        <li><a href="Webboard_Love.php">Love</a></li>
-        <li> <a href="Webboard_Education.php">Educations</a> </li>
-        <li><a href="Webboard_Drama.php">Drama</a></li>
-        <li> <a href="Webboard_Health.php">Health</a> </li>
-        <li><a href="Webboard_Game.php">Game</a></li>
-        <li> <a href="Webboard_Idol.php">Idol</a> </li>
+            <li><a href="Webboard_Love.php">Love</a></li>
+            <li> <a href="Webboard_Education.php">Educations</a> </li>
+            <li><a href="Webboard_Drama.php">Drama</a></li>
+            <li> <a href="Webboard_Health.php">Health</a> </li>
+            <li><a href="Webboard_Game.php">Game</a></li>
+            <li> <a href="Webboard_Idol.php">Idol</a> </li>
     </div>
     </div> 
 <!-- ---------------------------------------- -->
@@ -105,7 +104,7 @@ $(document).ready(function(){
   </ul>
 </tr>
 <tr>
-  <td>
+  <td >
   <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
   <div class="container">
     <div class="container">

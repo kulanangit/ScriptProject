@@ -84,7 +84,7 @@ $(document).ready(function(){
     <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
   </div>
   </div>
-  <table style="width: 100%">
+  <table align="center">
 <tr>
   <div class="header">
       <h1>School of Science </h1>

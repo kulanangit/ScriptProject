@@ -50,15 +50,15 @@ if(mysqli_num_rows($result) > 0)
  {
   $output .= '
    <tr>
-    <td>'.$row["QuestionID"].'</td>
-    <td><a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
-    <td>'.$row["Name"].'</td>
-    <td>'.$row["CreateDate"].'</td>
-    <td>'.$row["View"].'</td>
+    <td aling="center">'.$row["QuestionID"].'</td>
+    <td ><a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
+    <td aling="center">'.$row["Name"].'</td>
+    <td aling="center">'.$row["CreateDate"].'</td>
+    <td aling="center">'.$row["View"].'</td>
     <td>'.$row["Reply"].'</td>
     
-     <td><a href="Webboard_'.$row["Category"].'.php">'.$row["Category"].'</a></td>
-     <td><a href="Webboard_'.$row["Major"].'.php">'.$row["Major"].'</a></td>
+     <td aling="center"><a href="Webboard_'.$row["Category"].'.php">'.$row["Category"].'</a></td>
+     <td aling="center"><a href="Webboard_'.$row["Major"].'.php">'.$row["Major"].'</a></td>
    </tr>
   ';
  }
