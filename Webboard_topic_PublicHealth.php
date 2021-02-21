@@ -31,13 +31,13 @@ $(document).ready(function(){
  // alert(res);
   document.getElementById('headtopic').innerHTML = res;
   
-  load_data();
+ // load_data();
  load_data();
 
  function load_data(query)
  {
   $.ajax({
-   url:"Webboard_topic_Den.php",
+   url:"Webboard_topic.php",
    method:"POST",
    data:{query:query},
    success:function(data)
@@ -63,7 +63,9 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="container">
+
 <div class="navbar">
+    
     <a href="Webboard.php">Public</a>
     <div class="subnav">
       <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
@@ -87,48 +89,50 @@ $(document).ready(function(){
 </div>
   <table align="center">
 <tr>
-  <div class="header">
-    <h1>School of Dentistry </h1>
-    <p id = "headtopic" >Topic</p>
-    <?php '$_GET["Topic"]' ?>
+    <div class="header">
+      <h1>School of Public Health</h1>
+      <p id = "headtopic" >Topic</p>
+      <?php '$_GET["Topic"]' ?>
   </div>
 </tr>
 <tr>
     <ul>
-      <li><a href="Webboard_Dentistry.php">ALL</a></li>
-      <li><a href="Webboard_topic_Den.php?Topic=Love">Love</a></li>
-      <li><a href="Webboard_topic_Den.php?Topic=Education">Educations</a> </li>
-      <li><a href="Webboard_topic_Den.php?Topic=Drama">Drama</a></li>
-      <li> <a href="Webboard_topic_Den.php?Topic=Health">Health</a> </li>
-      <li><a href="Webboard_topic_Den.php?Topic=Game">Game</a></li>
-      <li> <a href="Webboard_topic_Den.php?Topic=Idol">Idol</a> </li>
+      <li><a href="Webboard_Public_Health.php">ALL</a></li>
+      <li><a href="Webboard_topic_PublicHealth.php?Topic=Love">Love</a></li>
+      <li><a href="Webboard_topic_PublicHealth.php?Topic=Education">Educations</a> </li>
+      <li><a href="Webboard_topic_PublicHealth.php?Topic=Drama">Drama</a></li>
+      <li><a href="Webboard_topic_PublicHealth.php?Topic=Health">Health</a> </li>
+      <li><a href="Webboard_topic_PublicHealth.php?Topic=Game">Game</a></li>
+      <li><a href="Webboard_topic_PublicHealth.php?Topic=Idol">Idol</a> </li>
   </ul>
 </tr>
 <tr>
 <td>
 <form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
-   <div class="container">
+  <div class="container">
     <div class="form-group">
       <div class="input-group">
-            <a class="button" href="NewQuestion.php">New Topic</a>
-            <!-- <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/> -->
-            <label class="form-label" for="form1"></label>
+          <a class="button" href="NewQuestion.php">New Topic</a>
+          <!-- <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/> -->
+          <label class="form-label" for="form1"></label>
       </div>
-  </div>
-<div>
-  <?php session_start() ?>
+    </div>
+  <div>
+<?php session_start() ?>
 <?php
 //fetch.php
 $connect = mysqli_connect("localhost", "root", "", "helloboard_db");
 $output = '';
 if(isset($_POST["query"])){
     $search = mysqli_real_escape_string($connect, $_POST["query"]);
-    $query = "SELECT * FROM webboard WHERE Major = 'Dentistry' AND  Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
+    $query = "SELECT * FROM webboard WHERE Major = 'Public_Health'  AND  Category = '".$_GET["Topic"]."' AND  Question LIKE '%".$search."%' ";
 }
 else{
-    $query = "SELECT * FROM webboard WHERE  Major = 'Dentistry'  AND  Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
+    $query = "SELECT * FROM webboard WHERE  Major = 'Public_Health'  AND  Category = '".$_GET["Topic"]."' ORDER BY QuestionID ";
 }
+
 $result = $connect->query($query);
+
 if(mysqli_num_rows($result) > 0){
  $output .= '
   <div class="table-responsive">
@@ -161,10 +165,9 @@ if(mysqli_num_rows($result) > 0){
 else{
  echo 'Data Not Found';
 }
-
 ?><!-- <div id="result"></div> -->
   </div>  
-</div>
+  </div>
 </form>
 </td>
 </tr>

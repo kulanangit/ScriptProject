@@ -60,19 +60,22 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="container">
+<<<<<<< HEAD
+  
 <div class="navbar">
     
     <a href="Webboard.php">Public</a>
     <div class="subnav">
       <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
       <div class="subnav-content">
-      <a href="Webboard_Social.php">Social Technology</a>
-      <a href="Webboard_Science.php">Science</a>
-       <a href="Webboard_Agricultural.php">Agricutural</a>
-      <a href="Webboard_Engineer.php">Engineering</a>
-      <a href="Webboard_Medicine.php">Medicine</a>
-      <a href="Webboard_Dentistry.php">Dentistry</a>
-      <a href="Webboard_Nurse.php">Nurse</a>
+      <a href="Webboard_Social_Technology.php">Social Technology</a>
+        <a href="Webboard_Science.php">Science</a>
+        <a href="Webboard_Agricultural.php">Agricutural</a>
+        <a href="Webboard_Engineer.php">Engineering</a>
+        <a href="Webboard_Medicine.php">Medicine</a>
+        <a href="Webboard_Dentistry.php">Dentistry</a>
+        <a href="Webboard_Nurse.php">Nurse</a>
+        <a href="Webboard_Public_Health.php">Public Health</a>
       </div>
      
     
@@ -80,6 +83,7 @@ $(document).ready(function(){
 
     <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
   </div>
+>>>>>>> b68f736096c019bf4f8d7f8a74e0399947e3a1a3<<<<<<<<<<<
   </div>
   <table align="center">
 <tr>
@@ -107,11 +111,13 @@ $(document).ready(function(){
     <div class="form-group">
       <div class="input-group">
           <a class="button" href="NewQuestion.php">New Topic</a>
-          <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
+          <!-- <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/> -->
           <label class="form-label" for="form1"></label>
       </div>
     </div>
   <?php session_start() ?>
+
+
 <?php
 //fetch.php
 $connect = mysqli_connect("localhost", "root", "", "helloboard_db");
