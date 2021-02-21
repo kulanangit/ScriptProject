@@ -21,6 +21,9 @@ body {
 
     color: #ffffff;
   }
+  #des{
+      font-size: 15px;
+  }
     table {
       padding-top: 10px;
       border-collapse:collapse;
@@ -29,6 +32,7 @@ body {
       color: #ffffff;
       font-size: 20px;
       width: auto;
+      position:static;
       font-family: Cursive, Helvetica, sans-serif;
     }
     th {
@@ -41,7 +45,7 @@ body {
     }
     td{
       text-align: left;
-      padding: 8px;
+      padding: 3px;
     }
     
     
@@ -62,16 +66,17 @@ body {
     }
 
     .button {
-      border-radius: 4px;
-      background-color: #e9e77c;
-      border: none;
-      color: #000000;
-      text-align: center;
-      padding: 10px;
-      width: 100px;
-      transition: all 0.5s;
-      cursor: pointer;
-      margin: 5px;
+        -webkit-text-stroke: 1px rgb(0, 0, 0);
+        border-radius: 4px;
+        background-color: #e9e77c;
+        border: none;
+        color: #000000;
+        text-align: center;
+        padding: 10px;
+        width: 100px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
     }
     
     .button span {
@@ -98,6 +103,15 @@ body {
       opacity: 1;
       right: 0;
     }
-    
+    input{
+        border-radius: 5px;
+    }
+    select{
+        width: auto;
+        padding: 3px 3px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f2f2f2;
+    }
  
   
