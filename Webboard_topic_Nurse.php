@@ -65,10 +65,6 @@ $(document).ready(function(){
 <div class="container">
   <div class="navbar">
     <a href="Webboard.php">Public</a>
-<<<<<<< HEAD
-=======
-
->>>>>>> 9ca91a0ec69eaf3c245c646cd84b0829e13e0a6f
     <div class="subnav">
       <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
       <div class="subnav-content">

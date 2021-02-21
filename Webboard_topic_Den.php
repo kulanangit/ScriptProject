@@ -77,10 +77,7 @@ $(document).ready(function(){
         <a href="Webboard_Nurse.php">Nurse</a>
         <a href="Webboard_Public_Health.php">Public Health</a>
       </div>
-     
-    
     </div> 
-
     <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
   </div>
   </div>

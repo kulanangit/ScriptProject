@@ -63,12 +63,7 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="container">
-<<<<<<< HEAD
-=======
-
->>>>>>> 9ca91a0ec69eaf3c245c646cd84b0829e13e0a6f
 <div class="navbar">
-    
     <a href="Webboard.php">Public</a>
     <div class="subnav">
       <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
@@ -82,10 +77,7 @@ $(document).ready(function(){
         <a href="Webboard_Nurse.php">Nurse</a>
         <a href="Webboard_Public_Health.php">Public Health</a>
       </div>
-     
-    
     </div> 
-
     <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
   </div>
   </div>

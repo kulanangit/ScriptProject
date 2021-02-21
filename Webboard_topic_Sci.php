@@ -63,12 +63,7 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="container">
-<<<<<<< HEAD
-=======
-
->>>>>>> 9ca91a0ec69eaf3c245c646cd84b0829e13e0a6f
 <div class="navbar">
-    
     <a href="Webboard.php">Public</a>
     <div class="subnav">
       <button class="subnavbtn">Major<i class="fa fa-caret-down"></i></button>
@@ -90,10 +85,6 @@ $(document).ready(function(){
   </div>
   </div>
   <table style="width: 100%">
-<<<<<<< HEAD
-=======
-
->>>>>>> 9ca91a0ec69eaf3c245c646cd84b0829e13e0a6f
 <tr>
   <div class="header">
       <h1>School of Science </h1>
