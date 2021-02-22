@@ -110,4 +110,9 @@ body {
      #listUser{
         background-color: honeydew;
     }
+    p{
+      font-size: 24pt;
+      -webkit-text-stroke: 0.5px;
+      
+    }
   
