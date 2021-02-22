@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <head>
   <title>Add new question</title>
   <link rel="stylesheet" type="text/css" href="newquestion.css"> 
@@ -25,7 +25,7 @@ session_start();
 ?>
 
   <div class="content">
-    <table width="1000px" align="center">
+    <table width="1200px" align="center">
       <tr>
           <td>
               <p1>Question</p1>
