@@ -3,10 +3,13 @@ session_start();
 ?>
 <html>
 <header>
-
         <link rel="stylesheet" type="text/css" href="list_user.css">
-            <div class="header">
-            <h1>User Control</h1>
+        <link rel="stylesheet" type="text/css" href="admin.css">
+        <div class="header">
+            <h1>SUT WEBBOARD</h1>
+            <p><b>User Control</b></p>
+        </div>
+</header>
             <p></p>
         </div>
         

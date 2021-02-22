@@ -1,7 +1,6 @@
 header{
    
     margin-top: 0;
- 
     text-align: center;
     background: #212F3C;
     color: white;
@@ -12,9 +11,9 @@ table {
     border-spacing: 1;
     border-collapse: collapse;
     background: white;
-    border-radius: 6px;
+    border-radius: 4px;
     overflow: hidden;
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     position: relative;

@@ -22,8 +22,10 @@ $result = mysqli_query($conn, $strSQL);
 
 </header>
 <body>
-<p>Report List</p>
+
 <button id="listUser" class="button" onclick="location.href='list_user.php'" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>>list users</button>
+<center><p>Report List</p>
+
 <form action="delete_topic.php" method="GET">
 <?php 
 

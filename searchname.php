@@ -42,21 +42,22 @@ if(mysqli_num_rows($result) > 0)
  $output .=
         '<table style="width:100%">
         <th>user_ID</th>
+        <th>image</th>
         <th>username</th>
         <th>major</th>
         <th>role</th>
-        <th></th>
-        <th></th>
+        <th>    </th>
+        <th>    </th>
         ';
 while($row = mysqli_fetch_array($result))
         {
             if($row["role"]==0)
             {
-                $s= "<td>user</td>";
+                $s= "user";
             } 
             if($row["role"]==1)
             {
-                $s= "<td>admin</td>";
+                $s= "admin";
             }
 
          $a1="<a onClick=\"javascript: return confirm('Are you sure to change role this #username ".$row['username']."');\"";
@@ -64,13 +65,13 @@ while($row = mysqli_fetch_array($result))
          $output .= '
          <tr>
             <td>'.$row["user_id"].'</td>
+            <td><img src='.$row["image"].' width =50 px></td>
             <td>'. $row["username"] .'</td>
             <td>'. $row["major"] .'</td>
             <td>'. $s.'</td>
             <td>'. $a1.' href="edit_role.php?user_id='.$row['user_id'].'">Change role</a></td>
             <td>'. $a2.' href="delete_user.php?username='.$row['username'].'">Delete</a></td>
-
-            </tr>
+        </tr>
   ';
  }
  echo $output;

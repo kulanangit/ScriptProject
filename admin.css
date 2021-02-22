@@ -111,8 +111,8 @@ body {
         background-color: honeydew;
     }
     p{
-      font-size: 24pt;
+      font-size: 20pt;
       -webkit-text-stroke: 0.5px;
-      
+      color: white;
     }
   
