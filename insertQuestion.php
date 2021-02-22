@@ -11,11 +11,13 @@ $date = date("Y-m-d H:i:s", time());
 	$rs = mysqli_query($conn,$sql);
 	
 	if($rs){
-		echo "Insertion Successfully!!"; 
+		echo "<script 'text/JavaScript'>";
+        echo "alert('Insert Question successful!');";
+		echo 'document.location.href = "webboard.php";';
+        echo "</script>";
 	}else{
 		echo mysqli_error($conn);
 	}
 	mysqli_close($conn); 
 ?>
-<br><a href="Webboard.php">Go to main page</a>
 </html>

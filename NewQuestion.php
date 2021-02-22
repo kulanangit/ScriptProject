@@ -91,8 +91,10 @@ session_start();
     <br>
     <br>
      <br>
+     <input name="url" type="hidden" id="url" value="<?php echo $_SERVER['REQUEST_URI'] ?>" size="50">
     <div class="input-button" align="center">
             <input name="btnSave" class="button" type="submit" id="btnSave" value="Submit" <?php if($_SESSION['username'] == "")  {echo "disabled=\"disabled\"";} ?>>
+            
     <div>
   </form>
 </body>
