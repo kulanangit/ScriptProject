@@ -40,7 +40,7 @@
         document.getElementById('hid').value = str2;
      };
         function func() {
-        document.getElementById('theForm').submit('hid');
+            document.getElementById('theForm').submit('hid');
     };
     </script>
     <form action="edit.php" id="theForm" method="post" onsubmit="return checkPassword();">
@@ -65,7 +65,7 @@
             <tr>
                  <!-- "padding: [top] [right] [bottom] [left]" -->
               <td > Username </td>
-              <td ><input type="text" id="username" name="username" placeholder="Username" pattern="^[a-z0-9_-]{5,15}$" required onblur="checkAvailability()"><span id="user-availability-status" ><img src=''></span></td>
+              <td ><input type="text" value ="<?php echo $row['username']; ?>" id="username" name="username" placeholder="Username" pattern="^[a-z0-9_-]{5,15}$" disabled><span id="user-availability-status" ><img src=''></span></td>
             </tr> 
             <tr >
                 <td > Major </td>
@@ -74,12 +74,16 @@
                 </td>
             </tr>
             <tr>
-                <td > Password:</td>
-                <td ><input type="password" name="password" placeholder="Password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></td>
+                <td > Current Password:</td>
+                <td ><input type="password" name="c_password" placeholder="Current Password" id="c_password" required></td>
             </tr>
             <tr>
-                <td > Confirm password:</td>
-                <td ><input type="password" name="confirm_password" placeholder="Confirm Password" id="confirm_password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></td>
+                <td > New Password:</td>
+                <td ><input type="password" name="password" placeholder="New Password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></td>
+            </tr>
+            <tr>
+                <td > Confirm New password:</td>
+                <td ><input type="password" name="confirm_password" placeholder="Confirm New Password" id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></td>
             </tr>
             <tr>
                 <td id="des" colspan = "2" >
@@ -120,24 +124,7 @@
                         return true;
                     }
                 }
-                </script>
-                <script type="text/javascript">
-                    function checkAvailability(){
-                    $.ajax({
-                        type:"POST",
-                        url:"check_username.php",
-                        cache:false,
-                        data:{
-                            type:1,
-                            username:$("#username").val(),
-                        },
-                        success:function(data){
-                            $("#user-availability-status").html(data);
-                            //$('#submit').prop('disabled', true);
-                        }
-                    });
-                    }
-                    </script>
+        </script>
             <center>        
         </td>
 </table>
