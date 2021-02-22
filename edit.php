@@ -18,6 +18,7 @@ if ($conn->query($sql)) {
   echo "<script 'text/JavaScript'>";
   echo "alert('Update Successfully!!');";
   echo "</script>";
+  session_destroy();
   echo "<meta http-equiv='refresh' content='0;URL=login.htm'>"; //redirect page
 } else {
   echo "Error Insert record: " . $conn->error;
