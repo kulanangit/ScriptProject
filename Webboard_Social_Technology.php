@@ -102,8 +102,8 @@ $(document).ready(function(){
       <div class="form-group">
         <div class="input-group">
               <a class="button" href="NewQuestion.php">New Topic</a>
-              <!-- <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
-              <label class="form-label" for="form1"></label> -->
+              <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
+              <label class="form-label" for="form1"></label>
     </div>
   </div>
    <div id="result"></div>
