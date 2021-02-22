@@ -6,10 +6,9 @@ body {
     font-size: 15px;
     
   }
-  .header{
-      padding-top: 0px;
+  header{
       padding: 20px;
-      margin-top: 0px;
+      margin-bottom: 10px;
       text-align: center;
       background: #212F3C;
       color: white;
@@ -24,18 +23,18 @@ body {
   #des{
       font-size: 15px;
   }
-    table {
-        border-radius: 10px;
+  table {
+      border-radius: 10px;
       padding-top: 10px;
       border-collapse:collapse;
       padding-left: 20%;
       padding-right: 20%;
       color: #000000;
-      font-size: 20px;
-      width: auto;
+      font-size: 16px;
+      width: 1400px;
       position:static;
       font-family: Cursive, Helvetica, sans-serif;
-    }
+  }
     th {
       text-align: center;
       padding: 8px;
