@@ -72,8 +72,9 @@ $(document).ready(function(){
         <a href="Webboard_Public_Health.php">Public Health</a>
       </div>
     </div>
+    <a href="editForm.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Account</a>
     <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
-    </div>
+  </div>
   </div>
   <table align="center">
 <tr>
