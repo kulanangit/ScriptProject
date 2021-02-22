@@ -22,7 +22,7 @@ while($row = $rs->fetch_assoc()) { ?>
     </head>
     <header>
         
-            <center>
+            <center>
             <h3> header </h3>
             </center>
     </header>
@@ -83,8 +83,8 @@ while($row = $rs->fetch_assoc()) { ?>
                  <!-- "padding: [top] [right] [bottom] [left]" -->
 
               <td style="padding: 15px 0px 0px 15px "> username:</td>
-              <td style="padding: 15px 0px 0px 15px "><input type="text" value ="<?php echo $row['username']; ?>" id="username" name="username" placeholder="Username" pattern="^[a-z0-9_-]{5,15}$" required onBlur="checkAvailability()"><span id="user-availability-status" style="padding: 20px "><img src=''></span></td>
-              
+              <td style="padding: 15px 0px 0px 15px "><input type="text" value ="<?php echo $row['username']; ?>" id="username" name="username" placeholder="Username" pattern="^[a-z0-9_-]{5,15}$" disabled><span id="user-availability-status" style="padding: 20px "><img src=''></span></td>
+        
             </tr> 
             <tr>
                 <td style="padding: 15px 0px 0px 15px "> major:</td>
@@ -142,27 +142,8 @@ while($row = $rs->fetch_assoc()) { ?>
                   return true;
               }
           }
-         </script>
-         <script type="text/javascript">
-            function checkAvailability(){
-            $("#loaderIcon").show();
-            
-            $.ajax({
-                type:"POST",
-                url:"check_username.php",
-                cache:false,
-                data:{
-                    type:1,
-                    username:$("#username").val(),
-                },
-                success:function(data){
-                    $("#user-availability-status").html(data);
-                    //$('#submit').prop('disabled', true);
-                }
-            });
-            }
-            </script>
-   
+    </script>
+        
         <center>
             <footer> Footer </footer>
         </center>
