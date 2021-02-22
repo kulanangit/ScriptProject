@@ -25,10 +25,10 @@ session_start();
 ?>
 
   <div class="content">
-    <table width="1200px" align="center">
+    <table align="center">
       <tr>
           <td>
-              <p1>Question</p1>
+              <p class="p">Question</p>
           </td>
           <td>
               <p2><input name="txtQuestion" type="text" id="txtQuestion" value="" size="55" placeholder="Add your question here....." <?php if($_SESSION['username'] == "")  {echo "disabled=\"disabled\"";} ?>></p2>
@@ -37,24 +37,26 @@ session_start();
       
       <tr>
           <td>
-              <p1>Details </p1>
+              <p class="p" >Details </p>
           </td>
           <td>
           <div class="col-75">
-              <p2><textarea name="txtDetails" cols="50" rows="15" id="txtDetails" placeholder="Type your detail......" <?php if($_SESSION['username'] == "")  {echo "disabled=\"disabled\"";} ?>></textarea></p2>
+              <p2><textarea name="txtDetails" cols="45" rows="15" id="txtDetails" placeholder="Type your detail......" <?php if($_SESSION['username'] == "")  {echo "disabled=\"disabled\"";} ?>></textarea></p2>
           </div>
           </td>
       </tr>
       <tr>
           <td>
-            <p1>Name</p1>
+            <p class="p">Name</p>
           </td>
           <td>  
             <p2><input name="txtName" type="text" id="txtName" value="<?php echo $_SESSION['username'] ?>" size="55" placeholder="Insert your avatar name...." disabled></p2>
           </td>
       </tr> 
       <tr>
-          <td> Topic</td>
+          <td> 
+            <p class="p">Topic</p>
+          </td>
           <td>
           <div class="box">
             <select name="topic">
@@ -70,7 +72,9 @@ session_start();
           </td>
       </tr>
       <tr>
-          <td> Major</td>
+          <td> 
+            <p class="p">Major</p>
+          </td>
           <td>
           <div class="box">
             <select name="major">
@@ -89,8 +93,7 @@ session_start();
       </tr>       
     </table>
     <br>
-    <br>
-     <br>
+
      <input name="url" type="hidden" id="url" value="<?php echo $_SERVER['REQUEST_URI'] ?>" size="50">
     <div class="input-button" align="center">
             <input name="btnSave" class="button" type="submit" id="btnSave" value="Submit" <?php if($_SESSION['username'] == "")  {echo "disabled=\"disabled\"";} ?>>
