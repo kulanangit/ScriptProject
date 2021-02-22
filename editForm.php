@@ -55,8 +55,8 @@
         <td width="600px" align="center">    
         <table align="center" border="0">
             <tr>
-                <td><p id ="pic2" ><img src="./images/img1.png" width="100" onclick="selectPhoto(1)"></p>
-                <input type= "hidden" id="hid" name="avatar" value = "./images/img1.png" ></td>
+                <td><p id ="pic2" ><img src="<?php echo $row['image'] ?>" width="100" onclick="selectPhoto(1)"></p>
+                <input type= "hidden" id="hid" name="avatar" value = "<?php echo $row['image'] ?>" ></td>
                 <td><p > <b>Select your avatar</b></p></td>
             </tr>
         </table>
