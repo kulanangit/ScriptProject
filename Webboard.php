@@ -84,7 +84,7 @@ $(document).ready(function(){
       </div> 
       <a href="editForm.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Account</a>
       <div class="subnav1">
-      <a " <?php if($_SESSION['username'] == null)  {echo "style='display: none;'";} ?>> Logout</a>
+      <a href="login.htm" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
       </div>
     </div>
   </div>

@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title>Edit Account</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="signup.css">
         <?php
@@ -45,6 +46,7 @@
     </script>
     <form action="edit.php" id="theForm" method="post" onsubmit="return checkPassword();">
     <body>
+    
         <div class="header">
             <h1>SUT WEBBOARD</h1>
             <p><b>Edit Your Account</b></p>

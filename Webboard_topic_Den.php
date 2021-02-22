@@ -78,7 +78,10 @@ $(document).ready(function(){
         <a href="Webboard_Public_Health.php">Public Health</a>
       </div>
     </div> 
-    <a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
+    <a href="editForm.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Account</a>
+      <div class="subnav1">
+      <a href="login.htm" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
+      </div>
   </div>
   </div>
 </div>
@@ -108,8 +111,9 @@ $(document).ready(function(){
     <div class="form-group">
       <div class="input-group">
             <a class="button" href="NewQuestion.php">New Topic</a>
-            <!-- <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/> -->
-            <!-- <label class="form-label" for="form1"></label> -->
+            <a class="button" href="mypost.php" <?php if($_SESSION['username'] == "")?>>My Post</a>
+            <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
+            <label class="form-label" for="form1"></label>
       </div>
   </div>
 <div>
