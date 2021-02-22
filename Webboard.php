@@ -116,6 +116,7 @@ $(document).ready(function(){
               <a class="button" href="NewQuestion.php">New Topic</a>
               <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
               <label class="form-label" for="form1"></label>
+              <a class="button" href="mypost.php" <?php if($_SESSION['username'] == "")?>>My Post</a>
         </div>
       </div>
       <div id="result"></div>
