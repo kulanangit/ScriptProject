@@ -1,79 +1,67 @@
-<html>
-<header>
-        <center>
-        <h3> User Control </h3>
-        </center>
-        <link rel="stylesheet" type="text/css" href="list_user.css">
-</header>
-<body>
-<form action="delete_user.php" method="GET">
 <?php 
 session_start();
-
-
-        error_reporting(0);
-        ini_set('display_errors', 0); //hide error
-
-
-        $conn=mysqli_connect("localhost", "root", "","helloboard_db");
-        $conn->query("SET NAMES UTF8");
-        // $strSQL = "SELECT * FROM user WHERE username = '".$_SESSION['username']."' ";
-        // $result = mysqli_query($conn, $strSQL);
-
-
-        
-
-        // if($_SESSION['username'] == "")
-        // {
-        //     echo "<center>Please Login!<center>";
-        // }
-
-        // else if($_SESSION['role'] != "1")
-        // {
-        //     echo "<center>You don't have permission to access this page!</center>";
-        // }
-        
-        // else if($_SESSION['role'] != "0")
-        // {
-        // // get results from database
-        $sql="SELECT *
-        -- user_ID,username,major
-                FROM user
-                ORDER BY user_ID";
-                $rs=$conn->query($sql);
-
-    echo "<center><table border='1'>
-    <thead>	
-        <tr>
-            <th width='50px'>user_ID</th>
-            <th width='300px'>username</th>
-            <th width='200px'>major</th>
-            <th width='50px'></th>
-	    </tr>
-        <tbody>";
-    if($result = $conn->query($sql)){
-        while($row = $rs->fetch_assoc()) {
-    // echo out the contents of each row into a table
-    echo    "<tr>";
-        echo    "<td>". $row['user_ID'] ."</td>";
-        echo    "<td>". $row['username'] ."</td>";
-        echo    "<td>". $row['major'] ."</td>";
-        echo    "<td><a onClick=\"javascript: return confirm('Are you sure to delete this username #username ".$row['username']."');\" href='delete_user.php?username=".$row['username']."'>Delete</a></td>";
-        echo	"</tr>";
-        }
-        
-        echo    "</tbody>
-        </table></center>";
-    }
-    $conn->close();
-// }
 ?>
+<html>
+<header>
+
+        <link rel="stylesheet" type="text/css" href="list_user.css">
+            <div class="header">
+            <h1>User Control</h1>
+            <p></p>
+        </div>
+        
+</header>
+<body>
+    <button onclick="location.href='logout.php'" style="float: right;" >Logout</button>
+<form action="delete_user.php" method="GET">
+<form action="edit_role.php" method="GET">
+
+<form name="frmSearch" method="get" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
+   <div class="container" align="center">
+      <div class="form-group">
+        <div class="input-group">
+              <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search username"/>
+              <label class="form-label" for="form1"></label>
+    </div>
+    </div>
+    <br>
+    <div id="result"></div>
+  </div>
+  </div>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+
+ load_data();
+
+ function load_data(query)
+ {
+  $.ajax({
+   url:"searchname.php",
+   method:"POST",
+   data:{query:query},
+   success:function(data)
+   {
+    $('#result').html(data);
+   }
+  });
+ }
+ $('#search_text').keyup(function(){
+  var search = $(this).val();
+  if(search != '')
+  {
+   load_data(search);
+  }
+  else
+  {
+   load_data();
+  }
+ });
+});
+</script>
+</form>
 </form>
 </body>
-<a href="logout.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
-    <footer>
-    <center>
-        <h3> Sut Webboard</h3>
-    </center>
-    </footer>
 </html>
