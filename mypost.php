@@ -3,7 +3,7 @@
 <head>
   <title>My posts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="admin.css">
+    <!-- <link rel="stylesheet" type="text/css" href="admin.css"> -->
     <link rel="stylesheet" type="text/css" href="webboard.css">
     <link rel="stylesheet" type="text/css" href="Navbar_cat.css">
     <link rel="stylesheet" type="text/css" href="Topic.css">
@@ -35,6 +35,7 @@
         <a href="Webboard_Nurse.php">Nurse</a>
         <a href="Webboard_Public_Health.php">Public Health</a>
         </div>
+        
       </div> 
       <a href="editForm.php" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Account</a>
       <div class="subnav1">
@@ -48,9 +49,18 @@
       <h1>SUT WEBBOARD</h1>
       <p>Let's talk and discuss</p>
   </div>
+  
 </tr>
 <tr>
     <td>
+    <div class="form-group">
+        <div class="input-group">
+              <a class="button" href="NewQuestion.php">New Topic</a>
+              <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
+              <label class="form-label" for="form1"></label>
+              <a class="button" href="mypost.php" <?php if($_SESSION['username'] == "")?>>My Post</a>
+        </div>
+      </div>
 <form action="delete_mypost.php" method="GET">
 <?php
 //fetch.php
