@@ -47,7 +47,7 @@
 <tr>
   <div class="header">
       <h1>SUT WEBBOARD</h1>
-      <p>Let's talk and discuss</p>
+      <p>---My Post---</p>
   </div>
   
 </tr>
@@ -58,7 +58,6 @@
               <a class="button" href="NewQuestion.php">New Topic</a>
               <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
               <label class="form-label" for="form1"></label>
-              <a class="button" href="mypost.php" <?php if($_SESSION['username'] == "")?>>My Post</a>
         </div>
       </div>
 <form action="delete_mypost.php" method="GET">
