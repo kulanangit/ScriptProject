@@ -43,7 +43,7 @@
       width: 1200px;
       border: none;
       font-family: Cursive, Helvetica, sans-serif;
-      background-color: #AFDCEC;
+      background-color: #ffffff;
     } 
     table {
       border-collapse:collapse;
@@ -56,13 +56,13 @@
     }
     td {
       background-color: #f2f2f2;
-      padding: 4px;
+      padding: 2px;
     }
     tr {
-      padding-bottom: 4px;
+      padding-bottom: 2px;
     }
     tr:nth-child(even){
-      background-color: #f2f2f2}
+      background-color: #AFDCEC}
     #report{
       text-align : right;
     }
@@ -156,7 +156,7 @@
     
     th, td {
       padding: 1em;
-      background: #ddd;
+      background: #AFDCEC;
       border-bottom: 2px solid white; 
     }
     
