@@ -93,13 +93,13 @@ while($objResult2 = mysqli_fetch_array($objQuery2))
 ?>
 <form action="ViewWebboard.php?QuestionID=<?=$_GET["QuestionID"];?>&Action=Save" method="post" name="frmMain" id="frmMain">
 <table class="reply" align="center" border="1" cellpadding="1" cellspacing="1">
-    <tr id="replyTxt">
-      <td width="50px">Reply</td>
-      <td ><textarea name="txtDetails" id="txtDetails"></textarea></td>
+    <tr >
+      <td id="replyTxt"width="50px">Reply</td>
+      <td  id="replyTxt"><textarea name="txtDetails" id="txtDetails"></textarea></td>
     </tr>
-    <tr id="nameTxt">
-      <td >Name</td>
-      <td ><input name="txtName" type="text" id="txtName" value=""></td>
+    <tr >
+      <td id="replyTxt">Name</td>
+      <td id="nameTxt"><input name="txtName" type="text" id="txtName" value=""></td>
     </tr>
   </table>
   <br>

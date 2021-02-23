@@ -37,13 +37,14 @@
       border: 0;
       font-family: Cursive, Helvetica, sans-serif;
     }
+    
     table #comment{
       border-collapse:collapse;
       padding-right: 20%;
       width: 1200px;
       border: none;
       font-family: Cursive, Helvetica, sans-serif;
-      background-color: #AFDCEC;
+      background-color: white;
     } 
     table {
       border-collapse:collapse;
@@ -52,17 +53,17 @@
       width: 1200px;
       border: 0;
       font-family: Cursive, Helvetica, sans-serif;
-      background-color: #f2f2f2;
+      background-color: #ffffff;
     }
     td {
-      background-color: #f2f2f2;
+      background-color: #ffffff;
       padding: 4px;
     }
     tr {
       padding-bottom: 4px;
     }
     tr:nth-child(even){
-      background-color: #f2f2f2}
+      background-color: #ffffff}
     #report{
       text-align : right;
     }
@@ -128,12 +129,16 @@
       cursor: pointer;
       border-radius: 6px;
     }
+      .reply #replyTxt,#nameTxt{
+      background: #b7bbbd;
+    }
+
     #header{
       
       background-color: #F1C40F;
     }
     #detail{
-      background-color: #e0d7b4;
+      background-color: #ffecc2;
     }
     #comment{
       background-color: lightsalmon;
@@ -156,9 +161,12 @@
     
     th, td {
       padding: 1em;
-      background: #ddd;
+      background: #AFDCEC;
       border-bottom: 2px solid white; 
     }
+
+  
+   
     
     .css-mine {
       margin-top: 2em;
