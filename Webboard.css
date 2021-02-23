@@ -93,4 +93,9 @@ body {
     background-color: #4CAF50;
     color: white;
   }
+  p{
+    font-size: 20pt;
+    -webkit-text-stroke: 0.5px;
+    color: white;
+  }
 
