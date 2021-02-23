@@ -68,8 +68,8 @@ $result = $connect->query($query);
 
 if(mysqli_num_rows($result) > 0){
  $output .= '
-  <div class="table-responsive">
-   <table style="width:100%">
+  <div class="table-responsive" align="center">
+   <table>
     <tr>
      <th>QuestionID</th>
      <th>Question</th>
@@ -85,7 +85,7 @@ if(mysqli_num_rows($result) > 0){
   $output .= '
    <tr>
     <td>'.$row["QuestionID"].'</td>
-    <td><a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
+    <td><a class="tp" href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
     <td>'.$row["Name"].'</td>
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>
@@ -98,12 +98,27 @@ if(mysqli_num_rows($result) > 0){
  echo $output;
 }
 else{
- echo 'Data Not Found';
+    $output .= '
+  <div class="table-responsive" align="center">
+   <table>
+    <tr>
+     <th>QuestionID</th>
+     <th>Question</th>
+     <th>Name</th>
+     <th>CreateDate</th>
+     <th>View</th>
+     <th>Reply</th>
+     <th>Topic</th>
+     <th></th>
+    </tr>
+    <tr>
+        <center><p>You never post anything on webboard!<p>
+    </tr>
+   </div>
+ ';
+ echo $output;
 }
-?>
-  </div>
-</td>
-</tr><!-- <div id="result"></div> -->
-
+?><!-- <div id="result"></div> -->
+  
 </body> 
 </html

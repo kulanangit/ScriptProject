@@ -27,12 +27,27 @@ body {
       font-size: 15px;
       border-right: 5px solid rgb(255, 145, 0);
     }
+    .input-group .button {
+      float: left;
+      border-radius: 10px;
+      padding: 6px;
+      margin-top: 8px;
+      margin-right: 10px;
+      font-size: 15px;
+      border-right: 5px solid rgb(255, 145, 0);
+    }
+
   a{
     padding-left: 15%;
     color: #ffffff;
   }
   #des{
       font-size: 15px;
+  }
+  #quest{
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   table {
     text-align: center;
@@ -70,7 +85,11 @@ body {
       color: white;
     }
     
-    a {
+    .tp{
+        color: #212F3C;
+      }
+
+      a {
         color: red;
       }
 

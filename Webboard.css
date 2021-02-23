@@ -26,6 +26,23 @@ body {
     border-right: 5px solid rgb(255, 145, 0);
   }
 
+  
+  .input-group .button {
+    float: left;
+    border-radius: 10px;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 10px;
+    font-size: 15px;
+    border-right: 5px solid rgb(255, 145, 0);
+  }
+
+  #quest{
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
   table {
     border-collapse:collapse;
     padding-left: 20%;
@@ -35,32 +52,12 @@ body {
     font-size: 15px;
     font-family: Cursive, Helvetica, sans-serif;
   }
-  #quest{
-    text-align: left;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
+
   th {
     text-align: center;
     padding: 8px;
   }
-  td{
-    text-align: left;
-    padding: 8px;
-  }
-  
-  
-  tr,td:nth-child(even){
-    background-color: #ffffff;
-    
-  }
-  
-  th {
-    background-color: #4CAF50;
-    color: white;
-  }
-
-.button {
+  .button {
     display: inline-block;
     padding: 5px 10px;
     text-align: center;
@@ -81,3 +78,19 @@ body {
     border: none;
     
   }
+  td{
+    padding: 8px;
+    text-align: center;
+  }
+  
+  
+  tr,td:nth-child(even){
+    background-color: #ffffff;
+    
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
