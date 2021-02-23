@@ -13,19 +13,16 @@ $result = mysqli_query($conn, $strSQL);
 
 ?>
 <html>
-<header>
+<head>
     <link rel="stylesheet" type="text/css" href="admin.css">
+    <!-- <link rel="stylesheet" type="text/css" href="webboard.css"> -->
+</head>
+<body>
     <div class="header">
         <h1>SUT WEBBOARD</h1>
         <p><b>---ADMIN---</b></p>
     </div>
-
-</header>
-<body>
-
-<button id="listUser" class="button" onclick="location.href='list_user.php'" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>>list users</button>
 <center><p>Report List</p>
-
 <form action="delete_topic.php" method="GET">
 <?php 
 
@@ -51,12 +48,11 @@ $result = mysqli_query($conn, $strSQL);
 
     echo "<center><table border='1'>	
         <tr>
-            <th width='150px'>date</th>
-            <th width='300px'>question</th>
-            <th width='400px'>detail</th>
-            <th width='150px'>major</th>
-            <th width='150px'>category</th>
-
+            <th width='150px'>Date</th>
+            <th width='300px'>Question</th>
+            <th width='400px'>Detail</th>
+            <th width='150px'>Major</th>
+            <th width='150px'>Category</th>
             <th width='80px'></th>
 	    </tr>";
     if($result = $conn->query($sql)){
@@ -68,7 +64,6 @@ $result = mysqli_query($conn, $strSQL);
         echo    "<td>". $row['Details'] ."</td>";
         echo    "<td>". $row['Major'] ."</td>";
         echo    "<td><center>". $row['Category'] ."</td>";
-
         echo    "<td><a onClick=\"javascript: return confirm('Are you sure to delete Question #id ".$row['QuestionID']."');\" href='delete_topic.php?QuestionID=".$row['QuestionID']."'>Delete</a></td>";
         echo	"</tr>";
         }
@@ -78,6 +73,8 @@ $result = mysqli_query($conn, $strSQL);
 }
 ?>
 </form>
+<button id="listUser" class="button" onclick="location.href='list_user.php'" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>>List users</button>
+<button class="button" onclick="location.href='logout.php'" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
 </body> 
-<center><button class="button" onclick="location.href='logout.php'" <?php if($_SESSION['username'] == "")  {echo "style='display: none;'";} ?>> Logout</a>
+
 </html>

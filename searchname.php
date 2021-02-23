@@ -41,11 +41,11 @@ if(mysqli_num_rows($result) > 0)
 {
  $output .=
         '<table style="width:100%">
-        <th>user_ID</th>
-        <th>image</th>
-        <th>username</th>
-        <th>major</th>
-        <th>role</th>
+        <th>User_ID</th>
+        <th>Image</th>
+        <th>Username</th>
+        <th>Major</th>
+        <th>Role</th>
         <th>    </th>
         <th>    </th>
         ';

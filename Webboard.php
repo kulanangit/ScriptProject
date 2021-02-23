@@ -125,5 +125,6 @@ $(document).ready(function(){
   </form>
   </td>
 </tr>
+</table>
 </body>
 </html>
