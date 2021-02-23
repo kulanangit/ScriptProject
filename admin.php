@@ -14,6 +14,7 @@ $result = mysqli_query($conn, $strSQL);
 ?>
 <html>
 <head>
+    <title>ADMIN: Report List</title>
     <link rel="stylesheet" type="text/css" href="admin.css">
     <!-- <link rel="stylesheet" type="text/css" href="webboard.css"> -->
 </head>
@@ -60,7 +61,7 @@ $result = mysqli_query($conn, $strSQL);
     // echo out the contents of each row into a table
     echo    "<tr>";
         echo    "<td>". $row['date'] ."</td>";
-        echo    "<td id='quest'". $row['Question'] ."</td>";
+        echo    "<td id='quest'>". $row['Question'] ."</td>";
         echo    "<td>". $row['Details'] ."</td>";
         echo    "<td>". $row['Major'] ."</td>";
         echo    "<td><center>". $row['Category'] ."</td>";
