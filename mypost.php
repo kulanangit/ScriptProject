@@ -85,7 +85,7 @@ if(mysqli_num_rows($result) > 0){
   $output .= '
    <tr>
     <td>'.$row["QuestionID"].'</td>
-    <td><a class="tp" href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
+    <td id="quest"><a class="tp" href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
     <td>'.$row["Name"].'</td>
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>

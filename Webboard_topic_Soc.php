@@ -106,7 +106,7 @@ $(document).ready(function(){
       <div class="input-group">
             <a class="button" href="NewQuestion.php">New Topic</a>
             <a class="button" href="mypost.php" <?php if($_SESSION['username'] == "")?>>My Post</a>
-            <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/> -->
+            <input type="text" name="search_text" id="search_text" class="form-control" placeholder="Search...."/>
             <label class="form-label" for="form1"></label>
       </div>
     </div>
@@ -142,7 +142,7 @@ if(mysqli_num_rows($result) > 0){
   $output .= '
    <tr>
     <td>'.$row["QuestionID"].'</td>
-    <td><a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
+    <td id="quest"><a href="ViewWebboard.php?QuestionID='.$row["QuestionID"].'">'.$row["Question"].'</a></td>
     <td>'.$row["Name"].'</td>
     <td>'.$row["CreateDate"].'</td>
     <td>'.$row["View"].'</td>
